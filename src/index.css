@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-100 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 40s linear infinite;
+}
+
+.hero-depth-wrap {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.hero-layer {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.hero-title-3d {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.2),
+    0 2px 0 rgba(255, 255, 255, 0.15),
+    0 10px 28px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .hero-depth-wrap {
+    perspective: none;
+  }
+
+  .hero-layer {
+    transform: none !important;
+  }
+}
+
+:root {
+  --nav-height: 72px;
+  --container: 1120px;
+  --accent: #d32f2f;
+}
+
+/* Container utility */
+.container {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Loading screen */
+.app-loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.75));
+  z-index: 9999;
+}
+.app-loader .logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  color: white;
+}
+
+/* Parallax utility: add data-parallax-depth="0.2" */
+[data-parallax-depth] {
+  will-change: transform;
+}
+
+/* Remove any default gap above hero video by making nav fixed */
+.nav-fixed-offset {
+  padding-top: var(--nav-height);
+}
