@@ -1,0 +1,217 @@
+import Image from 'next/image'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import Link from 'next/link'
+import {
+  Noto_Serif_JP,
+  Lovers_Quarrel,
+  MedievalSharp,
+} from 'next/font/google'
+
+import {
+  BookOpenCheck,
+  UtensilsCrossed,
+  UsersRound,
+  Sprout,
+  Trees,
+  Smile,
+} from 'lucide-react'
+
+import ImageSlider3D from '../components/lightswind/3d-image-slider'
+
+const notoSerifJP = Noto_Serif_JP({
+  subsets: ['latin'],
+})
+
+const loversQuarrel = Lovers_Quarrel({
+  subsets: ['latin'],
+  weight: '400',
+})
+
+const medievalSharp = MedievalSharp({
+  subsets: ['latin'],
+  weight: '400',
+})
+
+const experienceHighlights = [
+  {
+    title: 'Sustainable Celebrations',
+    description:
+      'Eco-friendly decorations, organic catering, and zero-waste practices make your celebration environmentally responsible.',
+    Icon: Trees,
+  },
+  {
+    title: 'Nature Based Activities',
+    description:
+      'Unique activities like farm tours, animal interactions, vegetable picking, and nature games for all ages.',
+    Icon: Sprout,
+  },
+  {
+    title: 'Farm to Fork Dining',
+    description:
+      'Fresh, organic meals prepared from ingredients grown right on our farm, ensuring the highest quality and taste.',
+    Icon: UtensilsCrossed,
+  },
+  {
+    title: 'Personalized Experiences',
+    description:
+      'Customized decorations, themes, and activities tailored to your specific celebration and preferences.',
+    Icon: UsersRound,
+  },
+  {
+    title: 'Memorable Moments',
+    description:
+      'Professional photography, unique backdrops, and unforgettable experiences that create lasting memories.',
+    Icon: BookOpenCheck,
+  },
+  {
+    title: 'Beautiful venue',
+    description:
+      'Lush green gardens, scenic landscapes, and natural beauty provide the perfect backdrop for any celebration.',
+    Icon: Smile,
+  },
+]
+
+const page = () => {
+  return (
+    <div>
+      <div className="relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent">
+        
+        <Navbar />
+
+        {/* Background */}
+        <Image
+          src={'/Team building.webp'}
+          alt="team placeholder"
+          width={1200}
+          height={600}
+          className="absolute -z-20 h-full w-full object-cover"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 -z-10 bg-radial from-[#000000]/80 to-[#02160a]" />
+
+        {/* Hero */}
+        <div className="flex flex-col items-center px-4 pt-24 text-center sm:px-6 md:px-10">
+          
+          <h1
+            className={`text-4xl text-white sm:text-5xl md:text-6xl lg:text-7xl ${medievalSharp.className}`}
+          >
+            Our Philosophy
+          </h1>
+
+          <h2
+            className={`mt-3 text-4xl text-white sm:text-5xl md:text-6xl ${loversQuarrel.className}`}
+          >
+            "The Ikigai Experience"
+          </h2>
+        </div>
+
+        {/* Slider */}
+        <div className="relative mt-8 w-full overflow-hidden">
+          <ImageSlider3D
+            containerClassName="relative w-[130vw] sm:w-[120vw] lg:w-[110vw]"
+            images={[
+              '/Activity1.webp',
+              '/A reason img.webp',
+              '/bgact.webp',
+              '/food placeholder.webp',
+              '/Activity1.webp',
+              '/A reason img.webp',
+              '/placeholder.webp',
+              '/food placeholder.webp',
+              '/Activity1.webp',
+              '/A reason img.webp',
+              '/bgact.webp',
+              '/food placeholder.webp',
+              '/A reason img.webp',
+              '/bgact.webp',
+              '/food placeholder.webp',
+            ]}
+          />
+        </div>
+
+        {/* Highlights */}
+        <section className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
+          
+          <div className="mx-auto max-w-3xl text-center">
+            <p
+              className={`text-lg uppercase tracking-[0.25em] text-[#fff7c0] sm:text-xl md:text-2xl ${notoSerifJP.className}`}
+            >
+              What the experience includes
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {experienceHighlights.map(
+              ({ title, description, Icon }) => (
+                <article
+                  key={title}
+                  className="rounded-3xl border border-white/10 bg-[#012d0b] p-6 text-white shadow-[0_24px_70px_rgba(0,0,0,0.25)] backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 hover:bg-black/40"
+                >
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f8ffad]/15 text-[#f8ffad]">
+                    <Icon size={28} />
+                  </div>
+
+                  <h3
+                    className={`mt-5 text-xl sm:text-2xl ${notoSerifJP.className}`}
+                  >
+                    {title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-6 text-white/80 sm:text-base">
+                    {description}
+                  </p>
+                </article>
+              )
+            )}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="mx-auto mb-16 w-full max-w-5xl px-4 sm:px-6 lg:px-8">
+          
+          <div className="rounded-[2rem] border border-[#f8ffad]/20 bg-[#012d0b]/95 px-5 py-8 text-center text-white shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-md sm:px-8 sm:py-10 lg:px-10">
+            
+            <p
+              className={`text-xs uppercase tracking-[0.3em] text-[#f8ffad]/80 sm:text-sm ${notoSerifJP.className}`}
+            >
+              Ready to begin?
+            </p>
+
+            <p
+              className={`mx-auto mt-4 max-w-2xl text-2xl leading-tight sm:text-3xl md:text-4xl ${medievalSharp.className}`}
+            >
+              Ready to discover your purpose?
+            </p>
+
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-white/80 sm:text-base">
+              Join us at Ikigai Farm for an experience that reconnects you
+              with nature and your inner self. Book your visit or inquire
+              about our packages today.
+            </p>
+
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              
+              <Link href='/Events'>
+                <button className="w-full rounded-full bg-[#f8ffad] px-6 py-3 text-sm font-semibold text-[#012d0b] transition duration-300 hover:scale-105 sm:w-auto">
+                  Event Packages
+                </button>
+              </Link>
+
+              <Link href='/GroupBookings'>
+                <button className="w-full rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-white/10 sm:w-auto">
+                  Group Bookings
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <Footer />
+    </div>
+  )
+}
+
+export default page

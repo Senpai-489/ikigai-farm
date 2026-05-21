@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+/* stylelint-disable at-rule-no-unknown */
+@plugin 'lightswind/plugin';
+/* stylelint-enable at-rule-no-unknown */
+html,
+body {
+	overflow-x: hidden;
+}
+
+
+
