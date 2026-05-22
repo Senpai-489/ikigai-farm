@@ -35,12 +35,12 @@ const page = () => {
     <div>
       
       {/* HERO */}
-      <div className="relative flex flex-col items-center overflow-hidden bg-transparent">
+      <div className="relative flex flex-col items-center overflow-hidden bg-white">
         
         <Navbar />
 
         <Image
-          src={'/BG-img.png'}
+          src="/bg img.jpeg"
           alt="activities hero"
           width={1200}
           height={600}
@@ -60,7 +60,7 @@ const page = () => {
           </h1>
 
           <p
-            className={`mt-6 max-w-5xl text-center text-3xl leading-tight text-[#333] sm:text-4xl md:text-5xl lg:w-[60vw] lg:text-6xl ${loversQuarrel.className}`}
+            className={`mt-6 max-w-5xl text-center  leading-tight text-[#333] sm:text-sm md:text-xl lg:w-[60vw] lg:text-2xl ${notoSerifJP.className}`}
           >
             From school groups
             
@@ -102,17 +102,17 @@ const page = () => {
 
             <p className="flex items-center gap-2 text-sm sm:text-base">
               <CheckCircle size={18} />
-              Self Guided Garden Tour
+              20+ Activities Included
             </p>
 
             <p className="flex items-center gap-2 text-sm sm:text-base">
               <CheckCircle size={18} />
-              Complimentary Farm Tea
+              Interactive Workshops
             </p>
 
             <p className="flex items-center gap-2 text-sm sm:text-base">
               <CheckCircle size={18} />
-              Meditation Zone Access
+              Snacks & Refreshments
             </p>
 
             <p className="flex items-center gap-2 text-sm sm:text-base">
@@ -148,22 +148,22 @@ const page = () => {
 
             <p className="flex items-center gap-2 text-sm sm:text-base">
               <CheckCircle size={18} />
-              Guided Nature Walk
+              All 40+ Activities Included
             </p>
 
             <p className="flex items-center gap-2 text-sm sm:text-base">
               <CheckCircle size={18} />
-              Farm Tea & Snacks
+              High Tea & Snacks Included
             </p>
 
             <p className="flex items-center gap-2 text-sm sm:text-base">
               <CheckCircle size={18} />
-              Farm to Table Bento Lunch
+              Farm to Table Lunch
             </p>
 
             <p className="flex items-center gap-2 text-sm sm:text-base">
               <CheckCircle size={18} />
-              Harvesting Workshop
+              Interactive Farm Workshops
             </p>
 
             <Link href='/GroupBookings/#BookingForm' className='mx-auto block'>

@@ -6,13 +6,13 @@ const medievalSharp = MedievalSharp({ subsets: ['latin'],weight: '400' })
 
 const EventComponent = (props: { imageSrc: string, title: string, description: string }) => {
   return (
-    <article className='group overflow-hidden rounded-[2rem] border border-[#d6e3af] bg-[#f7f9e8] shadow-[0_16px_40px_rgba(18,42,2,0.14)] transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(18,42,2,0.18)]'>
+    <article className='group overflow-hidden rounded-[2rem] border border-[#d6e3af] bg-[#ffffff] shadow-[0_16px_40px_rgba(18,42,2,0.14)] transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(18,42,2,0.18)]'>
       <div className='grid gap-0 lg:grid-cols-[1.05fr_0.95fr]'>
         <div className='flex flex-col justify-between gap-6 p-6 sm:p-8 lg:p-10'>
           <div className='space-y-4'>
             
-            <p className={`${medievalSharp.className} text-3xl leading-tight text-[#093405] sm:text-4xl lg:text-5xl`}>{props.title}</p>
-            <p className='max-w-xl text-base leading-7 text-[#385328] sm:text-lg'>{props.description}</p>
+            <p className={`${medievalSharp.className} text-3xl leading-tight text-black sm:text-4xl lg:text-5xl`}>{props.title}</p>
+            <p className='max-w-xl text-base leading-7 text-black sm:text-lg'>{props.description}</p>
           </div>
 
           <div className='flex flex-wrap gap-3'>

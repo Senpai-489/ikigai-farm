@@ -20,7 +20,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Background Video */}
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -28,10 +28,18 @@ const HeroSection = () => {
         className="absolute inset-0 -z-20 h-full w-full object-cover"
       >
         <source src="/bg-vid.mp4" type="video/mp4" />
-      </video>
+      </video> */}
+      <Image
+        src="/bg img.jpeg"
+        alt="background placeholder"
+        width={1200}
+        height={600}
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        priority
+      />
 
       {/* Overlay */}
-      <div className="absolute inset-0 -z-10 bg-black/40"></div>
+      {/* <div className="absolute inset-0 -z-10 bg-black/40"></div> */}
 
       {/* Main Content */}
       <div className="relative flex min-h-screen flex-col items-center justify-center px-6 py-10">
@@ -55,22 +63,22 @@ const HeroSection = () => {
           <div className="hidden h-72 border-l-2 border-[#535352] lg:block"></div>
 
           {/* Text */}
-          <div className="flex flex-col items-center text-center text-[#fff4b8] drop-shadow-[4px_4px_2px_rgba(0,0,0,0.8)]">
+          <div className="flex flex-col items-center text-center text-black drop-shadow-[1px_4px_4px_rgba(0,0,0,0.8)]">
             
             <h1
-              className={`${noto_Serif_JP.className} text-5xl font-bold sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl`}
+              className={`${noto_Serif_JP.className} text-7xl font-bold sm:text-8xl md:text-8xl lg:text-8xl xl:text-8xl`}
             >
               ikigai<span className="text-[#e53131]">.</span>
             </h1>
 
             <h1
-              className={`${noto_Serif_JP.className} text-5xl font-bold sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl`}
+              className={`${noto_Serif_JP.className} text-7xl text-center -translate-x-2 font-bold sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl`}
             >
               farm
             </h1>
 
             <p
-              className={`${lovers_Quarrel.className} mt-4 text-4xl text-white sm:text-5xl md:text-6xl lg:text-7xl`}
+              className={`${noto_Serif_JP.className} mt-4 text-2xl text-black sm:text-5xl md:text-6xl lg:text-7xl`}
             >
               "a reason for being"
             </p>
@@ -78,12 +86,13 @@ const HeroSection = () => {
 
           {/* Japanese Text */}
           <div
-            className={`${noto_Serif_JP.className} hidden flex-col gap-4 text-2xl text-[#fff4b8] md:flex lg:text-4xl`}
+            className={`${noto_Serif_JP.className} hidden flex-col items-center gap-4 text-2xl text-blac md:flex lg:text-4xl`}
           >
             <p>生</p>
             <p>き</p>
             <p>甲</p>
             <p>斐</p>
+            <Image src="/japanesetext.png" alt="japanese text" width={50} height={50} className="h-auto" />
           </div>
         </div>
 

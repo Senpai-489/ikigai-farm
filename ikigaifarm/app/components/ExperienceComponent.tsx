@@ -48,20 +48,7 @@ const EventComponent = (props: {
         </p>
 
         {/* BUTTONS */}
-        <div className="flex flex-wrap gap-3">
-          
-          <Link href="/Contact">
-            <button className="rounded-full bg-[#122a02] px-5 py-3 text-sm font-medium text-amber-100 transition-all duration-300 hover:scale-105 hover:bg-[#1f3c07]">
-              Enquire Now
-            </button>
-          </Link>
-
-          <Link href="/Download-Brochure">
-            <button className="rounded-full border border-[#122a02] px-5 py-3 text-sm font-medium text-[#122a02] transition-all duration-300 hover:bg-[#122a02] hover:text-amber-100">
-              Download Brochure
-            </button>
-          </Link>
-        </div>
+        
       </div>
     </article>
   )

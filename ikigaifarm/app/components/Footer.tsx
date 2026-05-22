@@ -20,6 +20,7 @@ const Footer = () => {
               <li><Link href='/' className='hover:text-white'>Blog</Link></li>
               <li><Link href='/' className='hover:text-white'>Group Bookings</Link></li>
               <li><Link href='/' className='hover:text-white'>Refund Policy</Link></li>
+              <li><Link href='/Contact' className='hover:text-white'>Contact Us</Link></li>
             </ul>
           </div>
 
@@ -39,9 +40,15 @@ const Footer = () => {
           <div>
             <h4 className='mb-3 font-semibold'>Contact</h4>
             <ul className='text-sm text-gray-300 space-y-2'>
-              <li className='flex items-start gap-2'><MapPin size={18} className='mt-0.5 shrink-0' /> <span>Rajgarh Farms, Bandh Rd, Nagla Nagli, Sector 134, Noida, Uttar Pradesh 201304, India</span></li>
-              <li className='flex items-center gap-2'><Phone size={14} />+91 8006746390</li>
-              <li className='flex items-center gap-2'><Mail size={14} /> hello@ikigai.farm</li>
+             <a href="https://www.google.com/maps/place/Rajgarh+Farms,+Noida/@28.4928832,77.3717662,17z/data=!4m6!3m5!1s0x390ce791c95d1485:0xb367fe11eaf90f92!8m2!3d28.4928832!4d77.3717662!16s%2Fg%2F11fj3mkph2?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                <li className='flex items-start gap-2'><MapPin size={18} className='mt-0.5 shrink-0' /> <span>Rajgarh Farms, Bandh Rd, Nagla Nagli, Sector 134, Noida, Uttar Pradesh 201304, India</span></li>
+              </a>
+              <a href="tel:+918006746390">
+                <li className='flex items-center gap-2'><Phone size={14} />+91 8006746390</li>
+              </a>
+              <a href="mailto:bookings@ikigaifarm.org">
+                <li className='flex items-center gap-2'><Mail size={14} /> bookings@ikigaifarm.org</li>
+              </a>
             </ul>
           </div>
         </div>

@@ -27,31 +27,31 @@ const medievalSharp = MedievalSharp({
 
 const Cards = [
   {
-    imageSrc: '/placeholder.webp',
+    imageSrc: '/KidsFood.jpeg',
     title: 'Kids Celebrations',
     description:
       'Tiny tummies, big celebrations! Curated for little foodies.',
   },
   {
-    imageSrc: '/placeholder.webp',
+    imageSrc: '/CorporateFood.jpeg',
     title: 'Corporate Party',
     description:
       'Corporate, But Make It Memorable.Beyond Boardrooms. Into Experiences.Celebrate Success, The Ikigai Way.Fresh Air. Fresh Ideas. Better Gatherings.',
   },
   {
-    imageSrc: '/placeholder.webp',
+    imageSrc: '/WeekendFood.jpeg',
     title: 'Weekend Brunches',
     description:
       'Slow Mornings. Beautiful Brunches Where Weekends Taste Better.Brunches Worth Lingering Over.Your Weekend Ritual, Reimagined.',
   },
   {
-    imageSrc: '/placeholder.webp',
+    imageSrc: '/FarmToTable.jpeg',
     title: 'Farm to Table',
     description:
       'From Our Farm To Your Table.Freshly Harvested. Thoughtfully Served.From Soil To Celebration.The Art Of Fresh, Farm-Led Dining.',
   },
   {
-    imageSrc: '/placeholder.webp',
+    imageSrc: '/SundownTable.jpeg',
     title: 'Sundown Table',
     description:
       'Interactive culinary stations where the art of cooking becomes part of the celebration.',
@@ -63,7 +63,7 @@ const page = () => {
     <div>
       
       {/* HERO */}
-      <div className="relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent">
+      <div className="relative flex min-h-[70vh] flex-col items-center overflow-hidden bg-transparent sm:min-h-screen">
         
         <Navbar />
 
@@ -73,14 +73,14 @@ const page = () => {
           alt="food placeholder"
           width={1200}
           height={600}
-          className="absolute -z-20 h-full w-full object-cover"
+          className="absolute -z-20 h-full w-full object-cover sm:h-72 lg:h-full"
         />
 
         {/* Overlay */}
         <div className="absolute inset-0 -z-10 bg-radial from-[#000000]/80 to-[#02160a]" />
 
         {/* Hero Content */}
-        <div className="flex flex-col items-center px-4 pt-24 pb-16 text-center sm:px-6 md:px-10 lg:px-16">
+        <div className="flex flex-col items-center px-4 pt-20 pb-12 text-center sm:px-6 sm:pt-24 sm:pb-16 md:px-10 lg:px-16">
           
           <h1
             className={`text-4xl text-white sm:text-5xl md:text-6xl lg:text-7xl ${notoSerifJP.className}`}
@@ -124,7 +124,7 @@ const page = () => {
             Book your Spot at our interactive kitchen today!
           </p>
 
-          <Link href="/GroupBookings" className="mt-8">
+          <Link href="/Contact" className="mt-8">
             <button className="rounded-full bg-[#122a02] px-6 py-3 text-sm font-medium text-amber-100 transition-colors duration-300 hover:bg-[#1f3c07] sm:px-8 sm:py-4 sm:text-base">
               Book My Spot
             </button>

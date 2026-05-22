@@ -7,38 +7,38 @@ import Link from 'next/link'
 const medievalSharp = MedievalSharp({ subsets: ['latin'], weight: '400' })
 const Cards = [
     {
-        imageSrc: '/placeholder.webp',
+        imageSrc: '/KidsParty.jpeg',
         title: 'Kids Birthday Parties',
-        description: 'Make their milestone feel extraordinary and memories unforgettable—mountain-side adventures, rustic games, and farm-to-table treats.'
+        description: 'Celebrate your child’s special day with a fun-filled farm birthday party, complete with games, activities, and delicious treats.'
     },
     {
-        imageSrc: '/placeholder.webp',
+        imageSrc: '/CorporateParty.jpeg',
         title: 'Corporate Events',
         description: 'Strengthen bonds and boost morale with our unique team-building experiences, set against the backdrop of our serene farm.'
     },
     {
-        imageSrc: '/placeholder.webp',
+        imageSrc: '/FarmWedding.jpeg',
         title: 'Farm Weddings',
         description: 'Celebrate your love story in a rustic-chic setting, surrounded by nature’s beauty and the warmth of our farm.'
     },
     {
-        imageSrc: '/placeholder.webp',
+        imageSrc: '/FamilyReunion.jpeg',
         title: 'Family Reunions',
         description: 'Reconnect with loved ones in a picturesque farm setting, filled with fun activities, delicious food, and cherished moments.'
     }
 ]
 const page = () => {
   return (
-        <main className='min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#fbfdf1_0%,#eef4db_100%)]'>
+        <main className='min-h-screen overflow-x-hidden bg-white '>
         <Navbar />
                 <section className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16'>
                     <div className='mb-10 max-w-3xl space-y-4'>
-                        <p className='text-sm font-semibold uppercase tracking-[0.3em] text-[#35510f]'>Events</p>
-                        <h1 className={`text-4xl font-semibold text-[#093405] sm:text-5xl ${medievalSharp.className}`}>Thoughtfully designed gatherings for every kind of celebration</h1>
-                        <p className='text-base leading-7 text-[#4b5d35] sm:text-lg'>Choose from intimate birthday parties, corporate retreats, and wedding experiences, all shaped around nature, food, and open-air adventure.</p>
+                        <p className='text-sm font-semibold uppercase tracking-[0.3em] text-black'>Events</p>
+                        <h1 className={`text-4xl font-semibold text-black sm:text-5xl`}>Thoughtfully designed gatherings for every kind of celebration</h1>
+                        <p className='text-base leading-7 text-black sm:text-lg'>Choose from intimate birthday parties, corporate retreats, and wedding experiences, all shaped around nature, food, and open-air adventure.</p>
                     </div>
 
-                    <div className='grid gap-8 lg:grid-cols-1'>
+                    <div className='grid gap-8 lg:grid-cols-2'>
                         {Cards.map((card) => (
                             <EventComponent key={card.title} imageSrc={card.imageSrc} title={card.title} description={card.description} />
                         ))}

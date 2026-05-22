@@ -11,16 +11,29 @@ const ActivitiesHomeSection = () => {
   const tlRef = useRef<any>(null)
 
   // using the same image repeated for now; replace with distinct desktop images when available
-  const images = Array.from({ length: 8 }).map(() => '/Activity1.webp')
+  const images = [
+    "/beltCarousel2.jpeg",
+    "/beltCarousel3.jpeg",
+    "/beltCarousel4.jpeg",
+    "/beltCarousel5.jpeg",
+    "/beltCarousel1.jpeg",
+    "/beltCarousel6.jpeg",
+    "/beltCarousel7.jpeg",
+    "/beltCarousel8.jpeg",
+    "/beltCarousel9.jpeg",
+    "/beltCarousel10.jpeg",
+    "/beltCarousel11.jpeg",
+    "/beltCarousel12.jpeg",
+  ]
 
   useEffect(() => {
     const track = trackRef.current
     if (!track) return
 
     // width of one set (we render images twice), so half of track width
-    let totalWidth = track.getBoundingClientRect().width / 2
-    const pxPerSec = 120
-    let duration = Math.max(8, totalWidth / pxPerSec)
+    let totalWidth = track.getBoundingClientRect().width * 32
+    const pxPerSec = 180
+    let duration = 32
 
     gsap.set(track, { x: 0 })
     tlRef.current = gsap.to(track, { x: -totalWidth, duration, ease: 'none', repeat: -1 })
@@ -34,8 +47,8 @@ const ActivitiesHomeSection = () => {
     const ro = new ResizeObserver(() => {
       if (!track) return
       gsap.killTweensOf(track)
-      totalWidth = track.getBoundingClientRect().width / 2
-      duration = Math.max(8, totalWidth / pxPerSec)
+      totalWidth = track.getBoundingClientRect().width * 32
+      duration = 32
       gsap.set(track, { x: 0 })
       tlRef.current = gsap.to(track, { x: -totalWidth, duration, ease: 'none', repeat: -1 })
     })
@@ -54,10 +67,10 @@ const ActivitiesHomeSection = () => {
       <h1 className={`text-5xl text-center items-center text-[#123413] mt-20 mb-12 ${medieval_Sharp.className}`}>40+ Real Thrilling Adventure Activities</h1>
 
       <div className="overflow-hidden w-[110vw] rotate-3 bg-[#1e2e1f] py-8">
-        <div ref={trackRef} className="flex items-center gap-6 will-change-transform">
+        <div ref={trackRef} className="flex items-center w-42 h-72 gap-6 will-change-transform">
           {images.concat(images).map((src, i) => (
             <div key={i} className="shrink-0 px-3">
-              <Image src={src} alt={`activity-${i}`} width={400} height={300} className="rounded-lg hover:scale-105 duration-300 cursor-pointer object-cover" />
+              <Image src={src} alt={`activity-${i}`} width={400} height={300} className="rounded-lg h-68 hover:scale-105 duration-300 cursor-pointer object-cover" />
             </div>
           ))}
         </div>

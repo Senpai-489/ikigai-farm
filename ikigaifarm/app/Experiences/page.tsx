@@ -2,20 +2,14 @@ import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Link from 'next/link'
+import ExperienceComponent from '../components/ExperienceComponent'
 import {
   Noto_Serif_JP,
   Lovers_Quarrel,
   MedievalSharp,
 } from 'next/font/google'
 
-import {
-  BookOpenCheck,
-  UtensilsCrossed,
-  UsersRound,
-  Sprout,
-  Trees,
-  Smile,
-} from 'lucide-react'
+
 
 import ImageSlider3D from '../components/lightswind/3d-image-slider'
 
@@ -38,37 +32,37 @@ const experienceHighlights = [
     title: 'Sustainable Celebrations',
     description:
       'Eco-friendly decorations, organic catering, and zero-waste practices make your celebration environmentally responsible.',
-    Icon: Trees,
+    imageSrc: '/bachche.jpeg',
   },
   {
     title: 'Nature Based Activities',
     description:
       'Unique activities like farm tours, animal interactions, vegetable picking, and nature games for all ages.',
-    Icon: Sprout,
+    imageSrc: '/beltCarousel8.jpeg',
   },
   {
     title: 'Farm to Fork Dining',
     description:
       'Fresh, organic meals prepared from ingredients grown right on our farm, ensuring the highest quality and taste.',
-    Icon: UtensilsCrossed,
+    imageSrc: '/FarmToTable.jpeg',
   },
   {
     title: 'Personalized Experiences',
     description:
       'Customized decorations, themes, and activities tailored to your specific celebration and preferences.',
-    Icon: UsersRound,
+    imageSrc: '/SundownTable.jpeg',
   },
   {
     title: 'Memorable Moments',
     description:
       'Professional photography, unique backdrops, and unforgettable experiences that create lasting memories.',
-    Icon: BookOpenCheck,
+    imageSrc: '/beltCarousel2.jpeg',
   },
   {
     title: 'Beautiful venue',
     description:
       'Lush green gardens, scenic landscapes, and natural beauty provide the perfect backdrop for any celebration.',
-    Icon: Smile,
+    imageSrc:'/beltCarousel10.jpeg',
   },
 ]
 
@@ -80,91 +74,77 @@ const page = () => {
         <Navbar />
 
         {/* Background */}
-        <Image
+        {/* <Image
           src={'/Team building.webp'}
           alt="team placeholder"
           width={1200}
           height={600}
           className="absolute -z-20 h-full w-full object-cover"
-        />
+        /> */}
 
         {/* Overlay */}
-        <div className="absolute inset-0 -z-10 bg-radial from-[#000000]/80 to-[#02160a]" />
+        {/* <div className="absolute inset-0 -z-10 bg-radial from-[#000000]/80 to-[#02160a]" /> */}
 
         {/* Hero */}
-        <div className="flex flex-col items-center px-4 pt-24 text-center sm:px-6 md:px-10">
+        <div className="flex flex-col -translate-y-12 items-center px-4 pt-24 text-center sm:px-6 md:px-10">
           
           <h1
-            className={`text-4xl text-white sm:text-5xl md:text-6xl lg:text-7xl ${medievalSharp.className}`}
+            className={` text-black text-5xl sm:text-xl md:text-7xl lg:text-8xl ${medievalSharp.className}`}
           >
             Our Philosophy
           </h1>
 
           <h2
-            className={`mt-3 text-4xl text-white sm:text-5xl md:text-6xl ${loversQuarrel.className}`}
+            className={`mt-3  t0ext-black sm:text-xl md:text-2xl ${notoSerifJP.className}`}
           >
             "The Ikigai Experience"
           </h2>
         </div>
 
         {/* Slider */}
-        <div className="relative mt-8 w-full overflow-hidden">
+        <div className="relative -translate-y-32 w-full overflow-hidden">
           <ImageSlider3D
             containerClassName="relative w-[130vw] sm:w-[120vw] lg:w-[110vw]"
             images={[
-              '/Activity1.webp',
-              '/A reason img.webp',
-              '/bgact.webp',
-              '/food placeholder.webp',
-              '/Activity1.webp',
-              '/A reason img.webp',
-              '/placeholder.webp',
-              '/food placeholder.webp',
-              '/Activity1.webp',
-              '/A reason img.webp',
-              '/bgact.webp',
-              '/food placeholder.webp',
-              '/A reason img.webp',
-              '/bgact.webp',
-              '/food placeholder.webp',
+             '/3dCarousel1.jpeg',
+             '/3dCarousel2.jpeg',
+             'Archery.jpeg',
+             'KidsFood.jpeg',
+             'KidsTrain.jpeg',
+             'Trampoline.jpeg',
+             'CamelRide.jpeg',
+             'Food1.jpeg',
+             'ATV2.jpeg',
+             'beltCarousel1.jpeg',
+             'beltCarousel4.jpeg',
+             'CorporateFood.jpeg',
+             'zipline2.jpeg',
+
             ]}
           />
         </div>
 
         {/* Highlights */}
-        <section className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
+        <section className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-16  sm:px-6 lg:px-8">
           
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto -translate-y-40 max-w-3xl text-center">
             <p
-              className={`text-lg uppercase tracking-[0.25em] text-[#fff7c0] sm:text-xl md:text-2xl ${notoSerifJP.className}`}
+              className={`text-lg uppercase tracking-[0.25em] text-black sm:text-xl md:text-2xl ${notoSerifJP.className}`}
             >
               What the experience includes
             </p>
           </div>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {experienceHighlights.map(
-              ({ title, description, Icon }) => (
-                <article
-                  key={title}
-                  className="rounded-3xl border border-white/10 bg-[#012d0b] p-6 text-white shadow-[0_24px_70px_rgba(0,0,0,0.25)] backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 hover:bg-black/40"
-                >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f8ffad]/15 text-[#f8ffad]">
-                    <Icon size={28} />
-                  </div>
-
-                  <h3
-                    className={`mt-5 text-xl sm:text-2xl ${notoSerifJP.className}`}
-                  >
-                    {title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-6 text-white/80 sm:text-base">
-                    {description}
-                  </p>
-                </article>
-              )
-            )}
+          <div className="mt-10 grid -translate-y-40 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {experienceHighlights.map(({ title, description, imageSrc }, index) => (
+              <ExperienceComponent
+                key={index}
+                title={title}
+                description={description}
+                imageSrc={imageSrc}
+              />
+            ))}
+            
           </div>
         </section>
 

@@ -37,7 +37,7 @@ const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${process.env.NEX
 
 const page = () => {
   return (
-    <div className="min-h-screen bg-[#f8f5eb]">
+    <div className="min-h-screen bg-white">
       
       <Navbar />
 
@@ -50,13 +50,13 @@ const page = () => {
         <div className="text-center">
           
           <h1
-            className={`text-5xl text-[#122a02] sm:text-6xl lg:text-7xl ${medievalSharp.className}`}
+            className={`text-5xl text-black sm:text-6xl lg:text-7xl ${medievalSharp.className}`}
           >
             Contact Us
           </h1>
 
           <p
-            className={`mt-4 text-4xl text-[#4f4a3d] sm:text-5xl ${loversQuarrel.className}`}
+            className={`mt-4 text-4xl text-black sm:text-5xl ${loversQuarrel.className}`}
           >
             Plan Your Visit, Event, or Enquiry
           </p>
@@ -77,7 +77,7 @@ const page = () => {
           <div className="rounded-4xl border border-[#122a02]/10 bg-white p-6 shadow-[0_24px_80px_rgba(18,42,2,0.10)] sm:p-8">
             
             <h2
-              className={`text-3xl text-[#122a02] ${medievalSharp.className}`}
+              className={`text-3xl text-black ${medievalSharp.className}`}
             >
               Send an Enquiry
             </h2>
@@ -162,7 +162,7 @@ const page = () => {
                 <div className="flex items-start gap-4">
                   <MapPin className="mt-1 text-[#fff4b8]" />
 
-                  <div>
+                  <a href="https://www.google.com/maps/place/Rajgarh+Farms,+Noida/@28.4928832,77.3717662,17z/data=!4m6!3m5!1s0x390ce791c95d1485:0xb367fe11eaf90f92!8m2!3d28.4928832!4d77.3717662!16s%2Fg%2F11fj3mkph2?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D">
                     <p className="text-sm uppercase tracking-[0.2em] text-[#fff4b8]/70">
                       Address
                     </p>
@@ -171,13 +171,13 @@ const page = () => {
                       Rajgarh Farms, Bandh Rd, Nagla Nagli, Sector 134, Noida, Uttar Pradesh 201304, India
                       
                     </p>
-                  </div>
+                  </a >
                 </div>
 
                 <div className="flex items-start gap-4">
                   <Phone className="mt-1 text-[#fff4b8]" />
 
-                  <div>
+                  <a href="tel:+918006746390">
                     <p className="text-sm uppercase tracking-[0.2em] text-[#fff4b8]/70">
                       Phone
                     </p>
@@ -185,21 +185,21 @@ const page = () => {
                     <p className="mt-1 text-sm text-white/85 sm:text-base">
                       +91 8006746390
                     </p>
-                  </div>
+                  </a>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <Mail className="mt-1 text-[#fff4b8]" />
 
-                  <div>
+                  <a href="mailto:bookings@ikigaifarm.org">
                     <p className="text-sm uppercase tracking-[0.2em] text-[#fff4b8]/70">
                       Email
                     </p>
 
                     <p className="mt-1 text-sm text-white/85 sm:text-base">
-                      hello@ikigaifarm.com
+                      bookings@ikigaifarm.org
                     </p>
-                  </div>
+                  </a>
                 </div>
 
               </div>
@@ -218,6 +218,14 @@ const page = () => {
                 src={mapSrc}
                 className="border-0"
               />
+              <a
+                href="https://www.google.com/maps/place/Rajgarh+Farms,+Noida/@28.4928832,77.3717662,17z/data=!4m6!3m5!1s0x390ce791c95d1485:0xb367fe11eaf90f92!8m2!3d28.4928832!4d77.3717662!16s%2Fg%2F11fj3mkph2?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center py-2 px-6 border border-[#122a02] rounded-lg text-sm font-medium text-[#122a02] underline hover:text-[#1f3c07]"
+              >
+                View on Google Maps
+              </a>
             </div>
           </div>
         </div>
