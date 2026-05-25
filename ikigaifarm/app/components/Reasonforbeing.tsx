@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import {
   Lovers_Quarrel,
   Noto_Sans_JP,
@@ -84,10 +85,10 @@ const Reasonforbeing = () => {
               Get a virtual tour
             </button>
 
-            <button className="flex items-center gap-3 rounded-full bg-[#262626] px-6 py-3 text-sm text-white transition duration-300 hover:scale-105 hover:bg-[#535352] sm:text-base">
+           <Link href="tel:+918006746390"> <button className="flex items-center gap-3 rounded-full bg-[#262626] px-6 py-3 text-sm text-white transition duration-300 hover:scale-105 hover:bg-[#535352] sm:text-base">
               <Phone className="text-amber-200" />
               Book your visit
-            </button>
+            </button> </Link>
           </div>
         </div>
       </div>

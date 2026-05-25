@@ -19,37 +19,37 @@ const loversQuarrel = Lovers_Quarrel({
 
 const Cards = [
   {
-    imageSrc: '/zipline.jpeg',
+    imageSrc: ['/zipline.jpeg'],
     title: 'Zipline',
     description:
       'Take the leap. Own the sky. Zipline into pure adventure. ',
   },
   {
-    imageSrc: '/Archery.jpeg',
+    imageSrc: ['/Archery.jpeg'],
     title: 'Archery',
     description:
       'Fun, focus, and friendly competition for all ages. Step into the exciting world of archery. ',
   },
   {
-    imageSrc: '/KidsTrain.jpeg',
+    imageSrc: ['/KidsTrain.jpeg'],
     title: 'Kids train',
     description:
       'All aboard for fun! Our kids train offers a delightful ride through the farm, sparking joy and wonder for little adventurers.',
   },
   {
-    imageSrc: '/Trampoline.jpeg',
+    imageSrc: ['/Trampoline.jpeg'],
     title: 'Trampoline',
     description:
       'Bounce into joy! Our trampoline is a fun-filled escape for all ages, offering endless laughter and a chance to soar high in the fresh farm air.',
   },
   {
-    imageSrc: '/CamelRidecpy.jpeg',
+    imageSrc: ['/CamelRidecpy.jpeg'],
     title: 'Camel Cart Ride',
     description:
       'Experience the thrill of a camel cart ride through the scenic farm landscape.',
   },
   {
-    imageSrc: '/beltCarousel1.jpeg',
+    imageSrc: ['/beltCarousel1.jpeg'],
     title: 'Bouncy',
     description:
       'Jump into joy! Our bouncy castle is a fun-filled escape for all ages, offering endless laughter and a chance to soar high in the fresh farm air.',

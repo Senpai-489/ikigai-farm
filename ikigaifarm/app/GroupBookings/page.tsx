@@ -1,9 +1,11 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Link from 'next/link'
+
 import {
   Noto_Serif_JP,
-  Lovers_Quarrel,
   MedievalSharp,
 } from 'next/font/google'
 
@@ -20,23 +22,244 @@ const notoSerifJP = Noto_Serif_JP({
   subsets: ['latin'],
 })
 
-const loversQuarrel = Lovers_Quarrel({
-  subsets: ['latin'],
-  weight: '400',
-})
-
 const medievalSharp = MedievalSharp({
   subsets: ['latin'],
   weight: '400',
 })
 
-const page = () => {
+const GOOGLE_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycby-K1MIjhjl5nyUBuPDa3J8rdzzfKB7mkxtJd1yEc0jZt7UahEfGPDsmMtlLAfNbiMI/exec'
+
+const Page = () => {
+  const [formData, setFormData] =
+    useState({
+      groupName: '',
+      contactPerson: '',
+      email: '',
+      phone: '',
+      participants: '',
+      preferredDate: '',
+      interest: '',
+      additionalDetails: '',
+    })
+
+  const [errors, setErrors] =
+    useState({
+      groupName: '',
+      contactPerson: '',
+      email: '',
+      phone: '',
+      participants: '',
+      preferredDate: '',
+      interest: '',
+      additionalDetails: '',
+    })
+
+  const [loading, setLoading] =
+    useState(false)
+
+  const [successMessage, setSuccessMessage] =
+    useState('')
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement |
+      HTMLTextAreaElement
+    >
+  ) => {
+    const { name, value } =
+      e.target
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
+
+  const validateForm = () => {
+    const newErrors = {
+      groupName: '',
+      contactPerson: '',
+      email: '',
+      phone: '',
+      participants: '',
+      preferredDate: '',
+      interest: '',
+      additionalDetails: '',
+    }
+
+    let isValid = true
+
+    // GROUP NAME
+    const groupNameRegex =
+      /^[A-Za-z0-9\s&.,'-]{2,100}$/
+
+    if (
+      !groupNameRegex.test(
+        formData.groupName.trim()
+      )
+    ) {
+      newErrors.groupName =
+        'Enter a valid group name'
+      isValid = false
+    }
+
+    // CONTACT PERSON
+    const personRegex =
+      /^[A-Za-z\s]{2,50}$/
+
+    if (
+      !personRegex.test(
+        formData.contactPerson.trim()
+      )
+    ) {
+      newErrors.contactPerson =
+        'Enter a valid contact person name'
+      isValid = false
+    }
+
+    // EMAIL
+    const emailRegex =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    if (
+      !emailRegex.test(
+        formData.email
+      )
+    ) {
+      newErrors.email =
+        'Enter a valid email'
+      isValid = false
+    }
+
+    // PHONE
+    const phoneRegex =
+      /^(?:\+91)?[6-9]\d{9}$/
+
+    if (
+      !phoneRegex.test(
+        formData.phone
+      )
+    ) {
+      newErrors.phone =
+        'Enter valid 10-digit Indian mobile number'
+      isValid = false
+    }
+
+    // PARTICIPANTS
+    if (
+      !formData.participants ||
+      Number(
+        formData.participants
+      ) <= 0
+    ) {
+      newErrors.participants =
+        'Participants must be greater than 0'
+      isValid = false
+    }
+
+    // DATE
+    if (
+      !formData.preferredDate
+    ) {
+      newErrors.preferredDate =
+        'Select preferred date'
+      isValid = false
+    }
+
+    // INTEREST
+    if (!formData.interest) {
+      newErrors.interest =
+        'Select an interest'
+      isValid = false
+    }
+
+    // DETAILS
+    if (
+      formData.additionalDetails
+        .trim()
+        .length < 10
+    ) {
+      newErrors.additionalDetails =
+        'Please enter at least 10 characters'
+      isValid = false
+    }
+
+    setErrors(newErrors)
+
+    return isValid
+  }
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault()
+
+    setSuccessMessage('')
+
+    if (!validateForm())
+      return
+
+    try {
+      setLoading(true)
+
+      await fetch(
+        GOOGLE_SCRIPT_URL,
+        {
+          method: 'POST',
+          mode: 'no-cors',
+          body: JSON.stringify(
+            formData
+          ),
+        }
+      )
+
+      setSuccessMessage(
+        'Enquiry submitted successfully.'
+      )
+
+      setTimeout(() => {
+        setSuccessMessage('')
+      }, 4000)
+
+      setFormData({
+        groupName: '',
+        contactPerson: '',
+        email: '',
+        phone: '',
+        participants: '',
+        preferredDate: '',
+        interest: '',
+        additionalDetails:
+          '',
+      })
+
+      setErrors({
+        groupName: '',
+        contactPerson: '',
+        email: '',
+        phone: '',
+        participants: '',
+        preferredDate: '',
+        interest: '',
+        additionalDetails:
+          '',
+      })
+    } catch (error) {
+      console.error(error)
+
+      alert(
+        'Something went wrong.'
+      )
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <div>
-      
       {/* HERO */}
       <div className="relative flex flex-col items-center overflow-hidden bg-white">
-        
         <Navbar />
 
         <Image
@@ -52,7 +275,6 @@ const page = () => {
 
         {/* Heading */}
         <div className="flex flex-col items-center px-4 pt-24 text-center sm:px-6 lg:px-8">
-          
           <h1
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl ${medievalSharp.className}`}
           >
@@ -60,30 +282,22 @@ const page = () => {
           </h1>
 
           <p
-            className={`mt-6 max-w-5xl text-center  leading-tight text-[#333] sm:text-sm md:text-xl lg:w-[60vw] lg:text-2xl ${notoSerifJP.className}`}
+            className={`mt-6 max-w-5xl text-center leading-tight text-[#333] sm:text-sm md:text-xl lg:w-[60vw] lg:text-2xl ${notoSerifJP.className}`}
           >
             From school groups
-            
             to corporate
-            
             retreats, we tailor
-            
             every journey to
-            
             your group's unique
-            
             purpose. Tell us
-            
             about your vision.
           </p>
         </div>
 
         {/* Pricing Cards */}
         <div className="relative mt-16 flex w-full flex-col items-center gap-8 px-4 pb-16 sm:px-6 lg:mt-24 lg:flex-row lg:items-stretch lg:justify-center lg:gap-12 lg:px-8">
-          
           {/* Kids */}
           <div className="flex w-full max-w-md flex-col gap-4 rounded-2xl bg-amber-100 p-6 sm:p-8 lg:p-12">
-            
             <Balloon size={48} />
 
             <h2
@@ -120,7 +334,10 @@ const page = () => {
               Food Included
             </p>
 
-            <Link href='/GroupBookings/#BookingForm' className='mx-auto block'>
+            <Link
+              href="/GroupBookings/#BookingForm"
+              className="mx-auto block"
+            >
               <button className="mt-4 rounded-full bg-[#122a02] px-6 py-3 text-sm font-medium text-amber-100 transition-colors duration-300 hover:bg-[#1f3c07]">
                 Book My Spot
               </button>
@@ -129,8 +346,10 @@ const page = () => {
 
           {/* Adults */}
           <div className="flex w-full max-w-md flex-col gap-4 rounded-2xl bg-[#122a02]/80 p-6 text-amber-100 sm:p-8 lg:p-12">
-            
-            <TreePalmIcon color="#fff4b8" size={48} />
+            <TreePalmIcon
+              color="#fff4b8"
+              size={48}
+            />
 
             <h2
               className={`text-3xl sm:text-4xl ${notoSerifJP.className}`}
@@ -166,7 +385,10 @@ const page = () => {
               Interactive Farm Workshops
             </p>
 
-            <Link href='/GroupBookings/#BookingForm' className='mx-auto block'>
+            <Link
+              href="/GroupBookings/#BookingForm"
+              className="mx-auto block"
+            >
               <button className="mt-4 rounded-full border border-amber-100 px-6 py-3 text-sm font-medium text-amber-100 transition-colors duration-300 hover:bg-[#1f3c07]">
                 Book My Spot
               </button>
@@ -177,12 +399,14 @@ const page = () => {
 
       {/* FORM */}
       <section className="mx-auto mt-10 w-full max-w-5xl px-4 pb-20 sm:px-6 lg:mt-16">
-        
-        <form id="BookingForm" className="rounded-[2rem] border border-[#122a02]/10 bg-[#fbf6e9] p-5 shadow-[0_24px_80px_rgba(18,42,2,0.14)] sm:p-8 md:p-10">
-          
-          {/* Header */}
+        <form
+          id="BookingForm"
+          onSubmit={
+            handleSubmit
+          }
+          className="rounded-[2rem] border border-[#122a02]/10 bg-[#fbf6e9] p-5 shadow-[0_24px_80px_rgba(18,42,2,0.14)] sm:p-8 md:p-10"
+        >
           <div className="mx-auto max-w-3xl text-center">
-            
             <p
               className={`text-xs uppercase tracking-[0.25em] text-[#6b5f3a] sm:text-sm ${notoSerifJP.className}`}
             >
@@ -190,180 +414,259 @@ const page = () => {
             </p>
 
             <label
-              htmlFor="group-name"
               className={`mt-3 block text-2xl leading-tight text-[#122a02] sm:text-3xl md:text-4xl ${medievalSharp.className}`}
             >
-              Have a vision for your group? Let&apos;s make it a reality together.
+              Have a vision for
+              your group?
+              Let&apos;s make it
+              a reality
+              together.
             </label>
-
-            <p className="mt-4 text-sm leading-6 text-[#4f4a3d] md:text-base">
-              Share a few details and we&apos;ll shape the visit around your group
-              size, goals, and pace.
-            </p>
           </div>
 
-          {/* Inputs */}
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            
-            <div className="space-y-2">
-              <label
-                htmlFor="group-name"
-                className="text-sm font-medium text-[#122a02]"
-              >
-                Group Name
-              </label>
-
+            {/* GROUP NAME */}
+            <div>
               <input
                 type="text"
-                id="group-name"
-                name="group-name"
-                placeholder="Enter your group name"
-                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4 text-sm text-[#122a02] shadow-sm transition duration-300 placeholder:text-[#8b856f] focus:border-[#122a02] focus:outline-none focus:ring-4 focus:ring-[#122a02]/10"
+                name="groupName"
+                value={
+                  formData.groupName
+                }
+                onChange={
+                  handleChange
+                }
+                placeholder="Group Name"
+                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4"
               />
+
+              {errors.groupName && (
+                <p className="mt-2 text-sm text-red-500">
+                  {
+                    errors.groupName
+                  }
+                </p>
+              )}
             </div>
 
-            <div className="space-y-2">
-              <label
-                htmlFor="contact-person"
-                className="text-sm font-medium text-[#122a02]"
-              >
-                Contact Person
-              </label>
-
+            {/* CONTACT PERSON */}
+            <div>
               <input
                 type="text"
-                id="contact-person"
-                name="contact-person"
-                placeholder="Enter contact person name"
-                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4 text-sm text-[#122a02] shadow-sm transition duration-300 placeholder:text-[#8b856f] focus:border-[#122a02] focus:outline-none focus:ring-4 focus:ring-[#122a02]/10"
+                name="contactPerson"
+                value={
+                  formData.contactPerson
+                }
+                onChange={
+                  handleChange
+                }
+                placeholder="Contact Person"
+                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4"
               />
+
+              {errors.contactPerson && (
+                <p className="mt-2 text-sm text-red-500">
+                  {
+                    errors.contactPerson
+                  }
+                </p>
+              )}
             </div>
 
-            <div className="space-y-2">
-              <label
-                htmlFor="contact-email"
-                className="text-sm font-medium text-[#122a02]"
-              >
-                Contact Email
-              </label>
-
+            {/* EMAIL */}
+            <div>
               <input
                 type="email"
-                id="contact-email"
-                name="contact-email"
-                placeholder="Enter contact email"
-                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4 text-sm text-[#122a02] shadow-sm transition duration-300 placeholder:text-[#8b856f] focus:border-[#122a02] focus:outline-none focus:ring-4 focus:ring-[#122a02]/10"
+                name="email"
+                value={
+                  formData.email
+                }
+                onChange={
+                  handleChange
+                }
+                placeholder="Email"
+                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4"
               />
+
+              {errors.email && (
+                <p className="mt-2 text-sm text-red-500">
+                  {
+                    errors.email
+                  }
+                </p>
+              )}
             </div>
 
-            <div className="space-y-2">
-              <label
-                htmlFor="contact-phone"
-                className="text-sm font-medium text-[#122a02]"
-              >
-                Contact Phone
-              </label>
-
+            {/* PHONE */}
+            <div>
               <input
                 type="tel"
-                id="contact-phone"
-                name="contact-phone"
-                placeholder="Enter contact phone"
-                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4 text-sm text-[#122a02] shadow-sm transition duration-300 placeholder:text-[#8b856f] focus:border-[#122a02] focus:outline-none focus:ring-4 focus:ring-[#122a02]/10"
+                name="phone"
+                value={
+                  formData.phone
+                }
+                onChange={
+                  handleChange
+                }
+                placeholder="Phone"
+                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4"
               />
+
+              {errors.phone && (
+                <p className="mt-2 text-sm text-red-500">
+                  {
+                    errors.phone
+                  }
+                </p>
+              )}
             </div>
 
-            <div className="space-y-2">
-              <label
-                htmlFor="participants"
-                className="text-sm font-medium text-[#122a02]"
-              >
-                Number of Participants
-              </label>
-
+            {/* PARTICIPANTS */}
+            <div>
               <input
                 type="number"
-                id="participants"
+                min="1"
                 name="participants"
-                placeholder="Enter number of participants"
-                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4 text-sm text-[#122a02] shadow-sm transition duration-300 placeholder:text-[#8b856f] focus:border-[#122a02] focus:outline-none focus:ring-4 focus:ring-[#122a02]/10"
+                value={
+                  formData.participants
+                }
+                onChange={
+                  handleChange
+                }
+                placeholder="Participants"
+                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4"
               />
+
+              {errors.participants && (
+                <p className="mt-2 text-sm text-red-500">
+                  {
+                    errors.participants
+                  }
+                </p>
+              )}
             </div>
 
-            <div className="space-y-2">
-              <label
-                htmlFor="preferred-date"
-                className="text-sm font-medium text-[#122a02]"
-              >
-                Preferred Date
-              </label>
-
+            {/* DATE */}
+            <div>
               <input
                 type="date"
-                id="preferred-date"
-                name="preferred-date"
-                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4 text-sm text-[#122a02] shadow-sm transition duration-300 focus:border-[#122a02] focus:outline-none focus:ring-4 focus:ring-[#122a02]/10"
+                min={
+                  new Date()
+                    .toISOString()
+                    .split(
+                      'T'
+                    )[0]
+                }
+                name="preferredDate"
+                value={
+                  formData.preferredDate
+                }
+                onChange={
+                  handleChange
+                }
+                className="w-full rounded-2xl border border-[#122a02]/15 bg-white px-5 py-4"
               />
+
+              {errors.preferredDate && (
+                <p className="mt-2 text-sm text-red-500">
+                  {
+                    errors.preferredDate
+                  }
+                </p>
+              )}
             </div>
           </div>
 
-          {/* Interests */}
-          <div className="mt-8 rounded-[1.75rem] border border-[#122a02]/10 bg-white/80 p-5 md:p-6">
-            
-            <p className="text-sm font-medium text-[#122a02]">
+          {/* INTEREST */}
+          <div className="mt-8">
+            <p className="mb-4 text-sm font-medium text-[#122a02]">
               Primary Interest
             </p>
 
-            <div className="mt-4 grid gap-3 md:grid-cols-2">
-              
+            <div className="grid gap-3 md:grid-cols-2">
               {[
                 'Team Building',
                 'Nature Education',
                 'Wellness/Meditation',
                 'Culinary Experience',
-              ].map((interest) => (
-                <label
-                  key={interest}
-                  className="flex cursor-pointer items-center gap-3 rounded-2xl border border-[#122a02]/10 bg-[#f8f5eb] px-4 py-3 text-sm text-[#122a02] transition hover:border-[#122a02]/30 hover:bg-[#f3eddc]"
-                >
-                  <input
-                    type="radio"
-                    name="interest"
-                    value={interest}
-                    className="h-4 w-4 accent-[#122a02]"
-                  />
+              ].map(
+                (interest) => (
+                  <label
+                    key={
+                      interest
+                    }
+                    className="flex cursor-pointer items-center gap-3 rounded-2xl border border-[#122a02]/10 bg-[#f8f5eb] px-4 py-3"
+                  >
+                    <input
+                      type="radio"
+                      name="interest"
+                      value={
+                        interest
+                      }
+                      checked={
+                        formData.interest ===
+                        interest
+                      }
+                      onChange={
+                        handleChange
+                      }
+                    />
 
-                  <span>{interest}</span>
-                </label>
-              ))}
+                    {interest}
+                  </label>
+                )
+              )}
             </div>
+
+            {errors.interest && (
+              <p className="mt-2 text-sm text-red-500">
+                {
+                  errors.interest
+                }
+              </p>
+            )}
           </div>
 
-          {/* Textarea */}
-          <div className="mt-8 space-y-2">
-            
-            <label
-              htmlFor="additional-details"
-              className="text-sm font-medium text-[#122a02]"
-            >
-              Additional Details
-            </label>
-
+          {/* TEXTAREA */}
+          <div className="mt-8">
             <textarea
-              id="additional-details"
-              name="additional-details"
-              placeholder="Let us know about accessibility needs, specific goals, or food allergies..."
-              className="h-36 w-full resize-none rounded-3xl border border-[#122a02]/15 bg-white px-5 py-4 text-sm text-[#122a02] shadow-sm transition duration-300 placeholder:text-[#8b856f] focus:border-[#122a02] focus:outline-none focus:ring-4 focus:ring-[#122a02]/10"
+              name="additionalDetails"
+              value={
+                formData.additionalDetails
+              }
+              onChange={
+                handleChange
+              }
+              placeholder="Additional Details"
+              className="mt-8 h-36 w-full rounded-3xl border border-[#122a02]/15 bg-white px-5 py-4"
             />
+
+            {errors.additionalDetails && (
+              <p className="mt-2 text-sm text-red-500">
+                {
+                  errors.additionalDetails
+                }
+              </p>
+            )}
           </div>
 
-          {/* Submit */}
           <button
             type="submit"
-            className="mt-8 flex w-full items-center justify-center rounded-full bg-[#122a02] px-6 py-4 text-sm font-medium text-amber-100 shadow-lg shadow-[#122a02]/20 transition duration-300 hover:-translate-y-0.5 hover:bg-[#1f3c07]"
+            disabled={loading}
+            className="mt-8 flex w-full items-center justify-center rounded-full bg-[#122a02] px-6 py-4 text-sm font-medium text-amber-100 disabled:cursor-not-allowed disabled:opacity-70"
           >
-            Submit Enquiry
+            {loading
+              ? 'Submitting...'
+              : 'Submit Enquiry'}
           </button>
+
+          {successMessage && (
+            <p className="mt-4 text-center text-green-600">
+              {
+                successMessage
+              }
+            </p>
+          )}
         </form>
       </section>
 
@@ -372,4 +675,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

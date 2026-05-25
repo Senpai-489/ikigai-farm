@@ -6,6 +6,7 @@ import ExperiencesHomeSection from "./components/ExperiencesHomeSection";
 import ActivitiesHomeSection from "./components/ActivitiesHomeSection";
 import LastHomeSection from "./components/LastHomeSection";
 import Footer from "./components/Footer";
+import FAQSection from "./components/FAQs";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ExperiencesHomeSection />
       <ActivitiesHomeSection />
       <LastHomeSection />
+      <FAQSection />
       <Footer />
     </main>
   );

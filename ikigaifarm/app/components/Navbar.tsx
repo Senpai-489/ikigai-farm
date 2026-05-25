@@ -116,7 +116,7 @@ const Navbar = () => {
                   ].map((item, index) => (
                     <Link
                       key={index}
-                      href="/Events"
+                      href={`/Events/#${item.title}`}
                       className="
                         group flex items-center gap-3
                         px-5 py-3

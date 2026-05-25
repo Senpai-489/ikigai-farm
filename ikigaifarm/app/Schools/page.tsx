@@ -1,9 +1,42 @@
+'use client'
 import { PhoneCallIcon } from "lucide-react"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import Link from "next/link"
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
+gsap.registerPlugin(ScrollTrigger)
 export default function SchoolFarmLandingPage() {
+
+  const statsRef = useRef<(HTMLParagraphElement | null)[]>([])
+
+useEffect(() => {
+  statsRef.current.forEach((el, index) => {
+    if (!el) return
+
+    const finalValue = stats[index].value
+    const number = parseInt(finalValue.replace(/\D/g, ''))
+    const suffix = finalValue.replace(/[0-9]/g, '')
+
+    const counter = { value: 0 }
+
+    gsap.to(counter, {
+      value: number,
+      duration: 2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        once: true,
+      },
+      onUpdate: () => {
+        el.innerText = `${Math.floor(counter.value)}${suffix}`
+      },
+    })
+  })
+}, [])
   const stats = [
     { value: '2000+', label: 'Students' },
     { value: '15+', label: 'Schools' },
@@ -100,14 +133,19 @@ export default function SchoolFarmLandingPage() {
       {/* STATS */}
       <section className="mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-4 rounded-[2rem] bg-white p-4 shadow-[0_24px_80px_rgba(0,0,0,0.08)] sm:grid-cols-4 sm:p-6">
-          {stats.map((stat) => (
+          {stats.map((stat, index) => (
             <div
               key={stat.label}
               className="rounded-2xl bg-[#f7f6f2] p-5 text-center"
             >
-              <p className="text-2xl font-black text-black sm:text-3xl">
-                {stat.value}
-              </p>
+             <p
+  ref={(el) => {
+    statsRef.current[index] = el
+  }}
+  className="text-2xl font-black text-black sm:text-3xl"
+>
+  0
+</p>
               <p className="mt-1 text-sm text-[#666]">{stat.label}</p>
             </div>
           ))}

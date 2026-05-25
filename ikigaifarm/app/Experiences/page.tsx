@@ -32,37 +32,37 @@ const experienceHighlights = [
     title: 'Sustainable Celebrations',
     description:
       'Eco-friendly decorations, organic catering, and zero-waste practices make your celebration environmentally responsible.',
-    imageSrc: '/bachche.jpeg',
+    imageSrc: ['/bachche.jpeg'],
   },
   {
     title: 'Nature Based Activities',
     description:
       'Unique activities like farm tours, animal interactions, vegetable picking, and nature games for all ages.',
-    imageSrc: '/beltCarousel8.jpeg',
+    imageSrc: ['/beltCarousel8.jpeg'],
   },
   {
     title: 'Farm to Fork Dining',
     description:
       'Fresh, organic meals prepared from ingredients grown right on our farm, ensuring the highest quality and taste.',
-    imageSrc: '/FarmToTable.jpeg',
+    imageSrc: ['/FarmToTable.jpeg'],
   },
   {
     title: 'Personalized Experiences',
     description:
       'Customized decorations, themes, and activities tailored to your specific celebration and preferences.',
-    imageSrc: '/SundownTable.jpeg',
+    imageSrc: ['/SundownTable.jpeg'],
   },
   {
     title: 'Memorable Moments',
     description:
       'Professional photography, unique backdrops, and unforgettable experiences that create lasting memories.',
-    imageSrc: '/beltCarousel2.jpeg',
+    imageSrc: ['/beltCarousel2.jpeg'],
   },
   {
     title: 'Beautiful venue',
     description:
       'Lush green gardens, scenic landscapes, and natural beauty provide the perfect backdrop for any celebration.',
-    imageSrc:'/beltCarousel10.jpeg',
+    imageSrc: ['/beltCarousel10.jpeg'],
   },
 ]
 

@@ -27,31 +27,31 @@ const medievalSharp = MedievalSharp({
 
 const Cards = [
   {
-    imageSrc: '/KidsFood.jpeg',
+    imageSrc: ['/KidsFood.jpeg'],
     title: 'Kids Celebrations',
     description:
       'Tiny tummies, big celebrations! Curated for little foodies.',
   },
   {
-    imageSrc: '/CorporateFood.jpeg',
+    imageSrc: ['/CorporateFood.jpeg'],
     title: 'Corporate Party',
     description:
       'Corporate, But Make It Memorable.Beyond Boardrooms. Into Experiences.Celebrate Success, The Ikigai Way.Fresh Air. Fresh Ideas. Better Gatherings.',
   },
   {
-    imageSrc: '/WeekendFood.jpeg',
+    imageSrc: ['/WeekendFood.jpeg'],
     title: 'Weekend Brunches',
     description:
       'Slow Mornings. Beautiful Brunches Where Weekends Taste Better.Brunches Worth Lingering Over.Your Weekend Ritual, Reimagined.',
   },
   {
-    imageSrc: '/FarmToTable.jpeg',
+    imageSrc: ['/FarmToTable.jpeg'],
     title: 'Farm to Table',
     description:
       'From Our Farm To Your Table.Freshly Harvested. Thoughtfully Served.From Soil To Celebration.The Art Of Fresh, Farm-Led Dining.',
   },
   {
-    imageSrc: '/SundownTable.jpeg',
+    imageSrc: ['/SundownTable.jpeg'],
     title: 'Sundown Table',
     description:
       'Interactive culinary stations where the art of cooking becomes part of the celebration.',

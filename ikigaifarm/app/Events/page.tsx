@@ -7,22 +7,22 @@ import Link from 'next/link'
 const medievalSharp = MedievalSharp({ subsets: ['latin'], weight: '400' })
 const Cards = [
     {
-        imageSrc: '/KidsParty.jpeg',
+        imageSrc: ['/KidsParty.jpeg','/CorporateParty.jpeg','/FarmWedding.jpeg','/FamilyReunion.jpeg'],
         title: 'Kids Birthday Parties',
         description: 'Celebrate your child’s special day with a fun-filled farm birthday party, complete with games, activities, and delicious treats.'
     },
     {
-        imageSrc: '/CorporateParty.jpeg',
+        imageSrc: ['/CorporateParty.jpeg'],
         title: 'Corporate Events',
         description: 'Strengthen bonds and boost morale with our unique team-building experiences, set against the backdrop of our serene farm.'
     },
     {
-        imageSrc: '/FarmWedding.jpeg',
+        imageSrc: ['/FarmWedding.jpeg'],
         title: 'Farm Weddings',
         description: 'Celebrate your love story in a rustic-chic setting, surrounded by nature’s beauty and the warmth of our farm.'
     },
     {
-        imageSrc: '/FamilyReunion.jpeg',
+        imageSrc: ['/FamilyReunion.jpeg'],
         title: 'Family Reunions',
         description: 'Reconnect with loved ones in a picturesque farm setting, filled with fun activities, delicious food, and cherished moments.'
     }

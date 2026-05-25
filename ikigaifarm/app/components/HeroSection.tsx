@@ -1,138 +1,90 @@
 'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { Noto_Serif_JP, Lovers_Quarrel } from 'next/font/google'
 import { Calendar1, GroupIcon } from 'lucide-react'
-import { MagneticButton } from "@/app/components/lightswind/magnetic-button"
-const noto_Serif_JP = Noto_Serif_JP({
-  subsets: ['latin'],
-  weight: '400',
-})
-
-const lovers_Quarrel = Lovers_Quarrel({
-  subsets: ['latin'],
-  weight: '400',
-})
+import { MagneticButton } from '@/app/components/lightswind/magnetic-button'
 
 const HeroSection = () => {
-    const router = useRouter(); 
+  const router = useRouter()
+
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
-      {/* Background Video */}
-      {/* <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
-      >
-        <source src="/bg-vid.mp4" type="video/mp4" />
-      </video> */}
-      <Image
-        src="/bg img.jpeg"
-        alt="background placeholder"
-        width={1200}
-        height={600}
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
-        priority
-      />
+    <section className=" w-full overflow-hidden">
 
-      {/* Overlay */}
-      {/* <div className="absolute inset-0 -z-10 bg-black/40"></div> */}
+      {/* Desktop Background */}
+      <div className=" hidden h-screen w-full md:block">
+        <Image
+          src="/heroLDS.png"
+          alt="Desktop Hero"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
 
-      {/* Main Content */}
-      <div className="relative flex min-h-screen flex-col items-center justify-center px-6 py-10">
-        
-        {/* Hero Top */}
-        <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:gap-14">
-          
-          {/* Logo */}
-          <div className="flex justify-center">
-            <Image
-              src="/logo1.png"
-              alt="ikigai farm"
-              width={400}
-              height={400}
-              className="h-auto w-[220px] sm:w-[280px] md:w-[340px] lg:w-[400px]"
-              priority
-            />
-          </div>
+      {/* Mobile Background */}
+      <div className="relative block w-full md:hidden">
+        <Image
+          src="/heroIMG.png"
+          alt="Mobile Hero"
+          width={800}
+          height={1400}
+          priority
+          className="h-auto w-full object-cover"
+        />
+      </div>
 
-          {/* Divider */}
-          <div className="hidden h-72 border-l-2 border-[#535352] lg:block"></div>
+      {/* Buttons Container */}
+      <div className="absolute bottom-0 -translate-y-54  sm:-translate-y-0  left-1/2 z-20 flex w-full -translate-x-1/2 flex-col items-center justify-center md:gap-5 px-12 flex-row  ">
 
-          {/* Text */}
-          <div className="flex flex-col items-center text-center text-black drop-shadow-[1px_4px_4px_rgba(0,0,0,0.8)]">
-            
-            <h1
-              className={`${noto_Serif_JP.className} text-7xl font-bold sm:text-8xl md:text-8xl lg:text-8xl xl:text-8xl`}
-            >
-              ikigai<span className="text-[#e53131]">.</span>
-            </h1>
+       
+       {/* Group Booking Button */}
+<MagneticButton
+  onClick={() => router.push('/GroupBookings')}
+  className="group relative flex w-full max-w-[290px] items-center justify-center overflow-hidden rounded-2xl border border-[#fff4b8]/20 bg-black/55 px-4 py-3 text-[#fff4b8] shadow-[0_8px_30px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-300 active:scale-95 sm:w-auto sm:max-w-none sm:rounded-full sm:bg-black/70 sm:px-7 sm:py-3 md:px-8 md:py-4 hover:border-[#fff4b8]/60 hover:shadow-[0_0_35px_rgba(255,244,184,0.25)]"
+>
 
-            <h1
-              className={`${noto_Serif_JP.className} text-7xl text-center -translate-x-2 font-bold sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl`}
-            >
-              farm
-            </h1>
-
-            <p
-              className={`${noto_Serif_JP.className} mt-4 text-2xl text-black sm:text-5xl md:text-6xl lg:text-7xl`}
-            >
-              "a reason for being"
-            </p>
-          </div>
-
-          {/* Japanese Text */}
-          <div
-            className={`${noto_Serif_JP.className} hidden flex-col items-center gap-4 text-2xl text-blac md:flex lg:text-4xl`}
-          >
-            <p>生</p>
-            <p>き</p>
-            <p>甲</p>
-            <p>斐</p>
-            <Image src="/japanesetext.png" alt="japanese text" width={50} height={50} className="h-auto" />
-          </div>
-        </div>
-
-        {/* Buttons */}
-        <div className="mt-12 flex w-full flex-col items-center justify-center gap-5 sm:flex-row sm:gap-8">
-          
-          <MagneticButton onClick={() => router.push('/GroupBookings')} className="group relative overflow-hidden rounded-full border border-[#fff4b8]/20 bg-black/70 px-7 py-3 text-[#fff4b8] shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-500 hover:scale-105 hover:border-[#fff4b8]/60 hover:shadow-[0_0_35px_rgba(255,244,184,0.25)] sm:px-8 sm:py-4">
-  
   {/* Glow */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#fff4b8]/0 via-[#fff4b8]/10 to-[#fff4b8]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+  <div className="absolute inset-0 bg-gradient-to-r from-[#fff4b8]/0 via-[#fff4b8]/10 to-[#fff4b8]/0 opacity-100 transition-opacity duration-500 sm:opacity-0 sm:group-hover:opacity-100" />
 
-  {/* Content */}
   <div className="relative z-10 flex items-center gap-3">
-    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fff4b8]/10 transition-all duration-300 group-hover:bg-[#fff4b8]">
-      <GroupIcon className="h-5 w-5 text-[#fff4b8] transition-colors duration-300 group-hover:text-black md:h-6 md:w-6" />
+
+    {/* Icon */}
+    <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#fff4b8]/10 bg-[#fff4b8]/10 backdrop-blur-md transition-all duration-300 group-hover:bg-[#fff4b8] sm:h-10 sm:w-10">
+      <GroupIcon className="h-4 w-4 text-[#fff4b8] transition-colors duration-300 group-hover:text-black sm:h-5 sm:w-5 md:h-6 md:w-6" />
     </div>
 
-    <span className="text-base font-medium tracking-wide sm:text-lg md:text-xl">
+    {/* Text */}
+    <span className="text-sm font-medium tracking-wide sm:text-base md:text-xl">
       Group Booking
     </span>
   </div>
 </MagneticButton>
 
-<MagneticButton onClick={() => router.push('/Events')} className="group relative overflow-hidden rounded-full border border-[#fff4b8]/20 bg-black/70 px-7 py-3 text-[#fff4b8] shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-500 hover:scale-105 hover:border-[#fff4b8]/60 hover:shadow-[0_0_35px_rgba(255,244,184,0.25)] sm:px-8 sm:py-4">
-  
-  {/* Glow */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#fff4b8]/0 via-[#fff4b8]/10 to-[#fff4b8]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+{/* Event Packages Button */}
+<MagneticButton
+  onClick={() => router.push('/Events')}
+  className="group relative flex w-full max-w-[290px] items-center justify-center overflow-hidden rounded-2xl border border-[#fff4b8]/20 bg-black/55 px-4 py-3 text-[#fff4b8] shadow-[0_8px_30px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-300 active:scale-95 sm:w-auto sm:max-w-none sm:rounded-full sm:bg-black/70 sm:px-7 sm:py-3 md:px-8 md:py-4 hover:border-[#fff4b8]/60 hover:shadow-[0_0_35px_rgba(255,244,184,0.25)]"
+>
 
-  {/* Content */}
+  {/* Glow */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#fff4b8]/0 via-[#fff4b8]/10 to-[#fff4b8]/0 opacity-100 transition-opacity duration-500 sm:opacity-0 sm:group-hover:opacity-100" />
+
   <div className="relative z-10 flex items-center gap-3">
-    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fff4b8]/10 transition-all duration-300 group-hover:bg-[#fff4b8]">
-      <Calendar1 className="h-5 w-5 text-[#fff4b8] transition-colors duration-300 group-hover:text-black md:h-6 md:w-6" />
+
+    {/* Icon */}
+    <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#fff4b8]/10 bg-[#fff4b8]/10 backdrop-blur-md transition-all duration-300 group-hover:bg-[#fff4b8] sm:h-10 sm:w-10">
+      <Calendar1 className="h-4 w-4 text-[#fff4b8] transition-colors duration-300 group-hover:text-black sm:h-5 sm:w-5 md:h-6 md:w-6" />
     </div>
 
-    <span className="text-base font-medium tracking-wide sm:text-lg md:text-xl">
+    {/* Text */}
+    <span className="text-sm font-medium tracking-wide sm:text-base md:text-xl">
       Event Packages
     </span>
   </div>
 </MagneticButton>
-        </div>
+
       </div>
     </section>
   )
