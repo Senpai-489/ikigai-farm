@@ -51,7 +51,7 @@ const faqs = [
     question:
       'How far is Ikigai Farm from Delhi NCR?',
     answer:
-      'Ikigai Farm is conveniently located near Noida and easily accessible from Delhi NCR for both day trips and group retreats.',
+      'Ikigai Farm is conveniently located near sector 134 Noida and easily accessible from Delhi NCR for both day trips and group retreats.',
   },
   {
     question:

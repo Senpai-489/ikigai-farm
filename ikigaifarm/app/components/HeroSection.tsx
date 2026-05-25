@@ -26,7 +26,7 @@ const HeroSection = () => {
       {/* Mobile Background */}
       <div className="relative block w-full md:hidden">
         <Image
-          src="/heroIMG.png"
+          src="/HeroIMG.png"
           alt="Mobile Hero"
           width={800}
           height={1400}
