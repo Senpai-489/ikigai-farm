@@ -98,6 +98,8 @@ const Navbar = () => {
                     'Corporate Events',
                     'Farm Weddings',
                     'Family Reunions',
+                    'Upcoming Workshops',
+                    'Signature Events'
                   ].map((title, index) => (
                     <Link
                       key={index}

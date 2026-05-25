@@ -69,7 +69,7 @@ const page = () => {
 
         {/* Background */}
         <Image
-          src={'/food placeholder.webp'}
+          src={'/FoodMenu.jpeg'}
           alt="food placeholder"
           width={1200}
           height={600}
@@ -77,7 +77,7 @@ const page = () => {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 -z-10 bg-radial from-[#000000]/80 to-[#02160a]" />
+        <div className="absolute inset-0 -z-10 bg-radial from-[#000000]/30 to-[#02160a]" />
 
         {/* Hero Content */}
         <div className="flex flex-col items-center px-4 pt-20 pb-12 text-center sm:px-6 sm:pt-24 sm:pb-16 md:px-10 lg:px-16">

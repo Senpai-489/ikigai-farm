@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, PhoneCallIcon } from 'lucide-react'
 import { MedievalSharp } from 'next/font/google'
 
 const medievalSharp = MedievalSharp({
@@ -113,9 +113,9 @@ const EventComponent = (props: {
             </button>
           </Link>
 
-          <Link href="/Download-Brochure">
+          <Link href="tel:+918006746390">
             <button className="rounded-full border border-[#122a02] px-5 py-3 text-sm font-medium text-[#122a02] transition-all duration-300 hover:bg-[#122a02] hover:text-amber-100">
-              Download Brochure
+             <PhoneCallIcon className="inline-block h-5 w-5 mr-1" />
             </button>
           </Link>
 

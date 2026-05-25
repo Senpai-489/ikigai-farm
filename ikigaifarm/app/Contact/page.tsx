@@ -320,7 +320,7 @@ const Page = () => {
                   onChange={
                     handleChange
                   }
-                  placeholder="Tell us about your visit, event, or enquiry..."
+                  placeholder="Tell us about your visit or event..."
                   className="h-40 w-full resize-none rounded-3xl border border-[#122a02]/15 bg-[#fdfdf8] px-5 py-4 text-sm text-[#122a02] shadow-sm transition duration-300 placeholder:text-[#8b856f] focus:border-[#122a02] focus:outline-none focus:ring-4 focus:ring-[#122a02]/10"
                 />
 
@@ -372,7 +372,7 @@ const Page = () => {
                     </p>
 
                     <p className="mt-1 text-sm leading-7 text-white/85 sm:text-base">
-                      Rajgarh Farms,
+                      Ikigai Farm,
                       Bandh Rd, Nagla
                       Nagli, Sector
                       134, Noida,
