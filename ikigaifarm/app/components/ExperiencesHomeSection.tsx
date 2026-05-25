@@ -1,10 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React from 'react'
 import { MedievalSharp } from 'next/font/google'
-import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
+
 const medievalSharp = MedievalSharp({
   subsets: ['latin'],
   weight: '400',
@@ -29,12 +29,6 @@ const experiences = [
 ]
 
 const ExperiencesHomeSection = () => {
-  const [activeCard, setActiveCard] = useState<number | null>(0)
-
-  const toggleCard = (index: number) => {
-    setActiveCard(activeCard === index ? null : index)
-  }
-
   return (
     <section className="relative overflow-hidden py-16 lg:py-24">
       
@@ -76,61 +70,38 @@ const ExperiencesHomeSection = () => {
         {/* Cards */}
         <div className="grid gap-6 lg:grid-cols-3">
           {experiences.map((item, index) => {
-            const isOpen = activeCard === index
-
             return (
               <div
                 key={index}
-                onClick={() => toggleCard(index)}
-                className={`group cursor-pointer rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 ${
-                  isOpen
-                    ? 'ring-2 ring-[#fff4b8]/50 shadow-2xl shadow-[#fff4b8]/10'
-                    : ''
-                }`}
+                className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:ring-2 hover:ring-[#fff4b8]/50 hover:shadow-2xl hover:shadow-[#fff4b8]/10"
               >
                 
-                {/* Top */}
-                <div className="flex items-start justify-between gap-4">
-                  <h1
-                    className={`${medievalSharp.className} text-3xl leading-tight text-[#fff4b8] drop-shadow-[3px_2px_0px_rgba(0,0,0,1)] sm:text-4xl lg:text-5xl`}
-                  >
-                    {item.title.split(' ').map((word, i) => (
-                      <span key={i}>
-                        {word}
-                        <br />
-                      </span>
-                    ))}
-                  </h1>
-
-                  <div
-                    className={`mt-2 rounded-full border border-white/20 p-2 text-white transition-transform duration-300 ${
-                      isOpen ? 'rotate-180' : ''
-                    }`}
-                  >
-                    <ChevronDown size={20} />
-                  </div>
-                </div>
-
-                {/* Reveal Content */}
-                <div
-                  className={`overflow-hidden transition-all duration-500 ${
-                    isOpen
-                      ? 'mt-8 max-h-60 opacity-100'
-                      : 'max-h-0 opacity-0'
-                  }`}
+                {/* Title */}
+                <h1
+                  className={`${medievalSharp.className} text-3xl leading-tight text-[#fff4b8] drop-shadow-[3px_2px_0px_rgba(0,0,0,1)] sm:text-4xl lg:text-5xl`}
                 >
-                  <div className="h-px w-full bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                  {item.title.split(' ').map((word, i) => (
+                    <span key={i}>
+                      {word}
+                      <br />
+                    </span>
+                  ))}
+                </h1>
 
-                  <p className="mt-6 text-base leading-relaxed text-white/85 sm:text-lg">
-                    {item.description}
-                  </p>
+                {/* Divider */}
+                <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
-                  <Link href="/Experiences">
-                    <button className="mt-8 rounded-full border border-[#fff4b8]/40 bg-[#fff4b8]/10 px-6 py-3 text-sm text-[#fff4b8] transition duration-300 hover:bg-[#fff4b8] hover:text-black sm:text-base">
-                      Explore Experience
-                    </button>
-                  </Link>
-                </div>
+                {/* Description */}
+                <p className="mt-6 text-base leading-relaxed text-white/85 sm:text-lg">
+                  {item.description}
+                </p>
+
+                {/* Button */}
+                <Link href="/Experiences">
+                  <button className="mt-8 rounded-full border border-[#fff4b8]/40 bg-[#fff4b8]/10 px-6 py-3 text-sm text-[#fff4b8] transition duration-300 hover:bg-[#fff4b8] hover:text-black sm:text-base">
+                    Explore Experience
+                  </button>
+                </Link>
               </div>
             )
           })}

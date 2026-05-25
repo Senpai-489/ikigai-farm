@@ -27,7 +27,7 @@ const medievalSharp = MedievalSharp({
 
 const Cards = [
   {
-    imageSrc: ['/KidsFood.jpeg'],
+    imageSrc: ['/KidsFood.jpeg','/CorporateFood.jpeg'],
     title: 'Kids Celebrations',
     description:
       'Tiny tummies, big celebrations! Curated for little foodies.',
@@ -89,7 +89,7 @@ const page = () => {
           </h1>
 
           <h2
-            className={`mt-4 text-4xl text-white sm:text-5xl md:text-6xl ${loversQuarrel.className}`}
+            className={`mt-4 text-2xl text-white sm:text-3xl md:text-4xl ${notoSerifJP.className}`}
           >
             "A harvest woven in nature&apos;s finest threads"
           </h2>

@@ -6,6 +6,7 @@ import Link from "next/link"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import ImageCarousel from "../components/ImgCarousel"
 
 gsap.registerPlugin(ScrollTrigger)
 export default function SchoolFarmLandingPage() {
@@ -263,10 +264,12 @@ useEffect(() => {
             </div>
 
             <div className="relative h-full min-h-[320px] lg:min-h-[700px]">
-              <img
-                src="/School2.jpeg"
-                alt="children at farm"
-                className="absolute inset-0 h-full w-full object-cover"
+              <ImageCarousel
+                images={[
+                  '/Schools1.jpeg',
+                  '/School2.jpeg',
+                  '/Schools3.jpeg',
+                ]}
               />
             </div>
           </div>

@@ -31,7 +31,7 @@ const mapQuery = encodeURIComponent(
 const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=${mapQuery}&zoom=16`
 
 const GOOGLE_SCRIPT_URL =
- 'https://script.google.com/macros/s/AKfycbzTl90yCHgU2yOdEWwoVTY90IwGXlqDl7Un1mzOtERPpHt4U-KyEC4fgqAGHLdLwSB3/exec'
+ 'https://script.google.com/macros/s/AKfycbzLCAR3xiCzovNz8mcnmJV21AKav1mzMsz1CUnAps1jHFK6lFsAA_hlc2KF0S8zJ1vz/exec'
 
 const Page = () => {
   const [formData, setFormData] =

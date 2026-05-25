@@ -28,7 +28,7 @@ const medievalSharp = MedievalSharp({
 })
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycby-K1MIjhjl5nyUBuPDa3J8rdzzfKB7mkxtJd1yEc0jZt7UahEfGPDsmMtlLAfNbiMI/exec'
+  'https://script.google.com/macros/s/AKfycbyM53wbCXFIe9s2VxvZ_IJdTjNR9uFm9yiDRFzmHyi4YJ5D9umuDRY0yhYP5PaR1Plb/exec'
 
 const Page = () => {
   const [formData, setFormData] =

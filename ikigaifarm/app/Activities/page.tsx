@@ -25,7 +25,7 @@ const Cards = [
       'Take the leap. Own the sky. Zipline into pure adventure. ',
   },
   {
-    imageSrc: ['/Archery.jpeg'],
+    imageSrc: ['/Archery3.jpeg','/Archery2.jpeg','/Archery1.jpeg'],
     title: 'Archery',
     description:
       'Fun, focus, and friendly competition for all ages. Step into the exciting world of archery. ',
