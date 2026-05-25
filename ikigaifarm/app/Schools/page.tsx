@@ -293,7 +293,7 @@ useEffect(() => {
               educational, and joyful experiences.
             </p>
 
-           <Link href="/Contact"><button className="mt-8 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#0f5e1f] transition duration-300 hover:scale-105 hover:bg-[#f3f3f3]">
+           <Link href="/GroupBookings"><button className="mt-8 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#0f5e1f] transition duration-300 hover:scale-105 hover:bg-[#f3f3f3]">
               Enquire Now
             </button></Link>
           </div>
