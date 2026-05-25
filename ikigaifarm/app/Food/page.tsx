@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import {
   Noto_Serif_JP,
-  Lovers_Quarrel,
   MedievalSharp,
 } from 'next/font/google'
 
@@ -13,11 +12,6 @@ import Link from 'next/link'
 
 const notoSerifJP = Noto_Serif_JP({
   subsets: ['latin'],
-})
-
-const loversQuarrel = Lovers_Quarrel({
-  subsets: ['latin'],
-  weight: '400',
 })
 
 const medievalSharp = MedievalSharp({
@@ -91,7 +85,7 @@ const page = () => {
           <h2
             className={`mt-4 text-2xl text-white sm:text-3xl md:text-4xl ${notoSerifJP.className}`}
           >
-            "A harvest woven in nature&apos;s finest threads"
+            &quot;A harvest woven in nature&apos;s finest threads&quot;
           </h2>
 
           <p

@@ -1,4 +1,4 @@
-// @ts-nocheck
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react';
 import React, { useState, useEffect, useRef, useCallback } from 'react';

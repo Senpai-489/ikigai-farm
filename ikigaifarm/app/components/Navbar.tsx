@@ -72,7 +72,7 @@ const Navbar = () => {
             <Link
               href="/Events"
               className={navLinkStyles}
-              prefetch
+              prefetch={false}
                >
               Events <MdArrowDropDown className="h-5 w-5" />
             </Link>
@@ -122,7 +122,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               className={navLinkStyles}
-              prefetch
+              prefetch={false}
             >
               {link.label}
             </Link>
@@ -134,11 +134,11 @@ const Navbar = () => {
           <Link href="/" className="shrink-0">
             <Image
               src="/logo1.png"
-              loading="eager"
-              priority
               alt="logo"
               width={120}
               height={120}
+              quality={65}
+              sizes="(min-width: 1024px) 13rem, (min-width: 768px) 10rem, 5rem"
               className="h-24 w-24 object-contain drop-shadow-[4px_4px_2px_rgba(0,0,0,1)] sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-52 lg:w-52"
             />
           </Link>
@@ -151,7 +151,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               className={navLinkStyles}
-              prefetch
+              prefetch={false}
             >
               {link.label}
             </Link>
@@ -166,11 +166,11 @@ const Navbar = () => {
         <Link href="/" className="shrink-0">
           <Image
             src="/logo1.png"
-            loading="eager"
-            priority
             alt="logo"
             width={120}
             height={120}
+            quality={65}
+            sizes="5rem"
             className="h-20 w-20 object-contain drop-shadow-[4px_4px_2px_rgba(0,0,0,1)]"
           />
         </Link>
@@ -208,7 +208,7 @@ const Navbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              prefetch
+              prefetch={false}
               onClick={() => setIsMenuOpen(false)}
               className="flex h-14 items-center justify-center rounded-2xl bg-[#111111] px-5 text-sm font-medium text-[#ffe494] transition-all duration-300 hover:bg-[#1f3c07]"
             >

@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import {
   Noto_Serif_JP,
-  Lovers_Quarrel,
 } from 'next/font/google'
 import Footer from '../components/Footer'
 import EventComponent from '../components/EventComponent'
@@ -10,11 +9,6 @@ import Image from 'next/image'
 
 const notoSerifJP = Noto_Serif_JP({
   subsets: ['latin'],
-})
-
-const loversQuarrel = Lovers_Quarrel({
-  subsets: ['latin'],
-  weight: '400',
 })
 
 const Cards = [
@@ -86,7 +80,7 @@ const page = () => {
           <h2
             className={`mt-3 text-center  sm:text-sm md:text-3xl ${notoSerifJP.className}`}
           >
-            "a reason for being"
+            &quot;a reason for being&quot;
           </h2>
 
           <p
@@ -95,7 +89,7 @@ const page = () => {
             Discover a world of unforgettable outdoor experiences at Ikigai Farm.
             From thrilling adventures to serene escapes, we offer a curated
             selection of activities that connect you with nature, foster meaningful
-            connections, and create lasting memories. Whether you're seeking
+            connections, and create lasting memories. Whether you&apos;re seeking
             team-building retreats, family-friendly fun, or unique celebrations,
             Ikigai Farm is your destination for authentic and enriching experiences.
           </p>

@@ -1,11 +1,9 @@
-import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Link from 'next/link'
 import ExperienceComponent from '../components/ExperienceComponent'
 import {
   Noto_Serif_JP,
-  Lovers_Quarrel,
   MedievalSharp,
 } from 'next/font/google'
 
@@ -15,11 +13,6 @@ import ImageSlider3D from '../components/lightswind/3d-image-slider'
 
 const notoSerifJP = Noto_Serif_JP({
   subsets: ['latin'],
-})
-
-const loversQuarrel = Lovers_Quarrel({
-  subsets: ['latin'],
-  weight: '400',
 })
 
 const medievalSharp = MedievalSharp({
@@ -97,7 +90,7 @@ const page = () => {
           <h2
             className={`mt-3  t0ext-black sm:text-xl md:text-2xl ${notoSerifJP.className}`}
           >
-            "The Ikigai Experience"
+            &quot;The Ikigai Experience&quot;
           </h2>
         </div>
 

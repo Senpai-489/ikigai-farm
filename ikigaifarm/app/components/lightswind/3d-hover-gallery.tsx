@@ -1,6 +1,5 @@
-// @ts-nocheck
 import React, { useRef, useEffect, useState } from "react";
-const cn = (...classes) => classes.filter(Boolean).join(" ");
+const cn = (...classes: Array<string | undefined>) => classes.filter(Boolean).join(" ");
 
 export interface ThreeDHoverGalleryProps {
   images?: string[];
@@ -47,8 +46,6 @@ export const ThreeDHoverGallery: React.FC<ThreeDHoverGalleryProps> = ({
   grayscaleStrength = 1,
   brightnessLevel = 0.5,
   activeWidth = 45, // Increased default for wider active item
-  rotationAngle = 35,
-  zDepth = 10, // Increased default for deeper Z-axis effect
   enableKeyboardNavigation = true,
   autoPlay = false,
   autoPlayDelay = 3000,

@@ -1,7 +1,7 @@
-// @ts-nocheck
+/* eslint-disable react-hooks/refs */
 "use client";
 
-import React, { useEffect, useRef, useState, useMemo } from "react";
+import React, { useCallback, useEffect, useRef, useState, useMemo } from "react";
 import { motion, AnimatePresence, useMotionValue, easeOut } from "framer-motion";
 import { cn } from "../../lib/utils"; // Assuming you have this utility for class names
 import { animate } from "framer-motion";
@@ -67,7 +67,6 @@ export function ThreeDImageRing({
   imageClassName,
   backgroundColor,
   draggable = true,
-  ease = "easeOut",
   mobileBreakpoint = 768,
   mobileScaleFactor = 0.8,
   inertiaPower = 0.8, // Default power for inertia
@@ -84,16 +83,14 @@ export function ThreeDImageRing({
   const velocity = useRef<number>(0); // To track drag velocity
 
   const [currentScale, setCurrentScale] = useState(1);
-  const [showImages, setShowImages] = useState(false);
-
   const angle = useMemo(() => 360 / images.length, [images.length]);
 
-  const getBgPos = (imageIndex: number, currentRot: number, scale: number) => {
+  const getBgPos = useCallback((imageIndex: number, currentRot: number, scale: number) => {
     const scaledImageDistance = imageDistance * scale;
     const effectiveRotation = currentRot - 180 - imageIndex * angle;
     const parallaxOffset = ((effectiveRotation % 360 + 360) % 360) / 360;
     return `${-(parallaxOffset * (scaledImageDistance / 1.5))}px 0px`;
-  };
+  }, [angle, imageDistance]);
 
   useEffect(() => {
     const unsubscribe = rotationY.on("change", (latestRotation) => {
@@ -109,7 +106,7 @@ export function ThreeDImageRing({
       currentRotationY.current = latestRotation;
     });
     return () => unsubscribe();
-  }, [rotationY, images.length, imageDistance, currentScale, angle]);
+  }, [rotationY, images.length, imageDistance, currentScale, angle, getBgPos]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -123,10 +120,6 @@ export function ThreeDImageRing({
 
     return () => window.removeEventListener("resize", handleResize);
   }, [mobileBreakpoint, mobileScaleFactor]);
-
-  useEffect(() => {
-    setShowImages(true);
-  }, []);
 
   const handleDragStart = (event: React.MouseEvent | React.TouchEvent) => {
     if (!draggable) return;
@@ -244,7 +237,7 @@ const handleDragEnd = () => {
           }}
         >
           <AnimatePresence>
-            {showImages && images.map((imageUrl, index) => (
+            {images.map((imageUrl, index) => (
               <motion.div
                 key={index}
                 className={cn(

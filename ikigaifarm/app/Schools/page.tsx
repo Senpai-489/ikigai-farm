@@ -1,105 +1,76 @@
-'use client'
 import { PhoneCallIcon } from "lucide-react"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import Link from "next/link"
-import { useEffect, useRef } from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import Image from "next/image"
 import ImageCarousel from "../components/ImgCarousel"
 
-gsap.registerPlugin(ScrollTrigger)
+const stats = [
+  { value: '2000+', label: 'Students' },
+  { value: '15+', label: 'Schools' },
+  { value: '10+', label: 'Acres' },
+  { value: '99%', label: 'Happy Visitors' },
+]
+
+const audience = [
+  {
+    title: 'Schools & Colleges',
+    items: [
+      'Primary & Secondary Schools',
+      'Colleges & Universities',
+      'International Schools',
+    ],
+  },
+  {
+    title: 'Organisations',
+    items: [
+      'Corporate Teams',
+      'NGOs & Foundations',
+      'Community Groups',
+    ],
+  },
+]
+
+const learnings = [
+  {
+    title: 'Food System Roots',
+    description:
+      'Understanding where food comes from and the ecosystems they rely on.',
+  },
+  {
+    title: 'Beyond the Classroom',
+    description: 'Outdoor experiential learning.',
+  },
+  {
+    title: 'Life Skills Building',
+    description: 'Imagination and creativity.',
+  },
+]
+
+const features = [
+  'Experimental learning in Noida',
+  'Nature camp for kids.',
+  'Healthy Eating for children',
+  'Fresh, organic farm-to-table lunch',
+  'options available.',
+  '20+ fun Adventure Activities',
+  'Organic Farm Delhi NCR',
+  'Organic farming and fun workshops',
+  'Kids Activities Noida',
+]
+
 export default function SchoolFarmLandingPage() {
-
-  const statsRef = useRef<(HTMLParagraphElement | null)[]>([])
-
-useEffect(() => {
-  statsRef.current.forEach((el, index) => {
-    if (!el) return
-
-    const finalValue = stats[index].value
-    const number = parseInt(finalValue.replace(/\D/g, ''))
-    const suffix = finalValue.replace(/[0-9]/g, '')
-
-    const counter = { value: 0 }
-
-    gsap.to(counter, {
-      value: number,
-      duration: 2,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 85%',
-        once: true,
-      },
-      onUpdate: () => {
-        el.innerText = `${Math.floor(counter.value)}${suffix}`
-      },
-    })
-  })
-}, [])
-  const stats = [
-    { value: '2000+', label: 'Students' },
-    { value: '15+', label: 'Schools' },
-    { value: '10+', label: 'Acres' },
-    { value: '99%', label: 'Happy Visitors' },
-  ]
-
-  const audience = [
-    {
-      title: 'Schools & Colleges',
-      items: [
-        'Primary & Secondary Schools',
-        'Colleges & Universities',
-        'International Schools',
-      ],
-    },
-    {
-      title: 'Organisations',
-      items: [
-        'Corporate Teams',
-        'NGOs & Foundations',
-        'Community Groups',
-      ],
-    },
-  ]
-
-  const learnings = [
-    {
-      title: 'Food System Roots',
-      description:
-        'Understanding where food comes from and the ecosystems they rely on.',
-    },
-    {
-      title: 'Beyond the Classroom',
-      description: 'Outdoor experiential learning.',
-    },
-    {
-      title: 'Life Skills Building',
-      description: 'Imagination and creativity.',
-    },
-  ]
-
-  const features = [
-    'Experimental learning in Noida',
-    'Nature camp for kids.',
-    'Healthy Eating for children',
-    'Fresh, organic farm-to-table lunch',
-    'options available.',
-    '20+ fun Adventure Activities',
-    'Organic Farm Delhi NCR',
-    'Organic farming and fun workshops',
-    'Kids Activities Noida',
-  ]
-
   return (
     <main className="min-h-screen bg-white text-[#222]">
       <Navbar />
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="School.jpeg"
+          <Image
+            src="/School.jpeg"
             alt="farm"
+            fill
+            priority
+            sizes="100vw"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black/60" />
@@ -134,19 +105,14 @@ useEffect(() => {
       {/* STATS */}
       <section className="mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-4 rounded-[2rem] bg-white p-4 shadow-[0_24px_80px_rgba(0,0,0,0.08)] sm:grid-cols-4 sm:p-6">
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div
               key={stat.label}
               className="rounded-2xl bg-[#f7f6f2] p-5 text-center"
             >
-             <p
-  ref={(el) => {
-    statsRef.current[index] = el
-  }}
-  className="text-2xl font-black text-black sm:text-3xl"
->
-  0
-</p>
+              <p className="text-2xl font-black text-black sm:text-3xl">
+                {stat.value}
+              </p>
               <p className="mt-1 text-sm text-[#666]">{stat.label}</p>
             </div>
           ))}

@@ -20,7 +20,7 @@ const LastHomeSection = () => {
   ]
 
   return (
-    <section className="relative overflow-hidden bg-white py-20">
+    <section className="relative overflow-hidden bg-white py-20 [content-visibility:auto] [contain-intrinsic-size:1000px]">
 
       {/* Background Blur */}
       <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#9dc56d]/20 blur-3xl" />
@@ -117,6 +117,8 @@ const LastHomeSection = () => {
                   alt="Camel Ride"
                   width={900}
                   height={700}
+                  quality={70}
+                  sizes="(min-width: 1024px) 38vw, 100vw"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
@@ -128,6 +130,8 @@ const LastHomeSection = () => {
                   alt="Archery"
                   width={400}
                   height={300}
+                  quality={70}
+                  sizes="(min-width: 1024px) 13vw, 33vw"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
@@ -139,6 +143,8 @@ const LastHomeSection = () => {
                   alt="ATV Ride"
                   width={400}
                   height={300}
+                  quality={70}
+                  sizes="(min-width: 1024px) 13vw, 33vw"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
@@ -171,6 +177,8 @@ const LastHomeSection = () => {
                     alt={item.alt}
                     width={400}
                     height={300}
+                    quality={70}
+                    sizes="(min-width: 1024px) 13vw, 33vw"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>

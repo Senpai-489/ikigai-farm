@@ -25,7 +25,7 @@ const medieval_Sharp = MedievalSharp({
 
 const Reasonforbeing = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-20">
+    <section className="relative w-full overflow-hidden bg-white py-20 [content-visibility:auto] [contain-intrinsic-size:760px]">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-20 px-6 lg:flex-row lg:px-12">
         
         {/* LEFT IMAGE STACK */}
@@ -44,6 +44,8 @@ const Reasonforbeing = () => {
             alt="reason for being"
             width={500}
             height={700}
+            quality={75}
+            sizes="(min-width: 1024px) 500px, 80vw"
             className="relative z-10 h-[300px] w-auto rotate-6 rounded-2xl object-cover shadow-2xl drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] sm:h-[420px] lg:h-[520px]"
           />
         </div>
@@ -55,7 +57,7 @@ const Reasonforbeing = () => {
           <h1
             className={`${medieval_Sharp.className} text-3xl text-[#262626] sm:text-4xl md:text-5xl`}
           >
-            "A Reason for Being"
+            &quot;A Reason for Being&quot;
           </h1>
 
           {/* Sub heading */}

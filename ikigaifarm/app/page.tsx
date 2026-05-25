@@ -1,12 +1,23 @@
-'use client'
+import dynamic from "next/dynamic";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Reasonforbeing from "./components/Reasonforbeing";
 import ExperiencesHomeSection from "./components/ExperiencesHomeSection";
-import ActivitiesHomeSection from "./components/ActivitiesHomeSection";
 import LastHomeSection from "./components/LastHomeSection";
 import Footer from "./components/Footer";
-import FAQSection from "./components/FAQs";
+
+const ActivitiesHomeSection = dynamic(
+  () => import("./components/ActivitiesHomeSection"),
+  {
+    loading: () => (
+      <section className="min-h-[28rem] bg-[#fdfdf1]" aria-label="Loading activities" />
+    ),
+  },
+);
+
+const FAQSection = dynamic(() => import("./components/FAQs"), {
+  loading: () => <section className="min-h-[20rem] bg-[#faf6ea]" aria-label="Loading FAQs" />,
+});
 
 export default function Home() {
   return (

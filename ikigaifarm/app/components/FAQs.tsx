@@ -1,8 +1,6 @@
 'use client'
 
 import React, {
-  useEffect,
-  useRef,
   useState,
 } from 'react'
 
@@ -14,8 +12,6 @@ import {
   MedievalSharp,
   Noto_Serif_JP,
 } from 'next/font/google'
-
-import gsap from 'gsap'
 
 const medievalSharp =
   MedievalSharp({
@@ -71,32 +67,6 @@ const FAQSection = () => {
   const [activeIndex, setActiveIndex] =
     useState<number | null>(0)
 
-  const sectionRef =
-    useRef<HTMLDivElement>(null)
-
-  const cardsRef = useRef<
-    HTMLDivElement[]
-  >([])
-
-  useEffect(() => {
-    if (!sectionRef.current) return
-
-    gsap.fromTo(
-      cardsRef.current,
-      {
-        opacity: 0,
-        y: 60,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.12,
-        ease: 'power3.out',
-      },
-    )
-  }, [])
-
   const toggleFAQ = (
     index: number,
   ) => {
@@ -109,7 +79,6 @@ const FAQSection = () => {
 
   return (
     <section
-      ref={sectionRef}
       className="relative overflow-hidden bg-[#faf6ea] px-4 py-20 sm:px-6 lg:px-8"
     >
       {/* Background Glow */}
@@ -148,12 +117,6 @@ const FAQSection = () => {
             (faq, index) => (
               <div
                 key={index}
-                ref={(el) => {
-                  if (el)
-                    cardsRef.current[
-                      index
-                    ] = el
-                }}
                 className="overflow-hidden rounded-[2rem] border border-[#122a02]/10 bg-white shadow-[0_20px_60px_rgba(18,42,2,0.08)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(18,42,2,0.12)]"
               >
                 <button

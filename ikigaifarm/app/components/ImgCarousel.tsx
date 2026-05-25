@@ -1,9 +1,11 @@
 'use client'
 
 import React, {
+  useCallback,
   useEffect,
   useState,
 } from 'react'
+import Image from 'next/image'
 
 import {
   ChevronLeft,
@@ -20,13 +22,13 @@ const ImageCarousel = ({
   const [currentIndex, setCurrentIndex] =
     useState(0)
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prev) =>
       prev === images.length - 1
         ? 0
         : prev + 1,
     )
-  }
+  }, [images.length])
 
   const prevSlide = () => {
     setCurrentIndex((prev) =>
@@ -45,7 +47,7 @@ const ImageCarousel = ({
 
     return () =>
       clearInterval(interval)
-  }, [])
+  }, [nextSlide])
 
   return (
     <div className="relative h-full min-h-[320px] overflow-hidden lg:min-h-[700px]">
@@ -62,9 +64,11 @@ const ImageCarousel = ({
               key={index}
               className="relative h-full min-h-[320px] w-full shrink-0 lg:min-h-[700px]"
             >
-              <img
+              <Image
                 src={image}
                 alt={`carousel-image-${index}`}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>

@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import React from 'react'
 import { MedievalSharp } from 'next/font/google'
@@ -30,7 +28,7 @@ const experiences = [
 
 const ExperiencesHomeSection = () => {
   return (
-    <section className="relative overflow-hidden py-16 lg:py-24">
+    <section className="relative overflow-hidden py-16 [content-visibility:auto] [contain-intrinsic-size:900px] lg:py-24">
       
       {/* Background */}
       <div className="absolute inset-0">
@@ -39,6 +37,8 @@ const ExperiencesHomeSection = () => {
           alt="experiences background"
           width={1600}
           height={1000}
+          quality={70}
+          sizes="100vw"
           className="h-full w-full object-cover"
         />
 

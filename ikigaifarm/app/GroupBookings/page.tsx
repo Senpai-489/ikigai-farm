@@ -288,7 +288,7 @@ const Page = () => {
             to corporate
             retreats, we tailor
             every journey to
-            your group's unique
+            your group&apos;s unique
             purpose. Tell us
             about your vision.
           </p>
