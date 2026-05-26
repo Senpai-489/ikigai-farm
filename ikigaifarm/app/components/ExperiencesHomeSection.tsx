@@ -28,7 +28,7 @@ const experiences = [
 
 const ExperiencesHomeSection = () => {
   return (
-    <section className="relative overflow-hidden py-16 [content-visibility:auto] [contain-intrinsic-size:900px] lg:py-24">
+    <section className="relative overflow-hidden py-16 [content-visibility:auto] [contain-intrinsic-size:900px] ">
       
       {/* Background */}
       <div className="absolute inset-0">

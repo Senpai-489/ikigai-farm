@@ -29,7 +29,7 @@ const Belt = () => {
           Trusted By
         </p>
 
-        <h2 className="mt-3 text-4xl font-semibold text-[#122a02] sm:text-5xl">
+        <h2 className="mt-3 text-2xl font-semibold text-[#122a02] lg:text-4xl">
           Our Esteemed Clients
         </h2>
 

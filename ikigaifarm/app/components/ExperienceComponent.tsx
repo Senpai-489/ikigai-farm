@@ -30,7 +30,7 @@ const ExperienceComponent = (props: {
   }
 
   return (
-    <article className="group flex w-[90vw] max-w-[1700px] flex-col overflow-hidden rounded-[2rem] border border-[#d6e3af] bg-white shadow-[0_16px_40px_rgba(18,42,2,0.12)] transition-all duration-500 hover:shadow-[0_24px_60px_rgba(18,42,2,0.18)] lg:min-h-[80vh] lg:flex-row">
+    <article id={props.title} className="group scroll-mt-24 flex w-[90vw] max-w-[1700px] flex-col overflow-hidden rounded-[2rem] border border-[#d6e3af] bg-white shadow-[0_16px_40px_rgba(18,42,2,0.12)] transition-all duration-500 hover:shadow-[0_24px_60px_rgba(18,42,2,0.18)] lg:min-h-[80vh] lg:flex-row">
 
 
       {/* CONTENT SECTION */}

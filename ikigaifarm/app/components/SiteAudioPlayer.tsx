@@ -8,10 +8,28 @@ import {
 
 import gsap from 'gsap'
 
+import Image from 'next/image'
+
 import {
   BsVolumeMuteFill,
   BsVolumeUpFill,
 } from 'react-icons/bs'
+
+import {
+  Noto_Serif_JP,
+  MedievalSharp,
+} from 'next/font/google'
+
+const notoSerifJP =
+  Noto_Serif_JP({
+    subsets: ['latin'],
+  })
+
+const medievalSharp =
+  MedievalSharp({
+    subsets: ['latin'],
+    weight: '400',
+  })
 
 type Props = {
   src: string
@@ -31,6 +49,11 @@ export default function SiteAudioPlayer({
     )
 
   const contentRef =
+    useRef<HTMLDivElement | null>(
+      null,
+    )
+
+  const logoRef =
     useRef<HTMLDivElement | null>(
       null,
     )
@@ -67,7 +90,7 @@ export default function SiteAudioPlayer({
     )
   }, [isMuted])
 
-  // ENTRY ANIMATION
+  // ENTRY ANIMATIONS
   useEffect(() => {
     if (!contentRef.current)
       return
@@ -75,29 +98,42 @@ export default function SiteAudioPlayer({
     const tl = gsap.timeline()
 
     tl.fromTo(
-      '.hero-badge',
+      '.hero-logo',
       {
         opacity: 0,
-        y: 20,
-        letterSpacing:
-          '0.5em',
+        scale: 0.7,
+        rotate: -8,
       },
       {
         opacity: 1,
-        y: 0,
-        letterSpacing:
-          '0.25em',
-        duration: 1,
-        ease: 'power3.out',
+        scale: 1,
+        rotate: 0,
+        duration: 1.4,
+        ease: 'power4.out',
       },
     )
+
+      .fromTo(
+        '.hero-line',
+        {
+          width: 0,
+          opacity: 0,
+        },
+        {
+          width: '140px',
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+        },
+        '-=0.8',
+      )
 
       .fromTo(
         '.hero-title',
         {
           opacity: 0,
-          y: 60,
-          scale: 0.94,
+          y: 40,
+          scale: 0.96,
         },
         {
           opacity: 1,
@@ -106,11 +142,11 @@ export default function SiteAudioPlayer({
           duration: 1.2,
           ease: 'power4.out',
         },
-        '-=0.5',
+        '-=0.6',
       )
 
       .fromTo(
-        '.hero-text',
+        '.hero-subtitle',
         {
           opacity: 0,
           y: 30,
@@ -121,14 +157,14 @@ export default function SiteAudioPlayer({
           duration: 1,
           ease: 'power3.out',
         },
-        '-=0.7',
+        '-=0.8',
       )
 
       .fromTo(
         '.hero-button',
         {
           opacity: 0,
-          y: 20,
+          y: 25,
         },
         {
           opacity: 1,
@@ -136,18 +172,48 @@ export default function SiteAudioPlayer({
           duration: 1,
           ease: 'power3.out',
         },
-        '-=0.6',
+        '-=0.7',
       )
 
     gsap.to(glowRef.current, {
-      scale: 1.15,
-      duration: 4,
+      scale: 1.2,
+      duration: 5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+    })
+
+    gsap.to(logoRef.current, {
+      y: -10,
+      duration: 3,
       repeat: -1,
       yoyo: true,
       ease: 'sine.inOut',
     })
   }, [])
+useEffect(() => {
+  if (!hasEntered) {
+    document.body.style.overflow =
+      'hidden'
 
+    document.documentElement.style
+      .overflow = 'hidden'
+  } else {
+    document.body.style.overflow =
+      'auto'
+
+    document.documentElement.style
+      .overflow = 'auto'
+  }
+
+  return () => {
+    document.body.style.overflow =
+      'auto'
+
+    document.documentElement.style
+      .overflow = 'auto'
+  }
+}, [hasEntered])
   const enterExperience =
     async () => {
       const audio =
@@ -182,18 +248,18 @@ export default function SiteAudioPlayer({
 
         tl.to(contentRef.current, {
           opacity: 0,
-          y: -50,
-          scale: 0.95,
-          duration: 0.8,
-          ease: 'power3.inOut',
+          y: -80,
+          scale: 0.92,
+          duration: 1,
+          ease: 'power4.inOut',
         })
 
           .to(
             glowRef.current,
             {
-              scale: 2,
+              scale: 2.5,
               opacity: 0,
-              duration: 1.2,
+              duration: 1.4,
               ease: 'power4.out',
             },
             0,
@@ -203,13 +269,13 @@ export default function SiteAudioPlayer({
             overlayRef.current,
             {
               opacity: 0,
-              scale: 1.1,
+              scale: 1.08,
               filter:
-                'blur(12px)',
-              duration: 1.4,
+                'blur(14px)',
+              duration: 1.6,
               ease: 'power4.inOut',
             },
-            '-=0.4',
+            '-=0.5',
           )
       } catch (err) {
         console.error(err)
@@ -247,7 +313,7 @@ export default function SiteAudioPlayer({
         loop
       />
 
-      {/* ENTER EXPERIENCE */}
+      {/* EXPERIENCE SCREEN */}
       {!hasEntered && (
         <div
           ref={overlayRef}
@@ -256,28 +322,33 @@ export default function SiteAudioPlayer({
             inset-0
             z-[9999]
             overflow-hidden
-            bg-black
+            bg-[#efe8da]
           "
         >
-          {/* BEAUTIFUL GRADIENT BACKGROUND */}
+          {/* JAPANESE PAPER BACKGROUND */}
           <div
             className="
               absolute
               inset-0
-              bg-[radial-gradient(circle_at_top,#3c5c2a_0%,#1b2b13_30%,#071106_70%,#000000_100%)]
+              bg-[radial-gradient(circle_at_top,#f6f0e4_0%,#ece2d0_40%,#e2d4bf_100%)]
             "
           />
 
-          {/* SECONDARY GRADIENT */}
+          {/* RED BLOSSOM GLOW */}
           <div
             className="
               absolute
-              inset-0
-              bg-[linear-gradient(135deg,rgba(215,255,126,0.12)_0%,transparent_35%,rgba(255,255,255,0.03)_100%)]
+              right-[-10%]
+              top-[-10%]
+              h-[500px]
+              w-[500px]
+              rounded-full
+              bg-red-300/20
+              blur-3xl
             "
           />
 
-          {/* GLOW ORB */}
+          {/* GOLDEN GLOW */}
           <div
             ref={glowRef}
             className="
@@ -289,19 +360,19 @@ export default function SiteAudioPlayer({
               -translate-x-1/2
               -translate-y-1/2
               rounded-full
-              bg-[#d8ff7e]/20
+              bg-[#d4b200]/20
               blur-3xl
             "
           />
 
-          {/* NOISE */}
+          {/* JAPANESE GRID */}
           <div
             className="
               absolute
               inset-0
               opacity-[0.04]
-              mix-blend-overlay
-              [background-image:url('https://grainy-gradients.vercel.app/noise.svg')]
+              [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)]
+              [background-size:80px_80px]
             "
           />
 
@@ -320,73 +391,99 @@ export default function SiteAudioPlayer({
               text-center
             "
           >
-            {/* BADGE */}
-            <p
+            {/* LOGO */}
+            <div
+              ref={logoRef}
               className="
-                hero-badge
-                mb-5
-                text-[10px]
-                uppercase
-                tracking-[0.25em]
-                text-[#f4efc8]
-                sm:text-xs
+                hero-logo
+                relative
+                mb-10
+                h-32
+                w-32
+                sm:h-40
+                sm:w-40
               "
             >
-              Nature • Luxury •
-              Adventure
+              <Image
+                src="/logo1.png"
+                alt="Ikigai Farm"
+                fill
+                priority
+                className="object-contain drop-shadow-[0_10px_40px_rgba(0,0,0,0.35)]"
+              />
+            </div>
+
+            {/* SMALL LABEL */}
+            <p
+              className={`
+                hero-subtitle
+                text-[20px]
+                uppercase
+                tracking-[0.45em]
+                text-[#7b1e1e]
+                
+                ${notoSerifJP.className}
+              `}
+            >
+              生き甲斐 • A REASON FOR
+              BEING
             </p>
+
+            {/* DIVIDER */}
+            <div
+              className="
+                hero-line
+                my-6
+                h-px
+                bg-[#c2a76d]
+              "
+            />
 
             {/* TITLE */}
             <h1
-              className="
+              className={`
                 hero-title
-                max-w-6xl
                 text-5xl
-                font-semibold
-                leading-[0.95]
-                text-white
+                leading-[0.9]
+                text-[#111]
                 sm:text-7xl
                 lg:text-8xl
-              "
+                ${medievalSharp.className}
+              `}
             >
-              Welcome to
+              Ikigai
               <span
                 className="
                   mt-2
-                  pb-20
                   block
-                  bg-gradient-to-r
-                  from-[#f7f0c6]
-                  via-[#d8ff7e]
-                  to-[#ffffff]
-                  bg-clip-text
-                  text-transparent
+                  text-[#7b1e1e]
                 "
               >
-                Ikigai Farm
+                Farm
               </span>
             </h1>
 
             {/* TEXT */}
             <p
-              className="
-                hero-text
+              className={`
+                hero-subtitle
                 mt-8
                 max-w-2xl
                 text-sm
                 leading-7
-                text-white/70
+                text-[#3e3a32]
                 sm:text-base
                 md:text-lg
-              "
+                ${notoSerifJP.className}
+              `}
             >
               Escape the noise
               of the city and
               immerse yourself
-              in nature,
-              adventure, calm,
-              and unforgettable
-              experiences.
+              in a serene world
+              of nature,
+              experiences,
+              adventure, and calm.
             </p>
 
             {/* BUTTON */}
@@ -401,32 +498,32 @@ export default function SiteAudioPlayer({
                 hero-button
                 group
                 relative
-                mt-10
+                mt-12
                 overflow-hidden
                 rounded-full
                 border
-                border-white/15
-                bg-white/10
+                border-[#111]/10
+                bg-[#111]
                 px-10
                 py-4
                 text-sm
                 font-medium
                 uppercase
-                tracking-[0.2em]
-                text-white
-                backdrop-blur-xl
+                tracking-[0.25em]
+                text-[#f6e7a1]
+                shadow-[0_10px_40px_rgba(0,0,0,0.18)]
                 transition-all
                 duration-500
                 hover:scale-105
-                hover:bg-white/20
               "
             >
+              {/* HOVER */}
               <span
                 className="
                   absolute
                   inset-0
                   translate-y-full
-                  bg-white/10
+                  bg-[#2a2a2a]
                   transition-transform
                   duration-500
                   group-hover:translate-y-0
@@ -440,6 +537,23 @@ export default function SiteAudioPlayer({
               </span>
             </button>
           </div>
+
+          {/* CORNER BLOSSOMS */}
+          <div
+            className="
+              pointer-events-none
+              absolute
+              right-0
+              top-0
+              h-64
+              w-64
+              rotate-12
+              rounded-full
+              bg-[radial-gradient(circle,#d14d4d_0%,transparent_70%)]
+              opacity-30
+              blur-3xl
+            "
+          />
         </div>
       )}
 

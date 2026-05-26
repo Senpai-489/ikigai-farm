@@ -3,21 +3,26 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
-import { Menu, X } from 'lucide-react'
+
+import {
+  Menu,
+  X,
+  ChevronDown,
+} from 'lucide-react'
+
 import { MdArrowDropDown } from 'react-icons/md'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] =
     useState(false)
 
+  const [openDropdown, setOpenDropdown] =
+    useState<string | null>(null)
+
   const leftLinks = [
     {
       href: '/Schools',
       label: 'Schools',
-    },
-    {
-      href: '/Experiences',
-      label: 'Experiences',
     },
   ]
 
@@ -33,10 +38,6 @@ const Navbar = () => {
   ]
 
   const navLinks = [
-    {
-      href: '/Events',
-      label: 'Events',
-    },
     ...leftLinks,
     ...rightLinks,
   ]
@@ -50,32 +51,53 @@ const Navbar = () => {
     'Weekend Brunch',
     'Farm to Table',
     'Sundown Table',
-    
   ]
+
+  const experienceItems = [
+    'Sustainable Celebrations',
+    'Nature Based Activities',
+    'Farm to Fork Dining',
+    'Personalized Experiences',
+    'Memorable Moments',
+    'Farm venue'
+  ]
+
+  const eventItems = [
+    'Kids Birthday Parties',
+    'Corporate Events',
+    'Farm Weddings',
+    'Family Reunions',
+    'Upcoming Workshops',
+    'Signature Events',
+  ]
+
+  const toggleDropdown = (
+    name: string,
+  ) => {
+    setOpenDropdown((prev) =>
+      prev === name
+        ? null
+        : name,
+    )
+  }
 
   return (
     <header className="relative z-50 w-full px-4 py-4 sm:px-8 lg:px-14 lg:py-6">
-
       {/* DESKTOP */}
       <div className="hidden grid-cols-[1fr_auto_1fr] items-center md:grid">
-
         {/* LEFT */}
         <div className="flex items-center justify-end gap-3 lg:gap-5">
-
           {/* EVENTS */}
-          <div className="group relative">
-
-            <Link
-              href="/Events"
-              className={navLinkStyles}
-              prefetch={false}
-            >
-              Events
+            <div className="group relative">
+         <Link href="/Events">
+              <button
+                className={navLinkStyles}
+              >
+                Events
 
               <MdArrowDropDown className="h-5 w-5" />
-            </Link>
-
-            {/* EVENTS DROPDOWN */}
+            </button>
+          </Link>
             <div
               className="
                 invisible
@@ -93,28 +115,75 @@ const Navbar = () => {
               "
             >
               <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/90 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl">
-
                 <div className="flex flex-col py-2">
+                  {eventItems.map(
+                    (
+                      title,
+                      index,
+                    ) => (
+                      <Link
+                        key={index}
+                        href={`/Events/#${title}`}
+                        className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
+                      >
+                        <span className="h-2 w-2 rounded-full bg-[#ffe494] transition-transform duration-300 group-hover/item:scale-125" />
 
-                  {[
-                    'Kids Birthday Parties',
-                    'Corporate Events',
-                    'Farm Weddings',
-                    'Family Reunions',
-                    'Upcoming Workshops',
-                    'Signature Events',
-                  ].map((title, index) => (
-                    <Link
-                      key={index}
-                      href={`/Events/#${title}`}
-                      className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
-                    >
-                      <span className="h-2 w-2 rounded-full bg-[#ffe494] transition-transform duration-300 group-hover/item:scale-125" />
+                        {title}
+                      </Link>
+                    ),
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
 
-                      {title}
-                    </Link>
-                  ))}
+          {/* EXPERIENCES */}
+          <div className="group relative">
+           <Link href="/Experiences">
+              <button
+                className={navLinkStyles}
+              >
+                Experiences
 
+                <MdArrowDropDown className="h-5 w-5" />
+              </button>
+            </Link>
+           
+
+            <div
+              className="
+                invisible
+                absolute
+                left-1/2
+                top-[calc(100%+12px)]
+                z-50
+                w-72
+                -translate-x-1/2
+                opacity-0
+                transition-all
+                duration-300
+                group-hover:visible
+                group-hover:opacity-100
+              "
+            >
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/90 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+                <div className="flex flex-col py-2">
+                  {experienceItems.map(
+                    (
+                      title,
+                      index,
+                    ) => (
+                      <Link
+                        key={index}
+                        href={`/Experiences/#${title}`}
+                        className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
+                      >
+                        <span className="h-2 w-2 rounded-full bg-[#ffe494] transition-transform duration-300 group-hover/item:scale-125" />
+
+                        {title}
+                      </Link>
+                    ),
+                  )}
                 </div>
               </div>
             </div>
@@ -135,8 +204,10 @@ const Navbar = () => {
 
         {/* LOGO */}
         <div className="flex justify-center">
-
-          <Link href="/" className="shrink-0">
+          <Link
+            href="/"
+            className="shrink-0"
+          >
             <Image
               src="/logo1.png"
               alt="logo"
@@ -148,12 +219,10 @@ const Navbar = () => {
               className="h-24 w-24 object-contain drop-shadow-[4px_4px_2px_rgba(0,0,0,1)] sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-52 lg:w-52"
             />
           </Link>
-
         </div>
 
         {/* RIGHT */}
         <div className="flex items-center justify-start gap-3 lg:gap-5">
-
           {rightLinks.map((link) => (
             <Link
               key={link.href}
@@ -167,18 +236,18 @@ const Navbar = () => {
 
           {/* FOOD MENU */}
           <div className="group relative">
+           <Link href="/Food">
+              <button
+                className={navLinkStyles}
+              >
+                Food Menu
 
-            <Link
-              href="/Food"
-              className={navLinkStyles}
-              prefetch={false}
-            >
-              Food Menu
-
-              <MdArrowDropDown className="h-5 w-5" />
+                <MdArrowDropDown className="h-5 w-5" />
+              </button>
             </Link>
 
-            {/* FOOD DROPDOWN */}
+            
+
             <div
               className="
                 invisible
@@ -196,32 +265,32 @@ const Navbar = () => {
               "
             >
               <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/90 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl">
-
                 <div className="flex flex-col py-2">
+                  {foodMenuItems.map(
+                    (
+                      title,
+                      index,
+                    ) => (
+                      <Link
+                        key={index}
+                        href={`/Food/#${title}`}
+                        className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
+                      >
+                        <span className="h-2 w-2 rounded-full bg-[#ffe494] transition-transform duration-300 group-hover/item:scale-125" />
 
-                  {foodMenuItems.map((title, index) => (
-                    <Link
-                      key={index}
-                      href={`/Food/#${title}`}
-                      className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
-                    >
-                      <span className="h-2 w-2 rounded-full bg-[#ffe494] transition-transform duration-300 group-hover/item:scale-125" />
-
-                      {title}
-                    </Link>
-                  ))}
-
+                        {title}
+                      </Link>
+                    ),
+                  )}
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
       {/* MOBILE NAV */}
       <div className="flex items-center justify-between md:hidden">
-
         <Link href="/">
           <Image
             src="/logo1.png"
@@ -239,7 +308,9 @@ const Navbar = () => {
           type="button"
           aria-label="Toggle Menu"
           onClick={() =>
-            setIsMenuOpen(!isMenuOpen)
+            setIsMenuOpen(
+              !isMenuOpen,
+            )
           }
           className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-[#ffe494] transition-all duration-300 active:scale-95"
         >
@@ -255,19 +326,21 @@ const Navbar = () => {
       <div
         className={`overflow-hidden transition-all duration-500 md:hidden ${
           isMenuOpen
-            ? 'mt-5 max-h-[1200px] opacity-100'
+            ? 'mt-5 max-h-[2000px] opacity-100'
             : 'max-h-0 opacity-0'
         }`}
       >
         <div className="flex flex-col gap-3 rounded-3xl border border-white/10 bg-black/90 p-4 shadow-[0_24px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl">
-
+          {/* NORMAL LINKS */}
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               prefetch={false}
               onClick={() =>
-                setIsMenuOpen(false)
+                setIsMenuOpen(
+                  false,
+                )
               }
               className="flex h-14 items-center justify-center rounded-2xl bg-[#111111] px-5 text-sm font-medium text-[#ffe494] transition-all duration-300 hover:bg-[#1f3c07]"
             >
@@ -275,61 +348,173 @@ const Navbar = () => {
             </Link>
           ))}
 
-          {/* EVENT CATEGORIES */}
-          <div className="mt-2 rounded-2xl bg-[#111111] p-3">
+          {/* EVENTS */}
+          <div className="overflow-hidden rounded-2xl bg-[#111111]">
+            <button
+              onClick={() =>
+                toggleDropdown(
+                  'events',
+                )
+              }
+              className="flex h-14 w-full items-center justify-between px-5 text-sm font-medium text-[#ffe494]"
+            >
+              Events
 
-            <p className="mb-3 text-center text-sm font-semibold text-[#ffe494]">
-              Event Categories
-            </p>
+              <ChevronDown
+                className={`transition-transform duration-300 ${
+                  openDropdown ===
+                  'events'
+                    ? 'rotate-180'
+                    : ''
+                }`}
+              />
+            </button>
 
-            <div className="flex flex-col gap-2">
-
-              {[
-                'Kids Birthday Parties',
-                'Corporate Events',
-                'Farm Weddings',
-                'Family Reunions',
-              ].map((title, index) => (
-                <Link
-                  key={index}
-                  href={`/Events/#${title}`}
-                  onClick={() =>
-                    setIsMenuOpen(false)
-                  }
-                  className="rounded-xl bg-black px-4 py-3 text-center text-sm text-zinc-200 transition-all duration-300 hover:bg-[#1f3c07]"
-                >
-                  {title}
-                </Link>
-              ))}
-
+            <div
+              className={`grid transition-all duration-500 ${
+                openDropdown ===
+                'events'
+                  ? 'grid-rows-[1fr] opacity-100'
+                  : 'grid-rows-[0fr] opacity-0'
+              }`}
+            >
+              <div className="overflow-hidden">
+                <div className="flex flex-col gap-2 px-3 pb-3">
+                  {eventItems.map(
+                    (
+                      title,
+                      index,
+                    ) => (
+                      <Link
+                        key={index}
+                        href={`/Events/#${title}`}
+                        onClick={() =>
+                          setIsMenuOpen(
+                            false,
+                          )
+                        }
+                        className="rounded-xl bg-black px-4 py-3 text-center text-sm text-zinc-200 transition-all duration-300 hover:bg-[#1f3c07]"
+                      >
+                        {title}
+                      </Link>
+                    ),
+                  )}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* FOOD MENU CATEGORIES */}
-          <div className="rounded-2xl bg-[#111111] p-3">
+          {/* EXPERIENCES */}
+          <div className="overflow-hidden rounded-2xl bg-[#111111]">
+            <button
+              onClick={() =>
+                toggleDropdown(
+                  'experiences',
+                )
+              }
+              className="flex h-14 w-full items-center justify-between px-5 text-sm font-medium text-[#ffe494]"
+            >
+              Experiences
 
-            <p className="mb-3 text-center text-sm font-semibold text-[#ffe494]">
-              Food Categories
-            </p>
+              <ChevronDown
+                className={`transition-transform duration-300 ${
+                  openDropdown ===
+                  'experiences'
+                    ? 'rotate-180'
+                    : ''
+                }`}
+              />
+            </button>
 
-            <div className="flex flex-col gap-2">
-
-              {foodMenuItems.map((title, index) => (
-                <Link
-                  key={index}
-                  href={`/Food/#${title}`}
-                  onClick={() =>
-                    setIsMenuOpen(false)
-                  }
-                  className="rounded-xl bg-black px-4 py-3 text-center text-sm text-zinc-200 transition-all duration-300 hover:bg-[#1f3c07]"
-                >
-                  {title}
-                </Link>
-              ))}
-
+            <div
+              className={`grid transition-all duration-500 ${
+                openDropdown ===
+                'experiences'
+                  ? 'grid-rows-[1fr] opacity-100'
+                  : 'grid-rows-[0fr] opacity-0'
+              }`}
+            >
+              <div className="overflow-hidden">
+                <div className="flex flex-col gap-2 px-3 pb-3">
+                  {experienceItems.map(
+                    (
+                      title,
+                      index,
+                    ) => (
+                      <Link
+                        key={index}
+                        href={`/Experiences/#${title}`}
+                        onClick={() =>
+                          setIsMenuOpen(
+                            false,
+                          )
+                        }
+                        className="rounded-xl bg-black px-4 py-3 text-center text-sm text-zinc-200 transition-all duration-300 hover:bg-[#1f3c07]"
+                      >
+                        {title}
+                      </Link>
+                    ),
+                  )}
+                </div>
+              </div>
             </div>
           </div>
 
+          {/* FOOD */}
+          <div className="overflow-hidden rounded-2xl bg-[#111111]">
+            <button
+              onClick={() =>
+                toggleDropdown(
+                  'food',
+                )
+              }
+              className="flex h-14 w-full items-center justify-between px-5 text-sm font-medium text-[#ffe494]"
+            >
+              Food Menu
+
+              <ChevronDown
+                className={`transition-transform duration-300 ${
+                  openDropdown ===
+                  'food'
+                    ? 'rotate-180'
+                    : ''
+                }`}
+              />
+            </button>
+
+            <div
+              className={`grid transition-all duration-500 ${
+                openDropdown ===
+                'food'
+                  ? 'grid-rows-[1fr] opacity-100'
+                  : 'grid-rows-[0fr] opacity-0'
+              }`}
+            >
+              <div className="overflow-hidden">
+                <div className="flex flex-col gap-2 px-3 pb-3">
+                  {foodMenuItems.map(
+                    (
+                      title,
+                      index,
+                    ) => (
+                      <Link
+                        key={index}
+                        href={`/Food/#${title}`}
+                        onClick={() =>
+                          setIsMenuOpen(
+                            false,
+                          )
+                        }
+                        className="rounded-xl bg-black px-4 py-3 text-center text-sm text-zinc-200 transition-all duration-300 hover:bg-[#1f3c07]"
+                      >
+                        {title}
+                      </Link>
+                    ),
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>

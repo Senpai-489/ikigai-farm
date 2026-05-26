@@ -15,7 +15,7 @@ import {
 
 const Reasonforbeing = () => {
   return (
-    <section className="relative overflow-hidden bg-white py-20 [content-visibility:auto] [contain-intrinsic-size:760px]">
+    <section className="relative overflow-hidden lg:-translate-y-40 py-8 bg-white [content-visibility:auto] [contain-intrinsic-size:760px]">
 
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-16 px-6 lg:flex-row lg:gap-24 lg:px-12">
 
