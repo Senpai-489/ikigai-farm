@@ -5,18 +5,18 @@ import Image from 'next/image'
 
 const Belt = () => {
   const images = [
-    '/client1.webp',
-    '/client2.png',
-    '/client3.png',
-    '/client4.png',
-    '/client5.png',
-    '/client6.png',
-    '/client7.png',
-    '/client8.png',
-    '/client9.png',
-    '/client10.png',
-    '/client11.png',
-    '/client12.png',
+    '/Client1.webp',
+    '/Client2.png',
+    '/Client3.png',
+    '/Client4.png',
+    '/Client5.png',
+    '/Client6.png',
+    '/Client7.png',
+    '/Client8.png',
+    '/Client9.png',
+    '/Client10.png',
+    '/Client11.png',
+    '/Client12.png',
   ]
 
   return (
