@@ -52,7 +52,7 @@ const experienceHighlights = [
     imageSrc: ['/beltCarousel2.jpeg','/MemorableMoments2.jpeg','/MemorableMoments3.jpeg'],
   },
   {
-    title: 'Beautiful venue',
+    title: 'Farm venue',
     description:
       'Lush green gardens, scenic landscapes, and natural beauty provide the perfect backdrop for any celebration.',
     imageSrc: ['/KidsParty1.jpeg','/BeautifulVenue1.jpeg','/BeautifulVenue2.jpeg'],
