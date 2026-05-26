@@ -1,55 +1,65 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { BsWhatsapp, BsTelephoneFill } from "react-icons/bs";
-import Link from "next/link";
+import type { Metadata } from 'next'
+import './globals.css'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import {
+  geistMono,
+  geistSans,
+} from './fonts'
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
+import { Phone, MessageCircle } from 'lucide-react'
+import { BsWhatsapp } from 'react-icons/bs'
+
+const SiteAudioPlayer = dynamic(
+  () => import('./components/SiteAudioPlayer'),
+)
 
 export const metadata: Metadata = {
-  title: "Ikigai Farm",
-  description: "A destination for you, your family and friends to connect with nature, celebrate special occasions, and create unforgettable memories.",
-};
+  title: 'Ikigai Farm',
+  description:
+    'A destination for nature and adventure.',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} `}
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className=" flex flex-col overflow-x-hidden bg-white">
+      <body className="overflow-x-hidden bg-white">
+
         {children}
-        <div className="fixed z-50 right-4 bottom-4 flex flex-col gap-4 sm:right-6 sm:bottom-6 md:right-8 md:bottom-8 lg:right-10 lg:bottom-10">
+
+        {/* FLOATING ACTION BUTTONS */}
+        <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-3">
+
+          {/* WHATSAPP */}
           <Link
-            target="_blank"
-            rel="noopener noreferrer"
             href="https://wa.me/+918006746390"
-            className="inline-flex rounded-full p-0"
+            target="_blank"
           >
-            <BsWhatsapp
-              className="h-12 w-12 rounded-full bg-green-900 p-2 text-green-500 shadow-2xl transition-transform duration-300 hover:scale-110 active:scale-95 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20"
-            />
+            <button className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_30px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-110">
+              <BsWhatsapp className="h-7 w-7" />
+            </button>
           </Link>
 
-          <Link href="tel:+918006746390" className="inline-flex rounded-full p-0">
-            <BsTelephoneFill
-              className="h-12 w-12 rounded-full bg-green-900 p-2 text-white shadow-2xl transition-transform duration-300 hover:scale-110 active:scale-95 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20"
-            />
+          {/* CALL */}
+          <Link href="tel:+918006746390">
+            <button className="flex h-14 w-14 items-center justify-center rounded-full bg-[#122a02] text-[#fff4b8] shadow-[0_10px_30px_rgba(18,42,2,0.35)] transition-all duration-300 hover:scale-110">
+              <Phone className="h-6 w-6" />
+            </button>
           </Link>
+
         </div>
+
+        <SiteAudioPlayer src="/zen-music.mp3" />
+
       </body>
     </html>
-  );
+  )
 }

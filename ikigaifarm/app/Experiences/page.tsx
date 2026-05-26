@@ -128,7 +128,7 @@ const page = () => {
             </p>
           </div>
 
-          <div className="mt-10 grid -translate-y-40 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 items-center flex flex-col gap-12 -translate-y-40 ">
             {experienceHighlights.map(({ title, description, imageSrc }, index) => (
               <ExperienceComponent
                 key={index}

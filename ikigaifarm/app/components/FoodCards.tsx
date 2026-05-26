@@ -16,7 +16,6 @@ const EventComponent = (props: {
   title: string
   description: string
 }) => {
-
   const [currentImage, setCurrentImage] = useState(0)
 
   const nextImage = () => {
@@ -32,96 +31,94 @@ const EventComponent = (props: {
   }
 
   return (
-    <article className='group overflow-hidden rounded-[2rem] border border-[#d6e3af] bg-[#ffffff] shadow-[0_16px_40px_rgba(18,42,2,0.14)] transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(18,42,2,0.18)]'>
+    <article id={props.title} className="scroll-mt-24 group mx-auto flex w-[90vw] max-w-[1700px] flex-col overflow-hidden rounded-[2rem] border border-[#d6e3af] bg-[#ffffff] shadow-[0_16px_40px_rgba(18,42,2,0.14)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(18,42,2,0.18)] lg:min-h-[80vh] lg:flex-row">
 
-      <div className='grid gap-0 lg:grid-cols-[1.05fr_0.95fr]'>
+      {/* LEFT CONTENT */}
+      <div className="flex w-full flex-col justify-center bg-[#f9f8ef] px-6 py-10 sm:px-10 sm:py-14 lg:w-1/2 lg:px-20 lg:py-20">
 
-        {/* LEFT CONTENT */}
-        <div className='flex flex-col justify-between gap-6 p-6 sm:p-8 lg:p-10'>
+        <div className="space-y-6">
 
-          <div className='space-y-4'>
+          <h2
+            className={`${medievalSharp.className} text-3xl leading-tight text-black sm:text-5xl lg:text-6xl`}
+          >
+            {props.title}
+          </h2>
 
-            <p
-              className={`${medievalSharp.className} text-3xl leading-tight text-black sm:text-4xl lg:text-5xl`}
-            >
-              {props.title}
-            </p>
+          <div className="h-[2px] w-20 bg-[#d6e3af] sm:w-24" />
 
-            <p className='max-w-xl text-base leading-7 text-black sm:text-lg'>
-              {props.description}
-            </p>
-
-          </div>
-
-          {/* BUTTONS */}
-          <div className='flex flex-wrap gap-3'>
-
-            <Link href='/Contact'>
-              <button className='rounded-full bg-[#122a02] px-5 py-3 text-sm font-medium text-amber-100 transition-colors duration-300 hover:bg-[#1f3c07]'>
-                Enquire Now
-              </button>
-            </Link>
-
-            <Link href='/Download-Menu'>
-              <button className='rounded-full border border-[#122a02] px-5 py-3 text-sm font-medium text-[#122a02] transition-colors duration-300 hover:bg-[#122a02] hover:text-amber-100'>
-                Download Menu
-              </button>
-            </Link>
-
-          </div>
-        </div>
-
-        {/* RIGHT IMAGE */}
-        <div className='relative min-h-[18rem] overflow-hidden sm:min-h-[24rem] lg:min-h-full'>
-
-          <Image
-            src={props.imageSrc[currentImage]}
-            alt={props.title}
-            fill
-            className='object-cover transition-transform duration-500 group-hover:scale-105'
-            sizes='(min-width: 1024px) 50vw, 100vw'
-          />
-
-          {/* Overlay */}
-          <div className='absolute inset-0 bg-gradient-to-t from-[#122a02]/35 via-transparent to-transparent' />
-
-          {/* Left Arrow */}
-          {props.imageSrc.length > 1 && (
-            <button
-              onClick={prevImage}
-              className='absolute left-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-black/60'
-            >
-              <ChevronLeft className='h-5 w-5' />
-            </button>
-          )}
-
-          {/* Right Arrow */}
-          {props.imageSrc.length > 1 && (
-            <button
-              onClick={nextImage}
-              className='absolute right-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-black/60'
-            >
-              <ChevronRight className='h-5 w-5' />
-            </button>
-          )}
-
-          {/* Dots */}
-          {props.imageSrc.length > 1 && (
-            <div className='absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2'>
-              {props.imageSrc.map((_, index) => (
-                <div
-                  key={index}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    currentImage === index
-                      ? 'w-6 bg-[#fff4b8]'
-                      : 'w-2 bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-          )}
+          <p className="max-w-2xl text-sm leading-7 text-black sm:text-base sm:leading-8 lg:text-xl">
+            {props.description}
+          </p>
 
         </div>
+
+        {/* BUTTONS */}
+        <div className="mt-10 flex flex-wrap gap-4">
+
+          <Link href="/Contact">
+            <button className="rounded-full bg-[#122a02] px-6 py-3 text-sm font-medium text-amber-100 transition-all duration-300 hover:scale-105 hover:bg-[#1f3c07] sm:px-7 sm:py-4 sm:text-base">
+              Enquire Now
+            </button>
+          </Link>
+
+          <Link href="/Download-Menu">
+            <button className="rounded-full border border-[#122a02] px-6 py-3 text-sm font-medium text-[#122a02] transition-all duration-300 hover:bg-[#122a02] hover:text-amber-100 sm:px-7 sm:py-4 sm:text-base">
+              Download Menu
+            </button>
+          </Link>
+
+        </div>
+      </div>
+
+      {/* RIGHT IMAGE */}
+      <div className="relative h-[320px] w-full overflow-hidden sm:h-[420px] lg:h-auto lg:min-h-[80vh] lg:w-1/2">
+
+        <Image
+          src={props.imageSrc[currentImage]}
+          alt={props.title}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width:1024px) 100vw, 50vw"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#122a02]/35 via-transparent to-transparent" />
+
+        {/* Left Arrow */}
+        {props.imageSrc.length > 1 && (
+          <button
+            onClick={prevImage}
+            className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-black/60 sm:h-12 sm:w-12"
+          >
+            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+          </button>
+        )}
+
+        {/* Right Arrow */}
+        {props.imageSrc.length > 1 && (
+          <button
+            onClick={nextImage}
+            className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-black/60 sm:h-12 sm:w-12"
+          >
+            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+          </button>
+        )}
+
+        {/* Dots */}
+        {props.imageSrc.length > 1 && (
+          <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+            {props.imageSrc.map((_, index) => (
+              <div
+                key={index}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  currentImage === index
+                    ? 'w-7 bg-[#fff4b8]'
+                    : 'w-2 bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </article>
   )

@@ -97,7 +97,7 @@ const page = () => {
       </div>
 
       {/* EVENTS */}
-      <div className="flex flex-col gap-8 bg-[#fdfdf1] px-4 py-10 sm:px-6 md:px-10 lg:px-20 grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="flex flex-col gap-8 bg-[#fdfdf1] px-4 py-10 sm:px-6 md:px-10 lg:px-20 grid gap-9">
         
         {Cards.map((card, index) => (
           <EventComponent

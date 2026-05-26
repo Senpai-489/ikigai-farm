@@ -38,7 +38,7 @@ const page = () => {
                         <p className='text-base leading-7 text-black sm:text-lg'>Choose from intimate birthday parties, corporate retreats, and wedding experiences, all shaped around nature, food, and open-air adventure.</p>
                     </div>
 
-                    <div className='grid gap-8 lg:grid-cols-2'>
+                    <div className='flex items-center flex-col gap-8 '>
                         {Cards.map((card) => (
                             <EventComponent key={card.title} imageSrc={card.imageSrc} title={card.title} description={card.description} />
                         ))}

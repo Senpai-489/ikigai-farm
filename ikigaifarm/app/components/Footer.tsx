@@ -2,9 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, Mail, Phone } from 'lucide-react'
+import Belt from './Clients'
 
 const Footer = () => {
   return (
+    <div>
+      <Belt />
     <footer className='bg-[#262626] text-white py-12'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col items-center mb-4 '> 
@@ -17,9 +20,9 @@ const Footer = () => {
             <h4 className='mb-3 font-semibold'>Quick Links</h4>
             <ul className='space-y-2 text-sm text-gray-300'>
               <li><Link href='/' className='hover:text-white'>About Us</Link></li>
-              <li><Link href='/' className='hover:text-white'>Blog</Link></li>
-              <li><Link href='/' className='hover:text-white'>Group Bookings</Link></li>
-              <li><Link href='/' className='hover:text-white'>Refund Policy</Link></li>
+              <li><Link href='/Blogs' className='hover:text-white'>Blog</Link></li>
+              <li><Link href='/GroupBookings' className='hover:text-white'>Group Bookings</Link></li>
+              <li><Link href='/refund-policy' className='hover:text-white'>Refund Policy</Link></li>
               <li><Link href='/Contact' className='hover:text-white'>Contact Us</Link></li>
             </ul>
           </div>
@@ -55,12 +58,13 @@ const Footer = () => {
         <div className='mt-8 border-t border-white/10 pt-6 text-sm text-gray-400 flex flex-col gap-3 md:flex-row md:justify-between'>
           <div>© {new Date().getFullYear()} Ikigai Farm. All rights reserved.</div>
           <div className='flex gap-4'>
-            <Link href='/' className='hover:text-white'>Privacy</Link>
-            <Link href='/' className='hover:text-white'>Terms</Link>
+            <Link href='/privacy-policy' className='hover:text-white'>Privacy</Link>
+            <Link href='/terms-and-conditions' className='hover:text-white'>Terms</Link>
           </div>
         </div>
       </div>
     </footer>
+    </div>
   )
 }
 

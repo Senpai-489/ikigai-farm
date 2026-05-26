@@ -10,12 +10,11 @@ const medievalSharp = MedievalSharp({
   weight: '400',
 })
 
-const EventComponent = (props: {
+const ExperienceComponent = (props: {
   imageSrc: string[]
   title: string
   description: string
 }) => {
-
   const [currentImage, setCurrentImage] = useState(0)
 
   const nextImage = () => {
@@ -31,29 +30,46 @@ const EventComponent = (props: {
   }
 
   return (
-    <article className="group overflow-hidden rounded-[2rem] border border-[#d6e3af] bg-white shadow-[0_16px_40px_rgba(18,42,2,0.12)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(18,42,2,0.18)]">
+    <article className="group flex w-[90vw] max-w-[1700px] flex-col overflow-hidden rounded-[2rem] border border-[#d6e3af] bg-white shadow-[0_16px_40px_rgba(18,42,2,0.12)] transition-all duration-500 hover:shadow-[0_24px_60px_rgba(18,42,2,0.18)] lg:min-h-[80vh] lg:flex-row">
 
-      {/* IMAGE */}
-      <div className="relative aspect-[4/3] overflow-hidden">
+
+      {/* CONTENT SECTION */}
+      <div className="flex w-full flex-col justify-center bg-[#f9f8ef] px-6 py-10 sm:px-10 sm:py-14 lg:w-1/2 lg:px-20 lg:py-20">
+
+        <h2
+          className={`${medievalSharp.className} text-3xl leading-tight text-[#385328] sm:text-5xl lg:text-6xl`}
+        >
+          {props.title}
+        </h2>
+
+        <div className="mt-6 h-[2px] w-20 bg-[#d6e3af] sm:w-24" />
+
+        <p className="mt-6 max-w-2xl text-sm leading-7 text-[#385328] sm:text-base sm:leading-8 lg:mt-8 lg:text-xl">
+          {props.description}
+        </p>
+
+      </div>
+      {/* IMAGE SECTION */}
+      <div className="relative h-[320px] w-full overflow-hidden sm:h-[420px] lg:h-auto lg:min-h-[80vh] lg:w-1/2">
 
         <Image
           src={props.imageSrc[currentImage]}
           alt={props.title}
           fill
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
-          sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width:1024px) 100vw, 50vw"
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#122a02]/60 via-[#122a02]/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#122a02]/70 via-[#122a02]/10 to-transparent" />
 
         {/* Left Arrow */}
         {props.imageSrc.length > 1 && (
           <button
             onClick={prevImage}
-            className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-black/60"
+            className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-black/60 sm:h-12 sm:w-12"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
         )}
 
@@ -61,48 +77,30 @@ const EventComponent = (props: {
         {props.imageSrc.length > 1 && (
           <button
             onClick={nextImage}
-            className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-black/60"
+            className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-black/60 sm:h-12 sm:w-12"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
         )}
 
-        {/* Floating Title */}
-        <div className="absolute bottom-0 left-0 w-full p-5 sm:p-6">
-          <h2
-            className={`${medievalSharp.className} text-3xl leading-tight text-[#fff4b8] drop-shadow-[2px_2px_0px_rgba(0,0,0,0.8)] sm:text-4xl`}
-          >
-            {props.title}
-          </h2>
-        </div>
-
         {/* Dots */}
         {props.imageSrc.length > 1 && (
-          <div className="absolute bottom-4 right-4 z-20 flex gap-2">
+          <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2">
             {props.imageSrc.map((_, index) => (
               <div
                 key={index}
-                className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   currentImage === index
-                    ? 'w-5 bg-[#fff4b8]'
-                    : 'bg-white/50'
+                    ? 'w-7 bg-[#fff4b8]'
+                    : 'w-2 bg-white/50'
                 }`}
               />
             ))}
           </div>
         )}
       </div>
-
-      {/* CONTENT */}
-      <div className="flex flex-col gap-6 p-5 sm:p-6">
-
-        <p className="text-sm leading-7 text-[#385328] sm:text-base">
-          {props.description}
-        </p>
-
-      </div>
     </article>
   )
 }
 
-export default EventComponent
+export default ExperienceComponent
