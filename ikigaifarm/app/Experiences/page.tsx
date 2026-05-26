@@ -31,7 +31,7 @@ const experienceHighlights = [
     title: 'Nature Based Activities',
     description:
       'Unique activities like farm tours, animal interactions, vegetable picking, and nature games for all ages.',
-    imageSrc: ['/NatureBased1.jpeg','/NatureBased2.jpeg','/NatureBased3.jpeg'],
+    imageSrc: ['/Naturebased1.jpeg','/Naturebased2.jpeg','/Naturebased3.jpeg'],
   },
   {
     title: 'Farm to Fork Dining',
