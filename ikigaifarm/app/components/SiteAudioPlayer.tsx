@@ -369,16 +369,7 @@ useEffect(() => {
             "
           />
 
-          {/* JAPANESE GRID */}
-          <div
-            className="
-              absolute
-              inset-0
-              opacity-[0.04]
-              [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)]
-              [background-size:80px_80px]
-            "
-          />
+          
 
           {/* CONTENT */}
           <div
@@ -472,7 +463,7 @@ useEffect(() => {
             <p
               className={`
                 hero-subtitle
-                mt-8
+                mt-2
                 max-w-2xl
                 text-sm
                 leading-7
@@ -503,7 +494,7 @@ useEffect(() => {
                 hero-button
                 group
                 relative
-                mt-12
+                mt-8
                 overflow-hidden
                 rounded-full
                 border
