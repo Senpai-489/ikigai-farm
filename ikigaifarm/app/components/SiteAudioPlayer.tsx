@@ -17,9 +17,13 @@ import {
 
 import {
   Noto_Serif_JP,
-  MedievalSharp,
+  MedievalSharp,Ovo,
 } from 'next/font/google'
 
+const ovo = Ovo({
+  subsets: ['latin'],
+  weight: '400',
+})
 const notoSerifJP =
   Noto_Serif_JP({
     subsets: ['latin'],
@@ -397,7 +401,7 @@ useEffect(() => {
               className="
                 hero-logo
                 relative
-                mb-10
+                mb-4
                 h-32
                 w-32
                 sm:h-40
@@ -417,15 +421,16 @@ useEffect(() => {
             <p
               className={`
                 hero-subtitle
-                text-[20px]
+                text-[15px]
                 uppercase
+                
                 tracking-[0.45em]
                 text-[#7b1e1e]
                 
                 ${notoSerifJP.className}
               `}
             >
-              生き甲斐 • A REASON FOR
+            A REASON FOR
               BEING
             </p>
 
@@ -443,15 +448,15 @@ useEffect(() => {
             <h1
               className={`
                 hero-title
-                text-5xl
+                text-6xl
                 leading-[0.9]
                 text-[#111]
-                sm:text-7xl
-                lg:text-8xl
-                ${medievalSharp.className}
+                sm:text-8xl
+                lg:text-9xl
+                ${ovo.className}
               `}
             >
-              Ikigai
+              ikigai
               <span
                 className="
                   mt-2
@@ -459,7 +464,7 @@ useEffect(() => {
                   text-[#7b1e1e]
                 "
               >
-                Farm
+                farm
               </span>
             </h1>
 
