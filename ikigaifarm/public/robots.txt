@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+ 
+# Disallow admin and private routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+ 
+# Sitemaps
+Sitemap: https://www.ikigaifarm.org/sitemap.xml
+ 
+# Crawl delay for courtesy
+Crawl-delay: 10
+ 
