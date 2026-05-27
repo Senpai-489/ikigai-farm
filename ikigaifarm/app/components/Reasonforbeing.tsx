@@ -31,10 +31,10 @@ const Reasonforbeing = () => {
 
           {/* IMAGE */}
           <Image
-            src="/A reason img.webp"
+            src="/ReasonForBeing1.jpeg"
             alt="reason for being"
-            width={500}
-            height={700}
+            width={400}
+            height={400}
             quality={70}
             priority={false}
             sizes="(min-width:1024px) 500px, 80vw"

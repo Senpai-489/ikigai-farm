@@ -31,7 +31,7 @@ const experienceHighlights = [
     title: 'Nature Based Activities',
     description:
       'Unique activities like farm tours, animal interactions, vegetable picking, and nature games for all ages.',
-    imageSrc: ['/Naturebased1.jpeg','/Naturebased2.jpeg','/Naturebased3.jpeg'],
+    imageSrc: ['/Naturebased1.1.jpeg','/Naturebased2.jpeg','/Naturebased4.jpeg'],
   },
   {
     title: 'Farm to Fork Dining',
@@ -55,7 +55,7 @@ const experienceHighlights = [
     title: 'Farm venue',
     description:
       'Lush green gardens, scenic landscapes, and natural beauty provide the perfect backdrop for any celebration.',
-    imageSrc: ['/KidsParty1.jpeg','/BeautifulVenue1.jpeg','/BeautifulVenue2.jpeg'],
+    imageSrc: ['/FarmVenue0.jpeg','/FarmVenue1.jpeg','/FarmVenue2.jpeg','/FarmVenue3.jpeg','/FarmVenue4.jpeg'],
   },
 ]
 
