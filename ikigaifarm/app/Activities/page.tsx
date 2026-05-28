@@ -37,7 +37,7 @@ const Cards = [
       'Bounce into joy! Our trampoline is a fun-filled escape for all ages, offering endless laughter and a chance to soar high in the fresh farm air.',
   },
   {
-    imageSrc: ['/CamelRide5.jpeg','/CamelRide4.jpeg'],
+    imageSrc: ['/CamelRide4.jpeg'],
     title: 'Camel Cart Ride',
     description:
       'Experience the thrill of a camel cart ride through the scenic farm landscape.',
