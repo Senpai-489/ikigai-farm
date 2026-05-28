@@ -17,21 +17,21 @@ const Reasonforbeing = () => {
   return (
     <section className="relative overflow-hidden lg:-translate-y-40 py-8 bg-white [content-visibility:auto] [contain-intrinsic-size:760px]">
 
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-16 px-6 lg:flex-row lg:gap-24 lg:px-12">
+      <div className="mx-auto flex py-8 max-w-7xl flex-col items-center gap-16 px-6 lg:flex-row lg:gap-24 lg:px-12">
 
         {/* LEFT */}
         <div className="relative flex w-full items-center justify-center lg:w-1/2">
 
           {/* BACKGROUND STACK */}
-          <div className="absolute h-[280px] w-[220px] rotate-2 rounded-2xl bg-[#1d5a2f] sm:h-[380px] sm:w-[280px] lg:h-[520px] lg:w-[360px]" />
+          <div className="absolute h-[280px] w-[280px] rotate-2 rounded-2xl bg-[#1d5a2f] sm:h-[380px] sm:w-[380px] lg:h-[520px] lg:w-[520px]" />
 
-          <div className="absolute h-[280px] w-[220px] rotate-6 rounded-2xl bg-[#1f6d29] sm:h-[380px] sm:w-[280px] lg:h-[520px] lg:w-[360px]" />
+          <div className="absolute h-[280px] w-[280px] rotate-6 rounded-2xl bg-[#1f6d29] sm:h-[380px] sm:w-[380px] lg:h-[520px] lg:w-[520px]" />
 
-          <div className="absolute h-[280px] w-[220px] rotate-12 rounded-2xl bg-[#194b1f] sm:h-[380px] sm:w-[280px] lg:h-[520px] lg:w-[360px]" />
+          <div className="absolute h-[280px] w-[280px] rotate-12 rounded-2xl bg-[#194b1f] sm:h-[380px] sm:w-[380px] lg:h-[520px] lg:w-[520px]" />
 
           {/* IMAGE */}
           <Image
-            src="/ReasonForBeing1.jpeg"
+            src="/zipline.jpeg"
             alt="reason for being"
             width={400}
             height={400}
