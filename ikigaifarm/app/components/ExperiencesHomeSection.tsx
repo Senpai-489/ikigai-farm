@@ -73,19 +73,19 @@ const ExperiencesHomeSection = () => {
             return (
               <div
                 key={index}
-                className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:ring-2 hover:ring-[#fff4b8]/50 hover:shadow-2xl hover:shadow-[#fff4b8]/10"
+                className="group rounded-3xl text-wrap border border-white/10 bg-white/5 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:ring-2 hover:ring-[#fff4b8]/50 hover:shadow-2xl hover:shadow-[#fff4b8]/10"
               >
                 
                 {/* Title */}
                 <h1
                   className={`${medievalSharp.className} text-3xl leading-tight text-[#fff4b8] drop-shadow-[3px_2px_0px_rgba(0,0,0,1)] sm:text-4xl lg:text-5xl`}
                 >
-                  {item.title.split(' ').map((word, i) => (
-                    <span key={i}>
-                      {word}
-                      <br />
+                  
+                    <span >
+                      {item.title}
+                   
                     </span>
-                  ))}
+              
                 </h1>
 
                 {/* Divider */}
