@@ -13,7 +13,7 @@ const notoSerifJP = Noto_Serif_JP({
 
 const Cards = [
   {
-    imageSrc: ['/zipline.jpeg'],
+    imageSrc: ['/zipline3.jpeg','/zipline4.jpeg','/zipline.jpeg'],
     title: 'Zipline',
     description:
       'Take the leap. Own the sky. Zipline into pure adventure. ',
@@ -25,28 +25,28 @@ const Cards = [
       'Fun, focus, and friendly competition for all ages. Step into the exciting world of archery. ',
   },
   {
-    imageSrc: ['/KidsTrain.jpeg'],
+    imageSrc: ['/KidsTrain.jpeg','/KidsTrain2.png','/KidsTrain3.png'],
     title: 'Kids train',
     description:
       'All aboard for fun! Our kids train offers a delightful ride through the farm, sparking joy and wonder for little adventurers.',
   },
   {
-    imageSrc: ['/Trampoline.jpeg'],
+    imageSrc: ['/Trampoline2.png','/Trampoline3.png','/Trampoline.jpeg'],
     title: 'Trampoline',
     description:
       'Bounce into joy! Our trampoline is a fun-filled escape for all ages, offering endless laughter and a chance to soar high in the fresh farm air.',
   },
   {
-    imageSrc: ['/CamelRidecpy.jpeg'],
+    imageSrc: ['/CamelRide1.jpeg','/CamelRide2.jpeg','/CamelRide3.jpeg'],
     title: 'Camel Cart Ride',
     description:
       'Experience the thrill of a camel cart ride through the scenic farm landscape.',
   },
   {
-    imageSrc: ['/beltCarousel1.jpeg'],
-    title: 'Bouncy',
+    imageSrc: ['/ATV4.png','/ATV2.jpeg','/ATV3.png'],
+    title: 'ATV Ride',
     description:
-      'Jump into joy! Our bouncy castle is a fun-filled escape for all ages, offering endless laughter and a chance to soar high in the fresh farm air.',
+      'Get ready for an adrenaline-pumping ATV ride across our rugged farm terrain, perfect for adventure seekers of all ages.',
   },
 ]
 
