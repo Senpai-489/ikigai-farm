@@ -43,7 +43,7 @@ const Cards = [
       'Experience the thrill of a camel cart ride through the scenic farm landscape.',
   },
   {
-    imageSrc: ['/ATV4.png','/ATV5.jpeg','/ATV6.jpeg'],
+    imageSrc: ['/ATV2.jpeg','/ATV6.jpeg'],
     title: 'ATV Ride',
     description:
       'Get ready for an adrenaline-pumping ATV ride across our rugged farm terrain, perfect for adventure seekers of all ages.',
