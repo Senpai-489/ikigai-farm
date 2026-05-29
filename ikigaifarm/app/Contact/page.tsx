@@ -424,7 +424,7 @@ const Page = () => {
                     </p>
 
                     <p className="mt-1 break-all text-sm text-white/85 sm:text-base">
-                      bookings@ikigaifarm.org
+                      contact@ikigaifarm.org
                     </p>
                   </div>
                 </div>

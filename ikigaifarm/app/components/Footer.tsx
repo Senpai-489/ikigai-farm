@@ -48,8 +48,8 @@ const Footer = () => {
               <a href="tel:+918006746390">
                 <li className='flex items-center gap-2'><Phone size={14} />+91 8006746390</li>
               </a>
-              <a href="mailto:bookings@ikigaifarm.org">
-                <li className='flex items-center gap-2'><Mail size={14} /> bookings@ikigaifarm.org</li>
+              <a href="mailto:contact@ikigaifarm.org">
+                <li className='flex items-center gap-2'><Mail size={14} /> contact@ikigaifarm.org</li>
               </a>
             </ul>
           </div>

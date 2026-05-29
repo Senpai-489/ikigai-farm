@@ -98,10 +98,10 @@ const TermsAndConditionsPage: React.FC = () => {
                 <div className="mt-3 space-y-3">
 
                   <a
-                    href="mailto:bookings@ikigaifarm.org"
+                    href="mailto:contact@ikigaifarm.org"
                     className="block transition-all duration-300 hover:text-[#fff4b8]"
                   >
-                    bookings@ikigaifarm.org
+                    contact@ikigaifarm.org
                   </a>
 
                   <a
