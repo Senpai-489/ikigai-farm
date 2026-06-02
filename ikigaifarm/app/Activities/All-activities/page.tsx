@@ -81,6 +81,7 @@ const page = () => {
   </div>
 
 
+
   <div className="relative overflow-hidden rounded-3xl">
     <Image
       src="/beltCarousel6.jpeg"
