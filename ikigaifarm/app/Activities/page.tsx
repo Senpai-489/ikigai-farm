@@ -110,7 +110,7 @@ const page = () => {
 
        <Link href="/Activities/all-activities">
           <button className="col-span-full mx-auto mb-10 text-center block rounded-full bg-[#122a02] px-6 py-3 text-base font-medium text-amber-100 transition-colors duration-300 hover:bg-[#1f3c07] sm:text-lg">
-            Explore all activities
+            Explore all activities!
           </button>
         </Link>
       </div>
