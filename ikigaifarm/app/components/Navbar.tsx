@@ -32,8 +32,8 @@ const Navbar = () => {
       label: 'Activities',
     },
     {
-      href: '/GroupBookings',
-      label: 'Group Bookings',
+      href: '/Packages',
+      label: 'Packages',
     },
   ]
 
@@ -123,7 +123,7 @@ const Navbar = () => {
                     ) => (
                       <Link
                         key={index}
-                        href={`/Events/#${title}`}
+                        href={title === 'Upcoming Workshops'|| title === 'Signature Events' ? `/Events/${title.toLowerCase().replace(/\s+/g, '-')}` : `/Events/#${title}`}
                         className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
                       >
                         <span className="h-2 w-2 rounded-full bg-[#ffe494] transition-transform duration-300 group-hover/item:scale-125" />

@@ -6,7 +6,7 @@ import {
 import Footer from '../components/Footer'
 import EventComponent from '../components/EventComponent'
 import Image from 'next/image'
-
+import Link from 'next/link'
 const notoSerifJP = Noto_Serif_JP({
   subsets: ['latin'],
 })
@@ -108,9 +108,11 @@ const page = () => {
           />
         ))}
 
-        <button className="col-span-full mx-auto mb-10 text-center block rounded-full bg-[#122a02] px-6 py-3 text-base font-medium text-amber-100 transition-colors duration-300 hover:bg-[#1f3c07] sm:text-lg">
-          Explore all activities
-        </button>
+       <Link href="/Activities/all-activities">
+          <button className="col-span-full mx-auto mb-10 text-center block rounded-full bg-[#122a02] px-6 py-3 text-base font-medium text-amber-100 transition-colors duration-300 hover:bg-[#1f3c07] sm:text-lg">
+            Explore all activities
+          </button>
+        </Link>
       </div>
 
       <Footer />

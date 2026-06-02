@@ -1,10 +1,11 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
+import EventComponent from '../../components/EventComponent'
 import { MedievalSharp } from 'next/font/google'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { ThreeDMarquee, MarqueeImage } from "@/app/components/lightswind/3d-marquee"
-import Image from 'next/image'
+import { AlignVerticalSpaceAround } from 'lucide-react'
 const medievalSharp = MedievalSharp({ subsets: ['latin'], weight: '400' })
 import VerticalCard from '../../components/VerticalCard'
 const images = [
@@ -103,75 +104,17 @@ const page = () => {
         <div className='pointer-events-none absolute -left-28 top-24 -z-10 h-72 w-72 rounded-full bg-[#e7f1d4] blur-3xl' />
         <div className='pointer-events-none absolute -right-20 top-52 -z-10 h-80 w-80 rounded-full bg-[#f5e6c9] blur-3xl' /> */}
 
-        {/* <ThreeDMarquee images={images} className='absolute left-1/2 -translate-y-20 -top-1/12 -z-10 w-[120%] -translate-x-1/2 ' /> */}
-        <div className="absolute opacity-70 left-1/2 -translate-y-20 -top-1/14 -z-10 w-[100%] -translate-x-1/2  grid grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-2 h-[600px]">
-  {/* Large Hero */}
-  
+        <ThreeDMarquee images={images} className='absolute left-1/2 -translate-y-20 -top-1/12 -z-10 w-[120%] -translate-x-1/2 ' />
 
-  {/* Tall Right */}
-  <div className="relative  overflow-hidden rounded-3xl md:col-span-2 md:row-span-1">
-    <Image
-      src="/FamilyReunion2.jpeg"
-      alt="Kids Birthday Parties"
-      fill
-      className="object-cover hover:scale-105 transition duration-500"
-    />
-  </div>
-
-
-  <div className="relative overflow-hidden rounded-3xl">
-    <Image
-      src="/BeltCarousel6.jpeg"
-      alt="Kids Birthday Parties"
-      fill
-      className="object-cover hover:scale-105 transition duration-500"
-    />
-  </div>
-  <div className="relative overflow-hidden rounded-3xl">
-    <Image
-      src="/Archery3.jpeg"
-      alt="Kids Birthday Parties"
-      fill
-      className="object-cover hover:scale-105 transition duration-500"
-    />
-  </div>
-  <div className="relative overflow-hidden rounded-3xl">
-    <Image
-      src="/CorporateFood.jpeg"
-      alt="Kids Birthday Parties"
-      fill
-      className="object-cover hover:scale-105 transition duration-500"
-    />
-  </div>
-
-  
-  <div className="relative overflow-hidden rounded-3xl">
-    <Image
-      src="/zipline.jpeg"
-      alt="Kids Birthday Parties"
-      fill
-      className="object-cover hover:scale-105 transition duration-500"
-    />
-  </div>
-
-   <div className="relative overflow-hidden rounded-3xl md:col-span-2 md:row-span-1">
-    <Image
-      src="/CorporateParty1.jpeg"
-      alt="Kids Birthday Parties"
-      fill
-      className="object-cover hover:scale-105 transition duration-500"
-    />
-  </div>
-</div>
-        <div className='relative drop-shadow-xl bg-white p-8 z-10 max-w-3xl space-y-5 text-left sm:space-y-6'>
+        <div className='relative bg-white p-8 z-10 max-w-3xl space-y-5 text-left sm:space-y-6'>
           <p className='inline-flex w-fit items-center gap-2 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#2c3b1d] shadow-sm'>
-            All Activities
+            Signature Events
           </p>
           <h1 className={`text-4xl font-semibold tracking-tight text-[#14240c] sm:text-5xl lg:text-6xl ${medievalSharp.className}`}>
-            Explore Our Full Range of 40+ Exciting Activities at Ikigai Farm
+            Our Signature Events Are Crafted to Create Unforgettable Memories
           </h1>
           <p className='max-w-2xl text-base leading-7 text-[#2a3821] sm:text-lg'>
-            Discover the perfect blend of adventure and tranquility at Ikigai Farm. Our diverse array of activities is designed to cater to every interest, ensuring a memorable experience for all ages.
+            Explore our range of signature events, crafted to create unforgettable memories in a beautiful farm setting.
           </p>
           {/* <div className='flex flex-wrap items-center gap-3 text-sm text-[#2d3c23]'>
             <span className='rounded-full bg-[#e7f1d4] px-3 py-1'>Small-group coaching</span>

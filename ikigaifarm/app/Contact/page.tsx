@@ -25,16 +25,18 @@ const medievalSharp = MedievalSharp({
 })
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzLCAR3xiCzovNz8mcnmJV21AKav1mzMsz1CUnAps1jHFK6lFsAA_hlc2KF0S8zJ1vz/exec'
+  'https://script.google.com/macros/s/AKfycbymTZp83wtKcfNLlsHTOtObdmbXWxMAgwAcRIswiPzIiJwjImOFh6zst7nuw34ftY5v/exec'
 
 const Page = () => {
-  const [formData, setFormData] =
-    useState({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-    })
+  const [formData, setFormData] = useState({
+  name: '',
+  email: '',
+  phone: '',
+  eventType: '',
+  kids: 0,
+  adults: 0,
+  message: '',
+})
 
   const [loading, setLoading] =
     useState(false)
@@ -114,17 +116,20 @@ const Page = () => {
     return isValid
   }
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement
-    >,
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]:
-        e.target.value,
-    })
-  }
+ const handleChange = (
+  e: React.ChangeEvent<
+    HTMLInputElement |
+    HTMLTextAreaElement |
+    HTMLSelectElement
+  >
+) => {
+  const { name, value } = e.target
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }))
+}
 
   const handleSubmit = async (
     e: React.FormEvent<HTMLFormElement>,
@@ -147,14 +152,15 @@ const Page = () => {
             'Content-Type':
               'text/plain',
           },
-          body: JSON.stringify({
-            name: formData.name,
-            email:
-              formData.email,
-            phone:
-              formData.phone,
-            message:
-              formData.message,
+          
+             body: JSON.stringify({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      eventType: formData.eventType,
+      kids: formData.kids,
+      adults: formData.adults,
+      message: formData.message,
           }),
         },
       )
@@ -167,6 +173,9 @@ const Page = () => {
         name: '',
         email: '',
         phone: '',
+        eventType: '',
+        kids: 0,
+        adults: 0,
         message: '',
       })
 
@@ -322,6 +331,142 @@ const Page = () => {
                 )}
               </div>
 
+              {/* PARTICIPANTS */}
+<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+  {/* KIDS */}
+  <div className="space-y-2">
+    <label className="text-sm font-medium text-[#122a02]">
+      Number of Kids
+    </label>
+
+    <div className="flex items-center justify-between rounded-2xl border border-[#122a02]/15 bg-[#fdfdf8] px-4 py-3">
+      <button
+        type="button"
+        onClick={() =>
+          setFormData((prev) => ({
+            ...prev,
+            kids: Math.max(0, prev.kids - 1),
+          }))
+        }
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#122a02] text-lg text-white transition hover:bg-[#1f3c07]"
+      >
+        -
+      </button>
+
+      <span className="text-lg font-semibold text-[#122a02]">
+        {formData.kids}
+      </span>
+
+      <button
+        type="button"
+        onClick={() =>
+          setFormData((prev) => ({
+            ...prev,
+            kids: prev.kids + 1,
+          }))
+        }
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#122a02] text-lg text-white transition hover:bg-[#1f3c07]"
+      >
+        +
+      </button>
+    </div>
+  </div>
+
+  {/* ADULTS */}
+  <div className="space-y-2">
+    <label className="text-sm font-medium text-[#122a02]">
+      Number of Adults
+    </label>
+
+    <div className="flex items-center justify-between rounded-2xl border border-[#122a02]/15 bg-[#fdfdf8] px-4 py-3">
+      <button
+        type="button"
+        onClick={() =>
+          setFormData((prev) => ({
+            ...prev,
+            adults: Math.max(0, prev.adults - 1),
+          }))
+        }
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#122a02] text-lg text-white transition hover:bg-[#1f3c07]"
+      >
+        -
+      </button>
+
+      <span className="text-lg font-semibold text-[#122a02]">
+        {formData.adults}
+      </span>
+
+      <button
+        type="button"
+        onClick={() =>
+          setFormData((prev) => ({
+            ...prev,
+            adults: prev.adults + 1,
+          }))
+        }
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#122a02] text-lg text-white transition hover:bg-[#1f3c07]"
+      >
+        +
+      </button>
+    </div>
+  </div>
+</div>
+
+            {/* TYPE OF VISIT */}
+{/* EVENT TYPE */}
+<div className="space-y-2">
+  <label className="text-sm font-medium text-[#122a02]">
+    Event Type
+  </label>
+
+  <select
+    name="eventType"
+    value={formData.eventType}
+    onChange={handleChange}
+    className="w-full rounded-2xl border border-[#122a02]/15 bg-[#fdfdf8] px-4 py-3 text-sm text-[#122a02] shadow-sm transition duration-300 focus:border-[#122a02] focus:outline-none focus:ring-4 focus:ring-[#122a02]/10 sm:px-5 sm:py-4"
+  >
+    <option value="">
+      Select Event Type
+    </option>
+
+    <option value="Adventure Day Out (10am-3pm)">
+      Adventure Day Out (10am-3pm)
+    </option>
+
+    <option value="Sunset Trail (4pm-9pm)">
+      Sunset Trail (4pm-9pm)
+    </option>
+
+    <option value="Kids Birthday Party">
+      Kids Birthday Party
+    </option>
+
+    <option value="Corporate Events">
+      Corporate Events
+    </option>
+
+    <option value="Family Reunions">
+      Family Reunions
+    </option>
+
+    <option value="Farm Wedding">
+      Farm Wedding
+    </option>
+
+    <option value="Anniversary Celebration">
+      Anniversary Celebration
+    </option>
+
+    <option value="Reception">
+      Reception
+    </option>
+
+    <option value="Other">
+      Other
+    </option>
+  </select>
+</div>
               {/* MESSAGE */}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-[#122a02]">

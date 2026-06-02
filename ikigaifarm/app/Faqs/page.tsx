@@ -8,6 +8,8 @@ import {
 } from '@/app/fonts'
 import faqs from '@/app/lib/faqs'
 import Link from 'next/link'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const FAQItem = memo(
   ({
@@ -70,6 +72,9 @@ const FAQSection = () => {
     useState<number | null>(0)
 
   return (
+    <div>
+        <Navbar />
+   
     <section className="relative overflow-hidden bg-[#faf6ea] px-4 py-20 sm:px-6 lg:px-8">
 
       <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#d6e3af]/20 blur-3xl" />
@@ -91,7 +96,7 @@ const FAQSection = () => {
         </div>
 
         <div className="mt-14 flex flex-col gap-5">
-          {faqs.slice(0, 7).map((faq, index) => (
+          {faqs.map((faq, index) => (
             <FAQItem
               key={index}
               faq={faq}
@@ -108,11 +113,11 @@ const FAQSection = () => {
             />
           ))}
         </div>
-        <Link href="/Faqs" className="mt-6 font-bold block text-center rounded-full bg-amber-200 px-6 py-3 text-[#6b5f3a] hover:text-[#122a02]">
-          View All FAQs
-        </Link>
+       
       </div>
     </section>
+    <Footer />
+     </div>
   )
 }
 

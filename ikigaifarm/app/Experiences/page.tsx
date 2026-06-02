@@ -172,9 +172,9 @@ const page = () => {
                 </button>
               </Link>
 
-              <Link href='/GroupBookings'>
+              <Link href='/Contact'>
                 <button className="w-full rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-white/10 sm:w-auto">
-                  Group Bookings
+                  Book Now!
                 </button>
               </Link>
             </div>

@@ -87,14 +87,14 @@ const LastHomeSection = () => {
             {/* BUTTONS */}
             <div className="mt-10 flex flex-wrap gap-4">
 
-              <Link href="/GroupBookings">
+              <Link href="/Contact">
                 <button className="group flex items-center gap-2 rounded-full bg-[#003901] px-7 py-4 text-sm font-semibold text-[#fffba6] shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[#0a4f0c]">
                   Book Now
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </Link>
 
-              <Link href="/Activities">
+              <Link href="/Activities/all-activities">
                 <button className="rounded-full border-2 border-[#003901] bg-white px-7 py-4 text-sm font-semibold text-[#003901] transition-all duration-300 hover:bg-[#003901] hover:text-[#fffba6]">
                   View All Activities
                 </button>
