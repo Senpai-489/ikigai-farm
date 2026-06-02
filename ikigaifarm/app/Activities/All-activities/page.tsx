@@ -7,45 +7,7 @@ import { ThreeDMarquee, MarqueeImage } from "@/app/components/lightswind/3d-marq
 import Image from 'next/image'
 const medievalSharp = MedievalSharp({ subsets: ['latin'], weight: '400' })
 import VerticalCard from '../../components/VerticalCard'
-const images = [
-  { src: '/KidsParty2.jpeg',
-    alt: 'Kids Birthday Parties' },
-  { src: '/CorporateParty2.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding2.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/FamilyReunion.jpeg',
-    alt: 'Family Reunions' },
-    { src: '/KidsParty5.jpeg',
-    alt: 'Kids Birthday Parties' },
-  { src: '/CorporateParty1.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding3.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/FamilyReunion2.jpeg',
-    alt: 'Family Reunions' },
-    { src: '/KidsParty6.jpeg',
-    alt: 'Kids Birthday Parties' },
-  { src: '/CorporateParty.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding4.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/FamilyReunion1.jpeg',
-    alt: 'Family Reunions' },
-    { src: '/FarmWedding5.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/KidsParty7.jpeg',
-    alt: 'Kids Birthday Parties' },
-    { src: '/KidsParty1.jpeg',
-    alt: 'Kids Birthday Parties' },
-    { src: '/CorporateParty.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding4.jpeg',
-    alt: 'Farm Weddings' },
 
-
-
-]
 const Cards = [
   {
     imageSrc: ['/placeholder.webp'],
@@ -121,7 +83,7 @@ const page = () => {
 
   <div className="relative overflow-hidden rounded-3xl">
     <Image
-      src="/BeltCarousel6.jpeg"
+      src="/beltCarousel6.jpeg"
       alt="Kids Birthday Parties"
       fill
       className="object-cover hover:scale-105 transition duration-500"
