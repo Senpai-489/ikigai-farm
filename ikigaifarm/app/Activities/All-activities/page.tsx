@@ -68,6 +68,7 @@ const page = () => {
         {/* <ThreeDMarquee images={images} className='absolute left-1/2 -translate-y-20 -top-1/12 -z-10 w-[120%] -translate-x-1/2 ' /> */}
         <div className="absolute opacity-70 left-1/2 -translate-y-20 -top-1/14 -z-10 w-[100%] -translate-x-1/2  grid grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-2 h-[600px]">
   {/* Tall Right */}
+  {/* <div className="relative overflow-hidden rounded-3xl">*/}
   <div className="relative  overflow-hidden rounded-3xl md:col-span-2 md:row-span-1">
     <Image
       src="/FamilyReunion2.jpeg"
