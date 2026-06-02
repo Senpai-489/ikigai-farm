@@ -94,7 +94,7 @@ const LastHomeSection = () => {
                 </button>
               </Link>
 
-              <Link href="/Activities/all-activities">
+              <Link href="/Activities/All-activities">
                 <button className="rounded-full border-2 border-[#003901] bg-white px-7 py-4 text-sm font-semibold text-[#003901] transition-all duration-300 hover:bg-[#003901] hover:text-[#fffba6]">
                   View All Activities
                 </button>
