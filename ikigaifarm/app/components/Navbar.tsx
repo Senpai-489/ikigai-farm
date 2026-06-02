@@ -387,7 +387,7 @@ const Navbar = () => {
                     ) => (
                       <Link
                         key={index}
-                        href={`/Events/#${title}`}
+                         href={title === 'Upcoming Workshops'|| title === 'Signature Events' ? `/Events/${title.toLowerCase().replace(/\s+/g, '-')}` : `/Events/#${title}`}
                         onClick={() =>
                           setIsMenuOpen(
                             false,
