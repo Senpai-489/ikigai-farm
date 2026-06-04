@@ -121,7 +121,7 @@ const Navbar = () => {
                     ) => (
                       <Link
                         key={index}
-                        href={title === 'Upcoming Workshops'|| title === 'Signature Events' ? `/Events/${title.toLowerCase().replace(/\s+/g, '-')}` : `/Events/#${title}`}
+                        href={title === '✧ Signature Events' ? `/Events/signature-events` : `/Events/#${title}`}
                         className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
                       >
                       
@@ -382,7 +382,7 @@ const Navbar = () => {
                     ) => (
                       <Link
                         key={index}
-                         href={title === 'Upcoming Workshops'|| title === 'Signature Events' ? `/Events/${title.toLowerCase().replace(/\s+/g, '-')}` : `/Events/#${title}`}
+                         href={title === '✧ Signature Events' ? "/Events/signature-events" : `/Events/#${title}`}
                         onClick={() =>
                           setIsMenuOpen(
                             false,

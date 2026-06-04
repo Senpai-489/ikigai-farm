@@ -239,7 +239,7 @@ const Page = () => {
     },
     {
       title: 'Birthday',
-      price: '1500/person',
+      price: '1600/person',
       specs: 'minimum 10+ people',
       description: [
         "Exclusive Party Area",

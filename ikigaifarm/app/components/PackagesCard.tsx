@@ -9,7 +9,7 @@ const PackagesCard = (props: {
   description: string[]
 }) => {
   return (
-    <div className="w-full rounded-lg drop-shadow-2xl overflow-hidden border border-[#e5e5e5] bg-[#f7f7f7] transition-all duration-300 hover:border-[#d9d9d9]">
+    <div className="w-full h-full flex-col flex rounded-lg drop-shadow-2xl overflow-hidden border border-[#e5e5e5] bg-[#feffd2] transition-all duration-300 hover:border-[#d9d9d9]">
       
       {/* Package Title */}
       <div className="border-b border-[#e5e5e5] py-10 text-center">
@@ -56,16 +56,14 @@ const PackagesCard = (props: {
       </div>
 
       {/* CTA */}
-      <div className="border-t flex  border-[#e5e5e5] px-6 py-10">
-        <Link
-          href="/Contact"
-          className="
-           mx-auto w-full rounded-full text-center bg-[#122a02] px-6 py-3 text-sm font-medium text-amber-100 transition-all duration-300 hover:scale-105 hover:bg-[#1f3c07] sm:px-7 sm:py-4 sm:text-base
-          "
-        >
-          Book Now
-        </Link>
-      </div>
+      <div className="mt-auto border-t border-[#e5e5e5] px-6 py-10">
+    <Link
+      href="/Contact"
+      className="block rounded-full bg-[#122a02] px-6 py-3 text-center text-amber-100"
+    >
+      Book Now
+    </Link>
+  </div>
     </div>
   )
 }
