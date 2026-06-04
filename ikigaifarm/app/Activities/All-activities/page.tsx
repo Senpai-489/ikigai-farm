@@ -3,58 +3,47 @@ import Navbar from '../../components/Navbar'
 import { MedievalSharp } from 'next/font/google'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
-import { ThreeDMarquee, MarqueeImage } from "@/app/components/lightswind/3d-marquee"
+
 import Image from 'next/image'
 const medievalSharp = MedievalSharp({ subsets: ['latin'], weight: '400' })
-import VerticalCard from '../../components/VerticalCard'
 
-const Cards = [
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Holi Bash',
-    description: 'Celebrate the vibrant festival of colors with us at Ikigai Farm! Join us for a joyous Holi Bash filled with music, dance, and of course, an explosion of colorful powders. Experience the spirit of togetherness and fun in our beautiful farm setting as we welcome spring with open arms. Don\'t miss out on this unforgettable celebration of life and color!'
-  },
-   {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Bhajan Clubbing',
-    description: 'Experience the soulful blend of spirituality and music with our Bhajan Clubbing event at Ikigai Farm! Join us for an evening of devotional songs, vibrant beats, and a lively atmosphere that will uplift your spirit. Whether you\'re a seasoned bhajan enthusiast or new to the genre, this event promises a unique fusion of traditional melodies and contemporary vibes. Come together with fellow music lovers for a night of joy, devotion, and unforgettable memories in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Navratri Garba',
-    description: 'Celebrate the vibrant festival of Navratri with us at Ikigai Farm! Join us for an unforgettable Navratri Garba night filled with energetic dance, traditional music, and a festive atmosphere. Whether you\'re a seasoned dancer or new to the art of Garba, this event promises a joyful celebration of culture and community. Come together with friends and family to dance the night away under the stars in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'New Year Celebration',
-    description: 'Ring in the new year with us at Ikigai Farm! Join us for an unforgettable New Year celebration filled with music, dance, and a festive atmosphere. Whether you\'re celebrating with family and friends or starting the year fresh, this event promises a night of joy, togetherness, and unforgettable memories in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Chrismas Carnival',
-    description: 'Celebrate the joyous Christmas season with us at Ikigai Farm! Join us for an unforgettable Christmas Carnival filled with festive decorations, traditional music, and a warm atmosphere. Whether you\'re celebrating with family and friends or enjoying the magic of the holidays, this event promises a night of joy, togetherness, and unforgettable memories in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Lohri Festival',
-    description: 'Experience the vibrant celebration of Lohri with us at Ikigai Farm! Join us for an unforgettable Lohri Festival night filled with traditional music, dance, and a festive atmosphere. Whether you\'re a seasoned participant or new to the celebration, this event promises a joyful gathering of culture and community. Come together with friends and family to celebrate under the stars in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Haloween',
-    description: 'Celebrate the spooky season with us at Ikigai Farm! Join us for an unforgettable Halloween night filled with eerie decorations, thrilling activities, and a festive atmosphere. Whether you\'re dressing up in costume or just looking for a fun night out, this event promises a night of excitement, togetherness, and unforgettable memories in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'War of DJs',
-    description: 'Experience the ultimate DJ battle with our War of DJs event at Ikigai Farm! Join us for an electrifying night of top-tier beats, dazzling visuals, and an atmosphere that will keep you on the edge of your seat. Whether you\'re a seasoned club-goer or new to the world of electronic music, this event promises an unforgettable night of rhythm and resonance in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Sufi Nights',
-    description: 'Experience the enchanting blend of spirituality and music with our Sufi Nights at Ikigai Farm! Join us for an unforgettable evening filled with soulful melodies, mesmerizing rhythms, and a serene atmosphere. Whether you\'re a seasoned Sufi music lover or new to the genre, this event promises a unique fusion of traditional sounds and contemporary vibes. Come together with fellow music enthusiasts for a night of joy, devotion, and unforgettable memories in our beautiful farm setting!'
-  },
-  
+import MasonryGrid from '../../components/MasonryGrid'
+const images = [
+  '/MusicJamming2.jpg',
+  '/LohriFestival2.jpg',
+  '/PizzaMaking1.jpg',
+  '/HoliBash2.jpeg',
+  '/KidsParty2.jpeg',
+  '/FleaMarket4.jpg',
+  '/BhajanClubbing2.jpeg',
+  '/NavratriGarba2.jpeg',
+  '/NewYearCelebration2.jpg',
+  '/Archery3.jpeg',
+  '/PotteryWorkshop1.jpg',
+  '/MaskPaintingWorkshop1.jpg',
+  '/CandleMakingWorkshop1.jpg',
+  '/MusicNights2.jpeg',
+  '/SufiNights2.jpg',
+  '/CorporateParty2.jpeg',
+  '/FarmWedding2.jpeg',
+  '/NukkadNatak1.jpg',
+  '/FamilyReunion.jpeg',
+  '/KidsParty5.jpeg',
+  '/OpenAirTheatre1.jpg',
+  '/CorporateParty1.jpeg',
+  '/FarmWedding3.jpeg',
+  '/FamilyReunion2.jpeg',
+  '/KidsParty6.jpeg',
+  '/CorporateParty.jpeg',
+  '/FarmWedding4.jpeg',
+  '/HoliBash1.jpeg',
+  '/FamilyReunion1.jpeg',
+  '/FarmWedding5.jpeg',
+  '/KidsParty7.jpeg',
+  '/KidsParty1.jpeg',
+  '/PizzaMaking1.jpg',
+  '/CorporateParty.jpeg',
+  '/FarmWedding4.jpeg',
 ]
 const page = () => {
   return (
@@ -140,10 +129,104 @@ const page = () => {
           </div> */}
         </div>
 
-        <div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:mt-20'>
-          {Cards.map((card) => (
-            <VerticalCard key={card.title} imageSrc={card.imageSrc} title={card.title} description={card.description} />
-          ))}
+        <section className="py-20">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    {/* Heading */}
+    <div className="mb-12 text-center">
+      
+
+      <h2 className={`${medievalSharp.className} mt-5 text-4xl font-black text-[#122a02] md:text-5xl`}>
+        Activities Offered at Ikigai Farm
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600">
+        Discover creative workshops, seasonal festivals, family
+        celebrations, corporate gatherings, and immersive farm
+        experiences designed for all age groups.
+      </p>
+    </div>
+
+    {/* Grid */}
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {[
+        "Pottery",
+        "Mask Painting",
+        "Candle Making",
+        "DIY Craft",
+        "Bakery",
+        "Pizza Making",
+        "Nukkad Natak",
+        "Open Air Theatre",
+        "Music & Jamming",
+        "Reading",
+        "Handwriting & Calligraphy",
+        "Puppet Workshop",
+
+        "Holi Bash",
+        "Bhajan Clubbing",
+        "Navratri Garba",
+        "New Year Celebration",
+        "Christmas Carnival",
+        "Lohri Festival",
+        "Music Festival",
+        "Sufi Night",
+        "Farmer's Market",
+        "Flea Bazaar",
+
+        "Kids Birthday Parties",
+        "Farm Weddings",
+        "Corporate Events",
+        "Family Reunions",
+        "Archery",
+        "Ziplining",
+        "ATV Rides",
+        "Camel Cart Rides",
+        "Zorbing",
+        "Farm to Table Experiences",
+        "Kids Train",
+        "Trampoline"
+      ].map((activity) => (
+        <div
+          key={activity}
+          className="
+            group
+            relative
+            overflow-hidden
+            
+            border
+            border-[#e5e5e5]
+            bg-white
+            p-5
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:border-[#ffe494]
+            hover:bg-[#fffdf5]
+            hover:shadow-xl
+          "
+        >
+          
+          <div className="relative flex items-center gap-3">
+           
+
+            <span className="font-semibold text-[#122a02]">
+              {activity}
+            </span>
+          </div>
+        </div>
+      ))}
+      <div className='font-semibold text-[#122a02]'>And Unforegettable Memories...</div>
+    </div>
+  </div>
+</section>
+
+<h2 className={`${medievalSharp.className} mb-12 text-center text-4xl font-black text-[#122a02] md:text-5xl`}>
+        Have a glimpse of the fun that awaits you at Ikigai Farm
+      </h2>
+
+
+        <div >
+          <MasonryGrid images={images} />
         </div>
       </section>
 

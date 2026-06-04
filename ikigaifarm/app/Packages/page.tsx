@@ -90,8 +90,41 @@ const Page = () => {
   }
   const gridImages = [
     
-    '/FarmersMarket1.webp', '/FarmersMarket2.png', '/FarmersMarket3.jpg', '/FarmersMarket4.jpg', '/FarmersMarket5.jpg',
-    '/SufiNights1.jpg', '/SufiNights2.jpg', '/SufiNights3.jpg', '/SufiNights4.jpg',
+    '/MusicJamming2.jpg',
+  '/LohriFestival2.jpg',
+  '/PizzaMaking1.jpg',
+  '/HoliBash2.jpeg',
+  '/KidsParty2.jpeg',
+  '/FleaMarket4.jpg',
+  '/BhajanClubbing2.jpeg',
+  '/NavratriGarba2.jpeg',
+  '/NewYearCelebration2.jpg',
+  '/Archery3.jpeg',
+  '/PotteryWorkshop1.jpg',
+  '/MaskPaintingWorkshop1.jpg',
+  '/CandleMakingWorkshop1.jpg',
+  '/MusicNights2.jpeg',
+  '/SufiNights2.jpg',
+  '/CorporateParty2.jpeg',
+  '/FarmWedding2.jpeg',
+  '/NukkadNatak1.jpg',
+  '/FamilyReunion.jpeg',
+  '/KidsParty5.jpeg',
+  '/OpenAirTheatre1.jpg',
+  '/CorporateParty1.jpeg',
+  '/FarmWedding3.jpeg',
+  '/FamilyReunion2.jpeg',
+  '/KidsParty6.jpeg',
+  '/CorporateParty.jpeg',
+  '/FarmWedding4.jpeg',
+  '/HoliBash1.jpeg',
+  '/FamilyReunion1.jpeg',
+  '/FarmWedding5.jpeg',
+  '/KidsParty7.jpeg',
+  '/KidsParty1.jpeg',
+  '/PizzaMaking1.jpg',
+  '/CorporateParty.jpeg',
+  '/FarmWedding4.jpeg',
      ]
 
   const validateForm = () => {
@@ -490,8 +523,8 @@ const Page = () => {
     </div>
   </div>
 </section>
-        <div>
-          <p className={` text-center text-3xl font-bold text-[#122a02] mt-20 mb-10 ${medievalSharp.className}`}>
+        <div className="p-12">
+          <p className={`p-8 text-center text-3xl lg:text-7xl font-bold text-[#122a02] mt-20 mb-10 ${medievalSharp.className}`}>
            Photo Gallery
           </p>
           <MasonryGrid images={gridImages} />
