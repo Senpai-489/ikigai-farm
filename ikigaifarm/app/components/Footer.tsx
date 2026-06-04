@@ -20,6 +20,7 @@ const Footer = () => {
             <h4 className='mb-3 font-semibold'>Quick Links</h4>
             <ul className='space-y-2 text-sm text-gray-300'>
               <li><Link href='/' className='hover:text-white'>About Us</Link></li>
+              <li><Link href='/PartnerWithUs' className='hover:text-white'>Partner With Us</Link></li>
               <li><Link href='/Blogs' className='hover:text-white'>Blog</Link></li>
               <li><Link href='/Contact' className='hover:text-white'>Group Bookings</Link></li>
               <li><Link href='/WhyUs' className='hover:text-white'>Why Choose Us</Link></li>

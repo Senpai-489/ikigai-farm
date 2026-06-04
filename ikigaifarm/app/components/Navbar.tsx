@@ -12,6 +12,7 @@ import {
 
 import { MdArrowDropDown } from 'react-icons/md'
 
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] =
     useState(false)
@@ -408,7 +409,7 @@ const Navbar = () => {
               }
               className="flex h-14 w-full items-center justify-between px-5 text-sm font-medium text-[#ffe494]"
             >
-              Experiences
+              ✧ Upcoming Workshops
 
               <ChevronDown
                 className={`transition-transform duration-300 ${
@@ -437,7 +438,7 @@ const Navbar = () => {
                     ) => (
                       <Link
                         key={index}
-                        href={`/Experiences/#${title}`}
+                        href={title === 'Upcoming Workshops' ? `/Events/upcoming-workshops` : `/${title}`}
                         onClick={() =>
                           setIsMenuOpen(
                             false,
