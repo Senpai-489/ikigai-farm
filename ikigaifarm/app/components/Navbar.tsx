@@ -54,6 +54,7 @@ const Navbar = () => {
   ]
 
   const experienceItems = [
+    'Upcoming Workshops',
     'Experiences',
     
   ]
@@ -64,7 +65,7 @@ const Navbar = () => {
     'Corporate Events',
     'Farm Weddings',
     'Family Reunions',
-    'Upcoming Workshops',
+    
   ]
 
   const toggleDropdown = (
@@ -170,7 +171,7 @@ const Navbar = () => {
                     ) => (
                       <Link
                         key={index}
-                        href={`/${title}`}
+                        href={title === 'Upcoming Workshops' ? `/Events/upcoming-workshops` : `/${title}`}
                         className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
                       >
                        
