@@ -100,7 +100,7 @@ const Page = () => {
   '/NavratriGarba2.jpeg',
   '/NewYearCelebration2.jpg',
   '/Archery3.jpeg',
-  '/PotteryWorkshop1.jpg',
+  '/Potteryworkshop1.jpg',
   '/MaskPaintingWorkshop1.jpg',
   '/CandleMakingWorkshop1.jpg',
   '/MusicNights2.jpeg',
