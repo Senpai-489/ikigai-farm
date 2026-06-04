@@ -22,6 +22,7 @@ const Footer = () => {
               <li><Link href='/' className='hover:text-white'>About Us</Link></li>
               <li><Link href='/Blogs' className='hover:text-white'>Blog</Link></li>
               <li><Link href='/Contact' className='hover:text-white'>Group Bookings</Link></li>
+              <li><Link href='/WhyUs' className='hover:text-white'>Why Choose Us</Link></li>
               <li><Link href='/refund-policy' className='hover:text-white'>Refund Policy</Link></li>
               <li><Link target='_blank' href='https://www.instagram.com/ikigaifarm.noida/' className='hover:text-white'>Gallery</Link></li>
               <li><Link href='/Contact' className='hover:text-white'>Contact Us</Link></li>

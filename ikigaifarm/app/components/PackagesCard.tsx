@@ -37,18 +37,18 @@ const PackagesCard = (props: {
       </div>
 
       {/* Features */}
-      <div className="flex min-h-[280px]  flex-col justify-center gap-6 px-8 py-10">
+      <div className="flex min-h-[280px]  flex-col justify-start gap-6 px-8 py-10">
         {props.description.map((item, index) => (
           <div
             key={index}
-            className="flex items-start justify-center gap-3"
+            className="flex items-start justify-start gap-3"
           >
             <CheckCircle2
               size={18}
               className="mt-1 shrink-0 text-[#ff7a00]"
             />
 
-            <p className="text-center text-lg leading-relaxed text-[#555]">
+            <p className="text-left text-lg leading-relaxed text-[#555]">
               {item}
             </p>
           </div>

@@ -54,21 +54,17 @@ const Navbar = () => {
   ]
 
   const experienceItems = [
-    'Sustainable Celebrations',
-    'Nature Based Activities',
-    'Farm to Fork Dining',
-    'Personalized Experiences',
-    'Memorable Moments',
-    'Farm venue'
+    'Experiences',
+    
   ]
 
   const eventItems = [
+    '✧ Signature Events',
     'Kids Birthday Parties',
     'Corporate Events',
     'Farm Weddings',
     'Family Reunions',
     'Upcoming Workshops',
-    'Signature Events',
   ]
 
   const toggleDropdown = (
@@ -126,8 +122,7 @@ const Navbar = () => {
                         href={title === 'Upcoming Workshops'|| title === 'Signature Events' ? `/Events/${title.toLowerCase().replace(/\s+/g, '-')}` : `/Events/#${title}`}
                         className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
                       >
-                        <span className="h-2 w-2 rounded-full bg-[#ffe494] transition-transform duration-300 group-hover/item:scale-125" />
-
+                      
                         {title}
                       </Link>
                     ),
@@ -139,11 +134,11 @@ const Navbar = () => {
 
           {/* EXPERIENCES */}
           <div className="group relative">
-           <Link href="/Experiences">
+           <Link href="/Events/upcoming-workshops">
               <button
                 className={navLinkStyles}
               >
-                Experiences
+                ✧ Upcoming Workshops
 
                 <MdArrowDropDown className="h-5 w-5" />
               </button>
@@ -175,11 +170,10 @@ const Navbar = () => {
                     ) => (
                       <Link
                         key={index}
-                        href={`/Experiences/#${title}`}
+                        href={`/${title}`}
                         className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
                       >
-                        <span className="h-2 w-2 rounded-full bg-[#ffe494] transition-transform duration-300 group-hover/item:scale-125" />
-
+                       
                         {title}
                       </Link>
                     ),
@@ -276,8 +270,7 @@ const Navbar = () => {
                         href={`/Food/#${title}`}
                         className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
                       >
-                        <span className="h-2 w-2 rounded-full bg-[#ffe494] transition-transform duration-300 group-hover/item:scale-125" />
-
+                      
                         {title}
                       </Link>
                     ),

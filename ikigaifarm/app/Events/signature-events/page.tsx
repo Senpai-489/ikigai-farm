@@ -48,51 +48,54 @@ const images = [
 
 ]
 const Cards = [
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Holi Bash',
-    description: 'Celebrate the vibrant festival of colors with us at Ikigai Farm! Join us for a joyous Holi Bash filled with music, dance, and of course, an explosion of colorful powders. Experience the spirit of togetherness and fun in our beautiful farm setting as we welcome spring with open arms. Don\'t miss out on this unforgettable celebration of life and color!'
-  },
-   {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Bhajan Clubbing',
-    description: 'Experience the soulful blend of spirituality and music with our Bhajan Clubbing event at Ikigai Farm! Join us for an evening of devotional songs, vibrant beats, and a lively atmosphere that will uplift your spirit. Whether you\'re a seasoned bhajan enthusiast or new to the genre, this event promises a unique fusion of traditional melodies and contemporary vibes. Come together with fellow music lovers for a night of joy, devotion, and unforgettable memories in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Navratri Garba',
-    description: 'Celebrate the vibrant festival of Navratri with us at Ikigai Farm! Join us for an unforgettable Navratri Garba night filled with energetic dance, traditional music, and a festive atmosphere. Whether you\'re a seasoned dancer or new to the art of Garba, this event promises a joyful celebration of culture and community. Come together with friends and family to dance the night away under the stars in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'New Year Celebration',
-    description: 'Ring in the new year with us at Ikigai Farm! Join us for an unforgettable New Year celebration filled with music, dance, and a festive atmosphere. Whether you\'re celebrating with family and friends or starting the year fresh, this event promises a night of joy, togetherness, and unforgettable memories in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Chrismas Carnival',
-    description: 'Celebrate the joyous Christmas season with us at Ikigai Farm! Join us for an unforgettable Christmas Carnival filled with festive decorations, traditional music, and a warm atmosphere. Whether you\'re celebrating with family and friends or enjoying the magic of the holidays, this event promises a night of joy, togetherness, and unforgettable memories in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Lohri Festival',
-    description: 'Experience the vibrant celebration of Lohri with us at Ikigai Farm! Join us for an unforgettable Lohri Festival night filled with traditional music, dance, and a festive atmosphere. Whether you\'re a seasoned participant or new to the celebration, this event promises a joyful gathering of culture and community. Come together with friends and family to celebrate under the stars in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Haloween',
-    description: 'Celebrate the spooky season with us at Ikigai Farm! Join us for an unforgettable Halloween night filled with eerie decorations, thrilling activities, and a festive atmosphere. Whether you\'re dressing up in costume or just looking for a fun night out, this event promises a night of excitement, togetherness, and unforgettable memories in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'War of DJs',
-    description: 'Experience the ultimate DJ battle with our War of DJs event at Ikigai Farm! Join us for an electrifying night of top-tier beats, dazzling visuals, and an atmosphere that will keep you on the edge of your seat. Whether you\'re a seasoned club-goer or new to the world of electronic music, this event promises an unforgettable night of rhythm and resonance in our beautiful farm setting!'
-  },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Sufi Nights',
-    description: 'Experience the enchanting blend of spirituality and music with our Sufi Nights at Ikigai Farm! Join us for an unforgettable evening filled with soulful melodies, mesmerizing rhythms, and a serene atmosphere. Whether you\'re a seasoned Sufi music lover or new to the genre, this event promises a unique fusion of traditional sounds and contemporary vibes. Come together with fellow music enthusiasts for a night of joy, devotion, and unforgettable memories in our beautiful farm setting!'
-  },
+{
+  imageSrc: ['/placeholder.webp'],
+  title: 'Holi Bash',
+  description:
+    'Celebrate Holi with vibrant colors, music, dance, and unforgettable fun in a lively farm setting.',
+},
+{
+  imageSrc: ['/placeholder.webp'],
+  title: 'Bhajan Clubbing',
+  description:
+    'A unique fusion of devotional bhajans, energetic beats, and a vibrant community atmosphere.',
+},
+{
+  imageSrc: ['/placeholder.webp'],
+  title: 'Navratri Garba',
+  description:
+    'Dance under the stars with traditional Garba, festive music, and joyful celebrations.',
+},
+{
+  imageSrc: ['/placeholder.webp'],
+  title: 'New Year Celebration',
+  description:
+    'Welcome the new year with music, entertainment, great food, and memorable moments.',
+},
+{
+  imageSrc: ['/placeholder.webp'],
+  title: 'Christmas Carnival',
+  description:
+    'Experience festive decorations, holiday cheer, family fun, and Christmas magic at the farm.',
+},
+{
+  imageSrc: ['/placeholder.webp'],
+  title: 'Lohri Festival',
+  description:
+    'Celebrate Lohri with bonfires, folk music, dance, and traditional festive spirit.',
+},
+{
+  imageSrc: ['/placeholder.webp'],
+  title: 'Music Festival',
+  description:
+    'Enjoy live performances, vibrant energy, and unforgettable musical experiences in nature.',
+},
+{
+  imageSrc: ['/placeholder.webp'],
+  title: 'Sufi Nights',
+  description:
+    'Immerse yourself in soulful Sufi music, serene vibes, and enchanting performances.',
+},
   
 ]
 const page = () => {
@@ -125,7 +128,7 @@ const page = () => {
 
         <div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:mt-20'>
           {Cards.map((card) => (
-            <VerticalCard key={card.title} imageSrc={card.imageSrc} title={card.title} description={card.description} />
+            <VerticalCard key={card.title} readmore={false} imageSrc={card.imageSrc} title={card.title} description={card.description} />
           ))}
         </div>
       </section>

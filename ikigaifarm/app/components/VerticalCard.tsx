@@ -19,6 +19,8 @@ const medievalSharp = MedievalSharp({
 const VerticalCard = (props: {
   imageSrc: string[]
   title: string
+  slug?: string
+  readmore?: boolean
   description: string
 }) => {
   const [currentImage, setCurrentImage] = useState(0)
@@ -161,7 +163,26 @@ const VerticalCard = (props: {
           >
             Enquire
           </Link>
-
+        {props.readmore && (
+          <Link
+href={`/Events/upcoming-workshops/${props.slug}`}
+className=" flex-1
+              rounded-full
+              bg-[#122a02]
+              px-4
+              py-3
+              text-center
+              text-sm
+              font-medium
+              text-amber-100
+              transition-all
+              duration-300
+              hover:bg-[#1f3c07]"
+>
+Read More
+</Link> 
+        )}
+              
           <Link
             href="tel:+918006746390"
             className="

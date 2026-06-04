@@ -43,7 +43,7 @@ export const ThreeDHoverGallery: React.FC<ThreeDHoverGalleryProps> = ({
   hoverScale = 15, // Increased default for more pronounced hover scale
   transitionDuration = 1.25,
   backgroundColor,
-  grayscaleStrength = 1,
+  grayscaleStrength = 0,
   brightnessLevel = 0.5,
   activeWidth = 45, // Increased default for wider active item
   enableKeyboardNavigation = true,

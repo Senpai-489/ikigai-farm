@@ -14,7 +14,18 @@ import Image from 'next/image'
 
 import {
   Balloon,
+  
+  BoomBox,
+  
+  BowArrow,
+  
+  CameraIcon,
+  
   CheckCircle,
+  CupSoda,
+  HandPlatter,
+  Soup,
+  SportShoe,
   TreePalmIcon,
 } from 'lucide-react'
 import PackagesCard from '../components/PackagesCard'
@@ -197,10 +208,11 @@ const Page = () => {
       price: '850/-',
       specs: '5-11yrs',
       description: [
-        "Guided nature walks",
-        "Kids Snacks",
-        "Educational storytelling",
-        "Creative art activities"
+        "20+ Adventure Activities",
+"Camp Games",
+"Healthy & Hygienic Meals",
+"4 Meals Included",
+        
       ]
     },
     {
@@ -208,10 +220,10 @@ const Page = () => {
       price: '1250/-',
       specs: '12yrs and above',
       description: [
-        "Adventure activities",
-        "Team-building exercises",
-        "Leadership workshops",
-        "Outdoor survival skills"
+        "40+ Adventure Activities",
+        "Camp Games",
+        "Healthy & Hygienic Meals",
+        "4 Meals Included"
       ]
     },
     {
@@ -219,10 +231,10 @@ const Page = () => {
       price: '1050/person',
       specs: 'minimum 30+ people ',
       description: [
-        "Customized group activities",
-        "Team-building exercises",
-        "Leadership workshops",
-        "Outdoor survival skills"
+       " Exclusive Area For Meals",
+"40+ Activities & Camp Games",
+"Dedicated Coordinator",
+"4 Meals Included"
       ]
     },
     {
@@ -230,10 +242,12 @@ const Page = () => {
       price: '1500/person',
       specs: 'minimum 10+ people',
       description: [
-        "Fun farm games",
-        "Full Arena access",
-        "Farm-themed crafts",
-        "Nature treasure hunts"
+        "Exclusive Party Area",
+        "Camping Style Decor",
+        "Birthday E-invite",
+        "Exclusive games coordinator",
+        "40+ Adventure Activities",
+        "4 Meals Included"
       ]
     }
   ]
@@ -244,54 +258,89 @@ const Page = () => {
       schedule: [
         {
           time: '10:00 AM',
-          activity: 'Welcome & Orientation',
-          icon: Balloon,
+          activity: 'Charge up with welcome drink &  breakfast',
+          icon: HandPlatter,
         },
         {
-          time: '11:00 AM',
-          activity: 'Guided Nature Walk',
+          time: '10:15 AM',
+          activity: 'Gear up for adventure activities',
           icon: TreePalmIcon,
         },
         {
-          time: '12:30 PM',
-          activity: 'Farm-to-Table Lunch',
-          icon: CheckCircle,
+          time: '12:15 PM',
+          activity: 'Enjoy refreshing snacks',
+          icon: CupSoda,
         },
         {
-          time: '2:00 PM',
-          activity: 'Creative Workshop',
-          icon: Balloon,
+          time: '12:45 PM',
+          activity: 'Enjoy activities and games',
+          icon: BowArrow,
         },
         {
-          time: '3:30 PM',
-          activity: 'Team Building Games',
-          icon: TreePalmIcon,
+          time: '01:45 PM',
+          activity: 'Relish delicious delicacies at the Gala Lunch',
+          icon: Soup,
         },
+        {
+          time: '02:00 PM',
+          activity: 'Get back to fun challenges',
+          icon: SportShoe,
+        },
+        {
+          time: '02:30 PM',
+          activity: 'High Tea & Shake a leg at DJ floor',
+          icon: BoomBox,
+        },
+        {
+          time: '03:00 PM',
+          activity: 'Carry Beautiful Memories Home',
+          icon: CameraIcon,
+        }
       ],
     },
     {
       title: 'Sunset Trails',
       schedule: [
-        {
-          time: '3:00 PM',
-          activity: 'Arrival & Welcome',
-          icon: Balloon,
+       {
+          time: '04:00 PM',
+          activity: 'Charge up with welcome drink &  breakfast',
+          icon: HandPlatter,
         },
         {
-          time: '4:00 PM',
-          activity: 'Nature Trail Walk',
+          time: '04:30 PM',
+          activity: 'Gear up for adventure activities',
           icon: TreePalmIcon,
         },
         {
-          time: '5:30 PM',
-          activity: 'Golden Hour Activities',
-          icon: CheckCircle,
+          time: '06:00 PM',
+          activity: 'Enjoy Delightful Refreshments',
+          icon: CupSoda,
         },
         {
-          time: '6:30 PM',
-          activity: 'Sunset Circle & Wrap Up',
-          icon: Balloon,
+          time: '06:30 PM',
+          activity: 'Enjoy activities and games',
+          icon: BowArrow,
         },
+        {
+          time: '07:30 PM',
+          activity: 'Relish delicious delicacies at the Gala Dinner',
+          icon: Soup,
+        },
+        {
+          time: '08:00 PM',
+          activity: 'Get back to fun challenges',
+          icon: SportShoe,
+        },
+        {
+          time: '08:30 PM',
+          activity: 'Refreshments & Shake a leg at DJ floor',
+          icon: BoomBox,
+        },
+        {
+          time: '09:00 PM',
+          activity: 'Carry Beautiful Memories Home',
+          icon: CameraIcon,
+        }
       ],
     },
   ]
@@ -385,7 +434,7 @@ const Page = () => {
 {/* Celebration Preview Section */}
 <section className="mx-auto mt-28 w-full max-w-7xl">
   {/* Hero Banner */}
-  <div className="relative h-[300px] overflow-hidden rounded-[2rem] lg:h-[420px]">
+  <div className="relative h-[300px] overflow-hidden  lg:h-[420px]">
     <Image
       src="/Archery1.jpeg"
       alt="Packages Hero"
@@ -393,12 +442,12 @@ const Page = () => {
       className="object-cover"
     />
 
-    <div className="absolute inset-0 bg-black/40" />
+    <div className="absolute inset-0 bg-black/60" />
 
     <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
      
 
-      <h2 className="max-w-3xl text-4xl font-bold text-white md:text-6xl">
+      <h2 className={`${medievalSharp.className} max-w-3xl text-4xl font-bold text-white md:text-6xl`}>
         A Glimpse Into Your Upcoming Celebration
       </h2>
 
