@@ -57,7 +57,7 @@ export default function RootLayout({
 
         </div>
 
-        <SiteAudioPlayer src="/zen-music1.mp3" />
+        {/* <SiteAudioPlayer src="/zen-music1.mp3" /> */}
 
       </body>
     </html>

@@ -49,90 +49,80 @@ const images = [
 const Cards = [
   {
     slug: 'pottery-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/Potteryworkshop1.jpg', '/PotteryWorkshop2.jpg', '/PotteryWorkshop3.jpg','/PotteryWorkshop4.jpg','/PotteryWorkshop5.jpg'],
     title: 'Pottery Workshop',
     description: 'Get hands-on with clay and shape beautiful handmade pieces in a calm, creative workshop setting.'
   },
   {
       slug: 'mask-painting-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/MaskPaintingWorkshop1.jpg', '/MaskPaintingWorkshop2.jpg', '/MaskPaintingWorkshop3.jpg'],
     title: 'Mask Painting Workshop',
     description: 'Design and paint expressive masks with guided creative techniques for a playful art experience.'
   },
   {
       slug: 'canvas-painting-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/CanvasPainting1.jpg',],
     title: 'Canvas Painting Workshop',
     description: 'Explore color, texture, and composition while creating your own canvas artwork from start to finish.'
   },
   {
       slug: 'candle-making-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/CandleMakingWorkshop1.jpg', '/CandleMakingWorkshop2.jpg', '/CandleMakingWorkshop3.jpg'],
     title: 'Candle Making Workshop',
     description: 'Learn the basics of candle making and craft personalized candles with colors, scents, and styles you love.'
   },
   {
       slug: 'puppet-show-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/PuppetShowWorkshop1.png', '/PuppetShowWorkshop2.png', '/PuppetShowWorkshop3.png', '/PuppetShowWorkshop4.png'],
     title: 'Puppet Show Workshop',
     description: 'Create your own puppets and bring them to life in a fun, interactive workshop focused on storytelling and performance.'
   },
   {
       slug: 'diy-craft-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/DIYCraftWorkshop1.jpg', '/DIYCraftWorkshop2.jpg', '/DIYCraftWorkshop3.jpg', '/DIYCraftWorkshop4.jpg'],
     title: 'DIY Craft Workshop',
     description: 'Build, decorate, and create fun handmade craft projects with simple materials and guided support.'
   },
   {
     slug: 'bakery-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/BakeryWorkshop1.jpg',],
     title: 'Bakery Workshop',
     description: 'Discover baking techniques and enjoy a warm, interactive session filled with fresh bakes and sweet creations.'
   },
   {
     slug: 'pizza-making-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/PizzaMaking1.jpg', '/PizzaMaking2.jpg',],
     title: 'Pizza-Making Workshop',
     description: 'Make your own pizza from dough to toppings in a delicious workshop that is equal parts fun and tasty.'
   },
   {
     slug: 'nukkad-natak-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/NukkadNatak1.jpg', '/NukkadNatak2.jpg',],
     title: 'Nukkad Natak Workshop',
     description: 'Dive into street theatre with voice, movement, and social storytelling in an energetic performance workshop.'
   },
   {
     slug: 'open-air-theater-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/OpenAirTheatre1.jpg', '/OpenAirTheatre2.jpg', ],
     title: 'Open Air Theater Workshop',
     description: 'Experience performance in a natural setting with an outdoor theatre workshop focused on expression and presence.'
   },
   {
     slug: 'music-and-jamming-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/MusicJamming1.jpg', '/MusicJamming2.jpg',],
     title: 'Music and Jamming Workshop',
     description: 'Bring instruments, rhythm, and collaboration together in a lively music jam session for all skill levels.'
   },
   {
     slug: 'reading-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/ReadingWorkshop1.jpg', '/ReadingWorkshop2.jpg', '/ReadingWorkshop3.jpg'],
     title: 'Reading Workshop',
     description: 'Enjoy guided reading sessions that encourage reflection, conversation, and a deeper love for stories.'
   },
-  {
-    imageSrc: ['/placeholder.webp'],
-    title: 'Dance Workshop',
-    description: 'Move, learn, and express yourself through an upbeat dance workshop focused on rhythm and confidence.'
-  },
-  {
-    slug: 'storytelling-workshop',
-    imageSrc: ['/placeholder.webp'],
-    title: 'Storytelling Workshop',
-    description: 'Develop your storytelling voice with engaging exercises that help ideas come alive for any audience.'
-  },
+ 
   {
     slug: 'handwriting-and-calligraphy-workshop',
-    imageSrc: ['/placeholder.webp'],
+    imageSrc: ['/HandwritingCalligraphy1.jpg', '/HandwritingCalligraphy2.jpg', '/HandwritingCalligraphy3.jpg'],
     title: 'Handwriting and Calligraphy Class',
     description: 'Practice elegant letterforms and improve your writing with a class centered on handwriting and calligraphy.'
   }

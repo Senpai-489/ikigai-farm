@@ -61,11 +61,7 @@ const EventComponent = (props: {
             </button>
           </Link>
 
-          <Link href="/Download-Menu">
-            <button className="rounded-full border border-[#122a02] px-6 py-3 text-sm font-medium text-[#122a02] transition-all duration-300 hover:bg-[#122a02] hover:text-amber-100 sm:px-7 sm:py-4 sm:text-base">
-              Download Menu
-            </button>
-          </Link>
+          
 
         </div>
       </div>

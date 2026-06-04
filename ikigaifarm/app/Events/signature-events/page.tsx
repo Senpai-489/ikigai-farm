@@ -49,52 +49,64 @@ const images = [
 ]
 const Cards = [
 {
-  imageSrc: ['/placeholder.webp'],
+  imageSrc: ['/HoliBash1.jpeg', '/HoliBash2.jpeg', '/HoliBash3.jpeg', '/HoliBash4.jpeg', '/HoliBash5.jpeg'],
   title: 'Holi Bash',
   description:
     'Celebrate Holi with vibrant colors, music, dance, and unforgettable fun in a lively farm setting.',
 },
 {
-  imageSrc: ['/placeholder.webp'],
+  imageSrc: ['/BhajanClubbing1.jpeg', '/BhajanClubbing2.jpeg',],
   title: 'Bhajan Clubbing',
   description:
     'A unique fusion of devotional bhajans, energetic beats, and a vibrant community atmosphere.',
 },
 {
-  imageSrc: ['/placeholder.webp'],
+  imageSrc: ['/NavratriGarba1.jpeg', '/NavratriGarba2.jpeg', '/NavratriGarba3.jpeg', '/NavratriGarba4.jpeg', '/NavratriGarba5.jpeg'],
   title: 'Navratri Garba',
   description:
     'Dance under the stars with traditional Garba, festive music, and joyful celebrations.',
 },
 {
-  imageSrc: ['/placeholder.webp'],
+  imageSrc: ['/NewYearCelebration1.jpg', '/NewYearCelebration2.jpg',],
   title: 'New Year Celebration',
   description:
     'Welcome the new year with music, entertainment, great food, and memorable moments.',
 },
 {
-  imageSrc: ['/placeholder.webp'],
+  imageSrc: ['/ChristmasCarnival1.jpg', '/ChristmasCarnival2.jpg', '/ChristmasCarnival3.jpg'],
   title: 'Christmas Carnival',
   description:
     'Experience festive decorations, holiday cheer, family fun, and Christmas magic at the farm.',
 },
 {
-  imageSrc: ['/placeholder.webp'],
+  imageSrc: ['/LohriFestival1.jpg', '/LohriFestival2.jpg', '/LohriFestival3.jpg'],
   title: 'Lohri Festival',
   description:
     'Celebrate Lohri with bonfires, folk music, dance, and traditional festive spirit.',
 },
 {
-  imageSrc: ['/placeholder.webp'],
+  imageSrc: ['/MusicNights1.jpeg', '/MusicNights2.jpeg', '/MusicNights3.jpeg', '/MusicNights4.jpg'],
   title: 'Music Festival',
   description:
     'Enjoy live performances, vibrant energy, and unforgettable musical experiences in nature.',
 },
 {
-  imageSrc: ['/placeholder.webp'],
+  imageSrc: ['/SufiNights1.jpg', '/SufiNights2.jpg', '/SufiNights3.jpg', '/SufiNights4.jpg'],
   title: 'Sufi Nights',
   description:
     'Immerse yourself in soulful Sufi music, serene vibes, and enchanting performances.',
+},
+{
+  imageSrc: ['/FarmersMarket1.webp', '/FarmersMarket2.png', '/FarmersMarket3.jpg', '/FarmersMarket4.jpg', '/FarmersMarket5.jpg',],
+  title: 'Farmers Market',
+  description:
+    'Discover fresh produce, artisanal goods, and a vibrant community atmosphere at our farm market.',
+},
+{
+  imageSrc: ['/FleaAMarket1.jpg', '/FleaMarket2.jpg', '/FleaMarket3.jpg', '/FleaMarket4.jpg', '/FleaMarket5.jpeg','/FleaMarket6.jpg','/FleaMarket7.jpg',],
+  title: 'Flea Market',
+  description:
+    'Explore unique finds, local crafts, and a vibrant community atmosphere at our weekly flea market.',
 },
   
 ]

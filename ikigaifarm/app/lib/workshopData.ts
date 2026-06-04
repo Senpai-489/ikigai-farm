@@ -1,7 +1,7 @@
 export const workshopData = {
 'pottery-workshop': {
 title: 'Pottery Workshop',
-heroImage: '/NatureBased1.jpeg',
+heroImage: '/PotteryWorkshop1.jpg',
 description:
 'Discover the art of pottery through hands-on clay shaping and creative expression in a peaceful farm environment.',
 duration: '2 Hours',
@@ -13,16 +13,18 @@ highlights: [
 'Take Home Creations',
 ],
 gallery: [
-'/NatureBased1.jpeg',
-'/NatureBased2.jpeg',
-'/NatureBased3.jpeg',
-'/NatureBased4.jpeg',
+'/PotteryWorkshop1.jpg',
+'/PotteryWorkshop2.jpg',
+'/PotteryWorkshop3.jpg',
+'/PotteryWorkshop4.jpg',
+'/PotteryWorkshop5.jpg',
+
 ],
 },
 
 'mask-painting-workshop': {
 title: 'Mask Painting Workshop',
-heroImage: '/MaskPainting.jpeg',
+heroImage: '/MaskPaintingWorkshop1.jpg',
 description:
 'Express your creativity through colors and patterns while designing unique handcrafted masks.',
 duration: '90 Minutes',
@@ -34,14 +36,15 @@ highlights: [
 'Family Friendly',
 ],
 gallery: [
-'/MaskPainting.jpeg',
-'/MaskPainting2.jpeg',
+'/MaskPaintingWorkshop1.jpg',
+'/MaskPaintingWorkshop2.jpg',
+'/MaskPaintingWorkshop3.jpg',
 ],
 },
 
 'canvas-painting-workshop': {
 title: 'Canvas Painting Workshop',
-heroImage: '/CanvasPainting.jpeg',
+heroImage: '/CanvasPainting1.jpg',
 description:
 'Create beautiful artwork on canvas while exploring colors, textures, and painting techniques.',
 duration: '2 Hours',
@@ -53,14 +56,14 @@ highlights: [
 'Take Home Canvas',
 ],
 gallery: [
-'/CanvasPainting.jpeg',
-'/CanvasPainting2.jpeg',
+'/CanvasPainting1.jpg',
+
 ],
 },
 
 'candle-making-workshop': {
 title: 'Candle Making Workshop',
-heroImage: '/CandleMaking.jpeg',
+heroImage: '/CandleMakingWorkshop1.jpg',
 description:
 'Craft personalized candles with unique scents, colors, and decorative styles.',
 duration: '90 Minutes',
@@ -72,14 +75,15 @@ highlights: [
 'Take Home Candles',
 ],
 gallery: [
-'/CandleMaking.jpeg',
-'/CandleMaking2.jpeg',
+'/CandleMakingWorkshop1.jpg',
+'/CandleMakingWorkshop2.jpg',
+'/CandleMakingWorkshop3.jpg',
 ],
 },
 
 'puppet-show-workshop': {
 title: 'Puppet Show Workshop',
-heroImage: '/PuppetWorkshop.jpeg',
+heroImage: '/PuppetShowWorkshop1.png',
 description:
 'Create and perform with your own puppets while exploring storytelling and imagination.',
 duration: '2 Hours',
@@ -91,14 +95,16 @@ highlights: [
 'Family Friendly',
 ],
 gallery: [
-'/PuppetWorkshop.jpeg',
-'/PuppetWorkshop2.jpeg',
+'/PuppetShowWorkshop1.png',
+'/PuppetShowWorkshop2.png',
+'/PuppetShowWorkshop3.png',
+'/PuppetShowWorkshop4.png',
 ],
 },
 
 'diy-craft-workshop': {
 title: 'DIY Craft Workshop',
-heroImage: '/DIYCraft.jpeg',
+heroImage: '/DIYCraftWorkshop1.jpg',
 description:
 'Build creative handmade projects using simple materials and guided techniques.',
 duration: '90 Minutes',
@@ -110,14 +116,17 @@ highlights: [
 'Take Home Projects',
 ],
 gallery: [
-'/DIYCraft.jpeg',
-'/DIYCraft2.jpeg',
+'/DIYCraftWorkshop1.jpg',
+'/DIYCraftWorkshop2.jpg',
+'/DIYCraftWorkshop3.jpg',
+'/DIYCraftWorkshop4.jpg',
+'/DIYCraftWorkshop5.jpg',
 ],
 },
 
 'bakery-workshop': {
 title: 'Bakery Workshop',
-heroImage: '/BakeryWorkshop.jpeg',
+heroImage: '/BakeryWorkshop1.jpg',
 description:
 'Learn baking basics while preparing delicious treats in an engaging farm-side setting.',
 duration: '2 Hours',
@@ -129,14 +138,14 @@ highlights: [
 'Tasty Creations',
 ],
 gallery: [
-'/BakeryWorkshop.jpeg',
-'/BakeryWorkshop2.jpeg',
+'/BakeryWorkshop1.jpg',
+
 ],
 },
 
 'pizza-making-workshop': {
 title: 'Pizza-Making Workshop',
-heroImage: '/PizzaWorkshop.jpeg',
+heroImage: '/PizzaMaking1.jpg',
 description:
 'Make your own pizza from scratch with fresh toppings and hands-on guidance.',
 duration: '90 Minutes',
@@ -148,14 +157,15 @@ highlights: [
 'Eat Your Creation',
 ],
 gallery: [
-'/PizzaWorkshop.jpeg',
-'/PizzaWorkshop2.jpeg',
+'/PizzaMaking1.jpg',
+'/PizzaMaking2.jpg',
+
 ],
 },
 
 'nukkad-natak-workshop': {
 title: 'Nukkad Natak Workshop',
-heroImage: '/NukkadNatak.jpeg',
+heroImage: '/NukkadNatak1.jpg',
 description:
 'Explore street theatre through voice, movement, expression, and storytelling.',
 duration: '2 Hours',
@@ -167,14 +177,15 @@ highlights: [
 'Creative Expression',
 ],
 gallery: [
-'/NukkadNatak.jpeg',
-'/NukkadNatak2.jpeg',
+'/NukkadNatak1.jpg',
+'/NukkadNatak2.jpg',
+
 ],
 },
 
 'open-air-theater-workshop': {
 title: 'Open Air Theater Workshop',
-heroImage: '/OpenAirTheater.jpeg',
+heroImage: '/OpenAirTheatre1.jpg',
 description:
 'Experience outdoor theatre and performance arts in a natural open-air setting.',
 duration: '2 Hours',
@@ -186,14 +197,15 @@ highlights: [
 'Creative Confidence',
 ],
 gallery: [
-'/OpenAirTheater.jpeg',
-'/OpenAirTheater2.jpeg',
+'/OpenAirTheatre1.jpg',
+'/OpenAirTheatre2.jpg',
+
 ],
 },
 
 'music-and-jamming-workshop': {
 title: 'Music and Jamming Workshop',
-heroImage: '/MusicJamming.jpeg',
+heroImage: '/MusicJamming1.jpg',
 description:
 'Bring music, rhythm, and collaboration together in an energetic jam session.',
 duration: '2 Hours',
@@ -205,14 +217,14 @@ highlights: [
 'Creative Collaboration',
 ],
 gallery: [
-'/MusicJamming.jpeg',
-'/MusicJamming2.jpeg',
+'/MusicJamming1.jpg',
+'/MusicJamming2.jpg',
 ],
 },
 
 'reading-workshop': {
 title: 'Reading Workshop',
-heroImage: '/ReadingWorkshop.jpeg',
+heroImage: '/ReadingWorkshop1.jpg',
 description:
 'Enjoy guided reading sessions that inspire imagination, reflection, and discussion.',
 duration: '1 Hour',
@@ -224,52 +236,17 @@ highlights: [
 'Relaxing Environment',
 ],
 gallery: [
-'/ReadingWorkshop.jpeg',
-'/ReadingWorkshop2.jpeg',
+'/ReadingWorkshop1.jpg',
+'/ReadingWorkshop2.jpg',
+'/ReadingWorkshop3.jpg',
 ],
 },
 
-'dance-workshop': {
-title: 'Dance Workshop',
-heroImage: '/DanceWorkshop.jpeg',
-description:
-'Learn new dance moves while building confidence, coordination, and rhythm.',
-duration: '90 Minutes',
-ageGroup: 'Kids & Adults',
-highlights: [
-'Dance Techniques',
-'Group Choreography',
-'Confidence Building',
-'Fun & Fitness',
-],
-gallery: [
-'/DanceWorkshop.jpeg',
-'/DanceWorkshop2.jpeg',
-],
-},
 
-'storytelling-workshop': {
-title: 'Storytelling Workshop',
-heroImage: '/StorytellingWorkshop.jpeg',
-description:
-'Develop your storytelling skills through creative exercises and engaging narratives.',
-duration: '90 Minutes',
-ageGroup: 'Kids & Adults',
-highlights: [
-'Creative Thinking',
-'Public Speaking',
-'Story Building',
-'Interactive Activities',
-],
-gallery: [
-'/StorytellingWorkshop.jpeg',
-'/StorytellingWorkshop2.jpeg',
-],
-},
 
 'handwriting-and-calligraphy-class': {
 title: 'Handwriting and Calligraphy Class',
-heroImage: '/CalligraphyWorkshop.jpeg',
+heroImage: '/HandwritingCalligraphy1.jpg',
 description:
 'Master elegant lettering and improve handwriting through guided calligraphy practice.',
 duration: '2 Hours',
@@ -281,8 +258,9 @@ highlights: [
 'Creative Expression',
 ],
 gallery: [
-'/CalligraphyWorkshop.jpeg',
-'/CalligraphyWorkshop2.jpeg',
+'/HandwritingCalligraphy1.jpg',
+'/HandwritingCalligraphy2.jpg',
+'/HandwritingCalligraphy3.jpg',
 ],
 },
 }

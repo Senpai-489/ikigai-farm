@@ -34,7 +34,7 @@ const Navbar = () => {
     },
     {
       href: '/Packages',
-      label: 'Packages',
+      label: '✧ Packages',
     },
   ]
 
@@ -79,6 +79,24 @@ const Navbar = () => {
     )
   }
 
+  const renderLabel = (label: any) => {
+    if (typeof label !== 'string') return label
+    const parts = label.split(/(✧)/)
+    return (
+      <>
+        {parts.map((part, i) =>
+          part === '✧' ? (
+            <span key={i} className="animate-pulse">
+              ✧
+            </span>
+          ) : (
+            part
+          ),
+        )}
+      </>
+    )
+  }
+
   return (
     <header className="relative z-50 w-full px-4 py-4 sm:px-8 lg:px-14 lg:py-6">
       {/* DESKTOP */}
@@ -114,21 +132,22 @@ const Navbar = () => {
             >
               <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/90 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl">
                 <div className="flex flex-col py-2">
-                  {eventItems.map(
-                    (
-                      title,
-                      index,
-                    ) => (
+                  {eventItems.map((title, index) => {
+                    const plain = title.replace(/✧/g, '').trim()
+                    return (
                       <Link
                         key={index}
-                        href={title === '✧ Signature Events' ? `/Events/signature-events` : `/Events/#${title}`}
+                        href={
+                          plain === 'Signature Events'
+                            ? '/Events/signature-events'
+                            : `/Events/#${encodeURIComponent(plain)}`
+                        }
                         className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
                       >
-                      
-                        {title}
+                        {renderLabel(title)}
                       </Link>
-                    ),
-                  )}
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -140,7 +159,7 @@ const Navbar = () => {
               <button
                 className={navLinkStyles}
               >
-                ✧ Upcoming Workshops
+                <span className="animate-pulse">✧</span> Upcoming Workshops
 
                 <MdArrowDropDown className="h-5 w-5" />
               </button>
@@ -165,21 +184,22 @@ const Navbar = () => {
             >
               <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/90 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl">
                 <div className="flex flex-col py-2">
-                  {experienceItems.map(
-                    (
-                      title,
-                      index,
-                    ) => (
+                  {experienceItems.map((title, index) => {
+                    const plain = title.replace(/✧/g, '').trim()
+                    return (
                       <Link
                         key={index}
-                        href={title === 'Upcoming Workshops' ? `/Events/upcoming-workshops` : `/${title}`}
+                        href={
+                          plain === 'Upcoming Workshops'
+                            ? '/Events/upcoming-workshops'
+                            : `/${encodeURIComponent(plain)}`
+                        }
                         className="group/item flex items-center gap-3 px-5 py-3 text-sm font-medium text-zinc-200 transition-all duration-200 hover:bg-white/10 hover:text-white"
                       >
-                       
-                        {title}
+                        {renderLabel(title)}
                       </Link>
-                    ),
-                  )}
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -193,7 +213,7 @@ const Navbar = () => {
               className={navLinkStyles}
               prefetch={false}
             >
-              {link.label}
+              {renderLabel(link.label)}
             </Link>
           ))}
         </div>
@@ -226,7 +246,7 @@ const Navbar = () => {
               className={navLinkStyles}
               prefetch={false}
             >
-              {link.label}
+              {renderLabel(link.label)}
             </Link>
           ))}
 
@@ -339,7 +359,7 @@ const Navbar = () => {
               }
               className="flex h-14 items-center justify-center rounded-2xl bg-[#111111] px-5 text-sm font-medium text-[#ffe494] transition-all duration-300 hover:bg-[#1f3c07]"
             >
-              {link.label}
+              {renderLabel(link.label)}
             </Link>
           ))}
 
@@ -375,25 +395,24 @@ const Navbar = () => {
             >
               <div className="overflow-hidden">
                 <div className="flex flex-col gap-2 px-3 pb-3">
-                  {eventItems.map(
-                    (
-                      title,
-                      index,
-                    ) => (
-                      <Link
-                        key={index}
-                         href={title === '✧ Signature Events' ? "/Events/signature-events" : `/Events/#${title}`}
-                        onClick={() =>
-                          setIsMenuOpen(
-                            false,
-                          )
-                        }
-                        className="rounded-xl bg-black px-4 py-3 text-center text-sm text-zinc-200 transition-all duration-300 hover:bg-[#1f3c07]"
-                      >
-                        {title}
-                      </Link>
-                    ),
-                  )}
+                 {eventItems.map((title, index) => {
+  const plain = title.replace(/✧/g, '').trim()
+
+  return (
+    <Link
+      key={index}
+      href={
+        plain === 'Signature Events'
+          ? '/Events/signature-events'
+          : `/Events/#${encodeURIComponent(plain)}`
+      }
+      onClick={() => setIsMenuOpen(false)}
+      className="rounded-xl bg-black px-4 py-3 text-center text-sm text-zinc-200 transition-all duration-300 hover:bg-[#1f3c07]"
+    >
+      {renderLabel(title)}
+    </Link>
+  )
+})}
                 </div>
               </div>
             </div>
@@ -431,25 +450,24 @@ const Navbar = () => {
             >
               <div className="overflow-hidden">
                 <div className="flex flex-col gap-2 px-3 pb-3">
-                  {experienceItems.map(
-                    (
-                      title,
-                      index,
-                    ) => (
-                      <Link
-                        key={index}
-                        href={title === 'Upcoming Workshops' ? `/Events/upcoming-workshops` : `/${title}`}
-                        onClick={() =>
-                          setIsMenuOpen(
-                            false,
-                          )
-                        }
-                        className="rounded-xl bg-black px-4 py-3 text-center text-sm text-zinc-200 transition-all duration-300 hover:bg-[#1f3c07]"
-                      >
-                        {title}
-                      </Link>
-                    ),
-                  )}
+                  {experienceItems.map((title, index) => {
+  const plain = title.replace(/✧/g, '').trim()
+
+  return (
+    <Link
+      key={index}
+      href={
+        plain === 'Upcoming Workshops'
+          ? '/Events/upcoming-workshops'
+          : `/${encodeURIComponent(plain)}`
+      }
+      onClick={() => setIsMenuOpen(false)}
+      className="rounded-xl bg-black px-4 py-3 text-center text-sm text-zinc-200 transition-all duration-300 hover:bg-[#1f3c07]"
+    >
+      {renderLabel(title)}
+    </Link>
+  )
+})}
                 </div>
               </div>
             </div>
@@ -494,7 +512,7 @@ const Navbar = () => {
                     ) => (
                       <Link
                         key={index}
-                        href={`/Food/#${title}`}
+                        href={`/Food/#${encodeURIComponent(title)}`}
                         onClick={() =>
                           setIsMenuOpen(
                             false,

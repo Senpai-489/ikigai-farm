@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Link from 'next/link'
-
+import MasonryGrid from '../components/MasonryGrid'
 import {
   Noto_Serif_JP,
   MedievalSharp,
@@ -88,6 +88,11 @@ const Page = () => {
       [name]: value,
     }))
   }
+  const gridImages = [
+    
+    '/FarmersMarket1.webp', '/FarmersMarket2.png', '/FarmersMarket3.jpg', '/FarmersMarket4.jpg', '/FarmersMarket5.jpg',
+    '/SufiNights1.jpg', '/SufiNights2.jpg', '/SufiNights3.jpg', '/SufiNights4.jpg',
+     ]
 
   const validateForm = () => {
     const newErrors = {
@@ -218,7 +223,7 @@ const Page = () => {
     {
       title: 'Adults',
       price: '1250/-',
-      specs: '12yrs and above',
+      specs: '',
       description: [
         "40+ Adventure Activities",
         "Camp Games",
@@ -485,7 +490,12 @@ const Page = () => {
     </div>
   </div>
 </section>
-
+        <div>
+          <p className={` text-center text-3xl font-bold text-[#122a02] mt-20 mb-10 ${medievalSharp.className}`}>
+           Photo Gallery
+          </p>
+          <MasonryGrid images={gridImages} />
+        </div>
 
       
       <Footer />

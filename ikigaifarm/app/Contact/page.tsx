@@ -354,9 +354,37 @@ const Page = () => {
         -
       </button>
 
-      <span className="text-lg font-semibold text-[#122a02]">
-        {formData.kids}
-      </span>
+      <input
+      type="number"
+      min={0}
+      value={formData.kids}
+      onChange={(e) =>
+        setFormData((prev) => ({
+          ...prev,
+          kids: Math.max(
+            1,
+            Number(e.target.value) || 1
+          ),
+        }))
+      }
+      className="
+        h-12
+        w-24
+        sm:w-32
+        rounded-xl
+        border
+        border-[#d6e3af]
+        text-center
+        text-lg
+        font-bold
+        outline-none
+        transition
+        focus:border-[#122a02]
+        focus:ring-2
+        focus:ring-[#122a02]/20
+      "
+    />
+
 
       <button
         type="button"
@@ -393,9 +421,36 @@ const Page = () => {
         -
       </button>
 
-      <span className="text-lg font-semibold text-[#122a02]">
-        {formData.adults}
-      </span>
+      <input
+      type="number"
+      min={1}
+      value={formData.adults}
+      onChange={(e) =>
+        setFormData((prev) => ({
+          ...prev,
+          adults: Math.max(
+            1,
+            Number(e.target.value) || 1
+          ),
+        }))
+      }
+      className="
+        h-12
+        w-24
+        sm:w-32
+        rounded-xl
+        border
+        border-[#d6e3af]
+        text-center
+        text-lg
+        font-bold
+        outline-none
+        transition
+        focus:border-[#122a02]
+        focus:ring-2
+        focus:ring-[#122a02]/20
+      "
+    />
 
       <button
         type="button"

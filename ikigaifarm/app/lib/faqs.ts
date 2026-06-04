@@ -36,7 +36,7 @@ const faqs = [
       'Carry comfortable clothing, closed-toe shoes, a hat or cap, sunscreen, and a reusable water bottle. If you are visiting during cooler months, bring a light jacket.',
   },
   {
-    question: ' Are Rocksport Programs Covid Safe?',
+    question: ' Are Ikigai Programs Covid Safe?',
     answer:
       'Yes. We follow standard safety and hygiene protocols, including sanitization of common areas and equipment. Please contact us for the latest guidelines before your visit.',
   },
@@ -133,7 +133,7 @@ const faqs = [
   {
     question: 'Are There Rooms For Overnight Stay?',
     answer:
-      'Overnight stay options are available for select programs. Contact us to confirm availability and inclusions.',
+      'No, the camp is a day camp',
   },
 
 ]

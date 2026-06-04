@@ -35,6 +35,40 @@ body {
   }
 }
 
+@keyframes floatStar {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
 
+  50% {
+    transform: translateY(-4px);
+  }
+}
 
+.magic-star {
+  animation: floatStar 1.8s ease-in-out infinite;
+  color: #ffe494;
+  text-shadow:
+    0 0 10px #ffe494,
+    0 0 20px #ffe494;
+}
+@keyframes sparkle {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+    filter: drop-shadow(0 0 0px #ffe494);
+  }
 
+  50% {
+    transform: scale(1.4) rotate(12deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px #ffe494);
+  }
+}
+
+.sparkle-star {
+  display: inline-block;
+  animation: sparkle 2s ease-in-out infinite;
+}

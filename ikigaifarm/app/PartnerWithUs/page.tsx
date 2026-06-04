@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { medievalSharp } from "../fonts";
 
 const partnershipCategories = [
   {
@@ -184,7 +185,7 @@ export default function PartnerWithUsPage() {
 
       {/* Benefits */}
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="text-center text-4xl font-black">
+        <h2 className={`${medievalSharp.className} text-center text-4xl font-black`}>
           Boost Your Outcomes With Partner Benefits
         </h2>
 
@@ -212,7 +213,7 @@ export default function PartnerWithUsPage() {
       >
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="max-w-3xl">
-            <h2 className="text-4xl font-black md:text-5xl">
+            <h2 className={`${medievalSharp.className} text-4xl font-black md:text-5xl`}>
               Partnership Opportunities
             </h2>
 
@@ -308,7 +309,7 @@ export default function PartnerWithUsPage() {
 
       {/* Process */}
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="text-center text-4xl font-black">
+        <h2 className={`${medievalSharp.className} text-center text-4xl font-black`}>
           Partnership Process
         </h2>
 
@@ -339,7 +340,7 @@ export default function PartnerWithUsPage() {
       <section className="pb-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="rounded-[40px] bg-black px-8 py-16 text-center text-white md:px-16">
-            <h2 className="text-4xl font-black md:text-6xl">
+            <h2 className={`${medievalSharp.className} text-4xl font-black md:text-6xl`}>
               Let's Build Something Meaningful
             </h2>
 
