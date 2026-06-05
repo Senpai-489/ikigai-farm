@@ -8,42 +8,52 @@ import { ThreeDMarquee, MarqueeImage } from "@/app/components/lightswind/3d-marq
 const medievalSharp = MedievalSharp({ subsets: ['latin'], weight: '400' })
 import VerticalCard from '../../components/VerticalCard'
 const images = [
-  { src: '/KidsParty2.jpeg',
-    alt: 'Kids Birthday Parties' },
-  { src: '/CorporateParty2.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding2.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/FamilyReunion.jpeg',
-    alt: 'Family Reunions' },
-    { src: '/KidsParty5.jpeg',
-    alt: 'Kids Birthday Parties' },
-  { src: '/CorporateParty1.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding3.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/FamilyReunion2.jpeg',
-    alt: 'Family Reunions' },
-    { src: '/KidsParty6.jpeg',
-    alt: 'Kids Birthday Parties' },
-  { src: '/CorporateParty.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding4.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/FamilyReunion1.jpeg',
-    alt: 'Family Reunions' },
-    { src: '/FarmWedding5.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/KidsParty7.jpeg',
-    alt: 'Kids Birthday Parties' },
-    { src: '/KidsParty1.jpeg',
-    alt: 'Kids Birthday Parties' },
-    { src: '/CorporateParty.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding4.jpeg',
-    alt: 'Farm Weddings' },
 
+    {
+      src: '/Potteryworkshop1.jpg',
+      alt: 'Pottery Workshop'
 
+    },
+    {
+      src: '/MaskPaintingWorkshop1.jpg',
+      alt: 'Mask Painting Workshop'
+    },
+    {
+      src: '/CanvasPainting1.jpg',
+      alt: 'Canvas Painting Workshop'
+    },
+    {
+      src: '/CandleMakingWorkshop1.jpg',
+      alt: 'Candle Making Workshop'
+    },
+    {
+      src: '/PuppetShowWorkshop1.png',
+      alt: 'Puppet Show Workshop'
+    },
+    {
+      src: '/DIYCraftWorkshop1.jpg',
+      alt: 'DIY Craft Workshop'
+    },
+    {
+      src: '/BakeryWorkshop1.jpg',
+      alt: 'Bakery Workshop'
+    },
+    {
+      src: '/PizzaMaking1.jpg',
+      alt: 'Pizza Making Workshop'
+    },
+    {
+      src: '/NukkadNatak1.jpg',
+      alt: 'Nukkad Natak Workshop'
+    },
+    {
+      src: '/OpenAirTheatre1.jpg',
+      alt: 'Open Air Theater Workshop'
+    },
+    {
+      src: '/MusicJamming1.jpg',
+      alt: 'Music and Jamming Workshop'
+    },
 
 ]
 const Cards = [

@@ -15,8 +15,34 @@ import {
 
 const Reasonforbeing = () => {
   return (
-    <section className="relative overflow-hidden lg:-translate-y-40 py-8 bg-white [content-visibility:auto] [contain-intrinsic-size:760px]">
+    <section className="relative overflow-hidden lg:-translate-y-40  bg-white [content-visibility:auto] [contain-intrinsic-size:760px]">
+<section className="lg:mb-40">
+  <div className="mx-auto max-w-6xl px-4">
+    <h3 className={` ${medievalSharp.className} text-center text-3xl lg:text-5xl  text-black`}>
+      We Are Also Available On
+    </h3>
 
+    <div className="my-10 flex flex-wrap items-center justify-center gap-8 md:gap-16">
+      <img
+        src="/TripAdvisorLogo.png"
+        alt="Tripadvisor"
+        className="h-16 lg:h-28 object-contain opacity-80 transition hover:opacity-100"
+      />
+
+      <img
+        src="/DistrictLogo.svg"
+        alt="District"
+        className="h-16 lg:h-28 object-contain opacity-80 transition hover:opacity-100"
+      />
+
+      <img
+        src="/BookMyShowLogo.png"
+        alt="BookMyShow"
+        className="h-16 lg:h-28 object-contain opacity-80 transition hover:opacity-100"
+      />
+    </div>
+  </div>
+</section>
       <div className="mx-auto flex py-8 max-w-7xl flex-col items-center gap-16 px-6 lg:flex-row lg:gap-24 lg:px-12">
 
         {/* LEFT */}

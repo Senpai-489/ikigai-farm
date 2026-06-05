@@ -5,104 +5,128 @@ import { MedievalSharp } from 'next/font/google'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { ThreeDMarquee, MarqueeImage } from "@/app/components/lightswind/3d-marquee"
-import { AlignVerticalSpaceAround } from 'lucide-react'
+import { AlertTriangle, AlignVerticalSpaceAround } from 'lucide-react'
 const medievalSharp = MedievalSharp({ subsets: ['latin'], weight: '400' })
 import VerticalCard from '../../components/VerticalCard'
 const images = [
-  { src: '/KidsParty2.jpeg',
-    alt: 'Kids Birthday Parties' },
-  { src: '/CorporateParty2.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding2.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/FamilyReunion.jpeg',
-    alt: 'Family Reunions' },
-    { src: '/KidsParty5.jpeg',
-    alt: 'Kids Birthday Parties' },
-  { src: '/CorporateParty1.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding3.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/FamilyReunion2.jpeg',
-    alt: 'Family Reunions' },
-    { src: '/KidsParty6.jpeg',
-    alt: 'Kids Birthday Parties' },
-  { src: '/CorporateParty.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding4.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/FamilyReunion1.jpeg',
-    alt: 'Family Reunions' },
-    { src: '/FarmWedding5.jpeg',
-    alt: 'Farm Weddings' },
-    { src: '/KidsParty7.jpeg',
-    alt: 'Kids Birthday Parties' },
-    { src: '/KidsParty1.jpeg',
-    alt: 'Kids Birthday Parties' },
-    { src: '/CorporateParty.jpeg',
-    alt: 'Corporate Events' },
-    { src: '/FarmWedding4.jpeg',
-    alt: 'Farm Weddings' },
+  {
+    src: '/HoliBash1.jpeg',
+    alt: 'Holi Bash'
+  },
+  {
+    src: '/ChristmasCarnival1.jpg',
+    alt: 'Christmas Carnival'
+  },
+  {
+    src: '/LohriFestival1.jpg',
+    alt: 'Lohri Festival'
+  },
+  {
+    src: '/NewYearCelebration1.jpg',
+    alt: 'New Year Celebration'
+  },
+  {
+    src: '/FarmersMarket1.webp',
+    alt: 'Farmers Market'
+  },
+  {
+    src: '/FleaAMarket1.jpg',
+    alt: 'Flea Market'
+  },
+  {
+    src: '/NavratriGarba1.jpeg',
+    alt: 'Navratri Garba'
+  },
+  {
+    src: '/MusicNights1.jpeg',
+    alt: 'Music Festival'
+  },
+  {
+    src: '/BhajanClubbing2.jpeg',
+    alt: 'Bhajan Clubbing'
+  },
+  {
+    src: '/SufiNights1.jpg',
+    alt: 'Sufi Nights'
+  },
+  {
+    src: '/HoliBash2.jpeg',
+    alt: 'Holi Bash'
+  },
+  {
+    src: '/ChristmasCarnival2.jpg',
+    alt: 'Christmas Carnival'
+  }
 
 
 
 ]
 const Cards = [
 {
+  slug: 'holi-bash',
   imageSrc: ['/HoliBash1.jpeg', '/HoliBash2.jpeg', '/HoliBash3.jpeg', '/HoliBash4.jpeg', '/HoliBash5.jpeg'],
   title: 'Holi Bash',
   description:
     'Celebrate Holi with vibrant colors, music, dance, and unforgettable fun in a lively farm setting.',
 },
 {
-  imageSrc: ['/BhajanClubbing1.jpeg', '/BhajanClubbing2.jpeg',],
+  slug: 'bhajan-clubbing',
+  imageSrc: ['/BhajanClubbing2.jpeg',],
   title: 'Bhajan Clubbing',
   description:
     'A unique fusion of devotional bhajans, energetic beats, and a vibrant community atmosphere.',
 },
 {
+  slug: 'navratri-garba',
   imageSrc: ['/NavratriGarba1.jpeg', '/NavratriGarba2.jpeg', '/NavratriGarba3.jpeg', '/NavratriGarba4.jpeg', '/NavratriGarba5.jpeg'],
   title: 'Navratri Garba',
   description:
     'Dance under the stars with traditional Garba, festive music, and joyful celebrations.',
 },
 {
+  slug: 'new-year-celebration',
   imageSrc: ['/NewYearCelebration1.jpg', '/NewYearCelebration2.jpg',],
   title: 'New Year Celebration',
   description:
     'Welcome the new year with music, entertainment, great food, and memorable moments.',
 },
 {
+  slug: 'christmas-carnival',
   imageSrc: ['/ChristmasCarnival1.jpg', '/ChristmasCarnival2.jpg', '/ChristmasCarnival3.jpg'],
   title: 'Christmas Carnival',
   description:
     'Experience festive decorations, holiday cheer, family fun, and Christmas magic at the farm.',
 },
 {
+  slug: 'lohri-festival',
   imageSrc: ['/LohriFestival1.jpg', '/LohriFestival2.jpg', '/LohriFestival3.jpg'],
   title: 'Lohri Festival',
   description:
     'Celebrate Lohri with bonfires, folk music, dance, and traditional festive spirit.',
 },
 {
+  slug: 'music-festival',
   imageSrc: ['/MusicNights1.jpeg', '/MusicNights2.jpeg', '/MusicNights3.jpeg', '/MusicNights4.jpg'],
   title: 'Music Festival',
   description:
     'Enjoy live performances, vibrant energy, and unforgettable musical experiences in nature.',
 },
 {
+  slug: 'sufi-nights',
   imageSrc: ['/SufiNights1.jpg', '/SufiNights2.jpg', '/SufiNights3.jpg', '/SufiNights4.jpg'],
   title: 'Sufi Nights',
   description:
     'Immerse yourself in soulful Sufi music, serene vibes, and enchanting performances.',
 },
 {
+  slug: 'farmers-market',
   imageSrc: ['/FarmersMarket1.webp', '/FarmersMarket2.png', '/FarmersMarket3.jpg', '/FarmersMarket4.jpg', '/FarmersMarket5.jpg',],
   title: 'Farmers Market',
   description:
     'Discover fresh produce, artisanal goods, and a vibrant community atmosphere at our farm market.',
 },
 {
+  slug: 'flea-market',
   imageSrc: ['/FleaAMarket1.jpg', '/FleaMarket2.jpg', '/FleaMarket3.jpg', '/FleaMarket4.jpg', '/FleaMarket5.jpeg','/FleaMarket6.jpg','/FleaMarket7.jpg',],
   title: 'Flea Market',
   description:
@@ -140,7 +164,7 @@ const page = () => {
 
         <div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:mt-20'>
           {Cards.map((card) => (
-            <VerticalCard key={card.title} readmore={false} imageSrc={card.imageSrc} title={card.title} description={card.description} />
+            <VerticalCard key={card.title} slug={card.slug} readmore={true} imageSrc={card.imageSrc} title={card.title} description={card.description} />
           ))}
         </div>
       </section>

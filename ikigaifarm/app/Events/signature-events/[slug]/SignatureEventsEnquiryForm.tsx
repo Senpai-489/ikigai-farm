@@ -9,7 +9,7 @@ import {
 } from 'lucide-react'
 const PRICE_PER_PARTICIPANT = 999
 
-export default function WorkshopEnquiryForm({
+export default function SignatureEventsEnquiryForm({
   workshop,
 }: {
   workshop: string

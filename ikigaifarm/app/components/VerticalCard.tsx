@@ -10,6 +10,8 @@ import {
   PhoneCallIcon,
 } from 'lucide-react'
 import { MedievalSharp } from 'next/font/google'
+import { usePathname } from 'next/navigation'
+
 
 const medievalSharp = MedievalSharp({
   subsets: ['latin'],
@@ -24,20 +26,21 @@ const VerticalCard = (props: {
   description: string
 }) => {
   const [currentImage, setCurrentImage] = useState(0)
-
+  
   const nextImage = () => {
     setCurrentImage((prev) =>
       prev === props.imageSrc.length - 1 ? 0 : prev + 1
-    )
-  }
+  )
+}
 
-  const prevImage = () => {
-    setCurrentImage((prev) =>
-      prev === 0 ? props.imageSrc.length - 1 : prev - 1
-    )
-  }
+const prevImage = () => {
+  setCurrentImage((prev) =>
+    prev === 0 ? props.imageSrc.length - 1 : prev - 1
+)
+}
 
-  return (
+const pathname = usePathname()
+return (
     <article
       id={props.title}
       className="
@@ -144,7 +147,7 @@ const VerticalCard = (props: {
         </p>
 
         <div className="mt-6 flex items-center gap-3">
-          <Link
+          {/* <Link
             href="/Contact"
             className="
               flex-1
@@ -162,10 +165,10 @@ const VerticalCard = (props: {
             "
           >
             Enquire
-          </Link>
+          </Link> */}
         {props.readmore && (
           <Link
-href={`/Events/upcoming-workshops/${props.slug}`}
+href={`${pathname}/${encodeURIComponent(props.slug || '')}`}
 className=" flex-1
               rounded-full
               bg-[#122a02]
@@ -179,7 +182,7 @@ className=" flex-1
               duration-300
               hover:bg-[#1f3c07]"
 >
-Read More
+Enquire Now
 </Link> 
         )}
               

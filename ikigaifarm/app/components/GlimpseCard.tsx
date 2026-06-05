@@ -44,7 +44,7 @@ const GlimpseCard = ({
       </div>
 
       {/* Desktop Headings */}
-      <div className="hidden md:grid grid-cols-[100px_1fr] border-b border-[#ece4dc] bg-[#f6efe7] px-5 py-3">
+      <div className="hidden md:grid grid-cols-[100px_1fr] gap-24 border-b border-[#ece4dc] bg-[#f6efe7] px-5 py-3">
         <div className="text-sm font-bold uppercase tracking-wide text-[#1f6b35]">
           Time
         </div>
@@ -86,7 +86,7 @@ const GlimpseCard = ({
                     {item.time}
                   </div>
 
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-center gap-3">
                     <div
                       className="
                         flex h-10 w-10 shrink-0

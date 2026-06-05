@@ -234,7 +234,7 @@ export default function SchoolFarmLandingPage() {
                 images={[
                   '/Schools1.jpeg',
                   '/School2.jpeg',
-                  '/Schools3.jpeg',
+                  
                 ]}
               />
             </div>

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, Mail, Phone } from 'lucide-react'
 import Belt from './Clients'
+import { BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs'
 
 const Footer = () => {
   return (
@@ -23,7 +24,7 @@ const Footer = () => {
               <li><Link href='/PartnerWithUs' className='hover:text-white'>Partner With Us</Link></li>
               <li><Link href='/Blogs' className='hover:text-white'>Blog</Link></li>
               <li><Link href='/Faqs' className='hover:text-white'>FAQs</Link></li>
-              <li><Link href='/Contact' className='hover:text-white'>Group Bookings</Link></li>
+              
               <li><Link href='/WhyUs' className='hover:text-white'>Why Choose Us</Link></li>
               <li><Link href='/refund-policy' className='hover:text-white'>Refund Policy</Link></li>
               <li><Link target='_blank' href='https://www.instagram.com/ikigaifarm.noida/' className='hover:text-white'>Gallery</Link></li>
@@ -35,10 +36,12 @@ const Footer = () => {
           <div className='w-[20vw]'>
             <h4 className='mb-3 font-semibold'>Adventures</h4>
             <div className='flex flex-col gap-2 text-sm'>
-              <a href='#' className='text-gray-300 hover:text-white'>Zipline</a>
-              <a href='#' className='text-gray-300 hover:text-white'>Camel Ride</a>
-              <a href='#' className='text-gray-300 hover:text-white'>Archery</a>
-                <a href='#' className='text-gray-300 hover:text-white'>Rain Dance</a>
+              <a href='/Activities#Zipline' className='text-gray-300 hover:text-white'>Zipline</a>
+              <a href='/Activities#Camel Cart Ride' className='text-gray-300 hover:text-white'>Camel Ride</a>
+              <a href='/Activities#Archery' className='text-gray-300 hover:text-white'>Archery</a>
+              <a href='/Activities#Kids Train' className='text-gray-300 hover:text-white'>Kids Train</a>
+              <a href='/Activities#Trampoline' className='text-gray-300 hover:text-white'>Trampoline</a>
+                <a href='/Activities#Rain Dance' className='text-gray-300 hover:text-white'>Rain Dance</a>
                 <a href='/Activities' className='text-gray-300 hover:text-white'>View More</a>
                 
             </div>
@@ -55,6 +58,17 @@ const Footer = () => {
               <a href="mailto:contact@ikigaifarm.org">
                 <li className='flex items-center gap-2'><Mail size={14} /> contact@ikigaifarm.org</li>
               </a>
+              <ul className='flex items-center gap-4 mt-4'>
+                <Link href='https://www.instagram.com/ikigaifarm.noida/' target='_blank' rel='noopener noreferrer'>
+                  <img src='/instagramicon.png' alt='Instagram' width={28} height={28} />
+                </Link>
+                <Link href='https://www.linkedin.com/company/ikigai-farm-noida/' target='_blank' rel='noopener noreferrer'>
+                <img src='/linkedinicon.png' alt='LinkedIn' width={28} height={28} />
+                </Link>
+                <Link href='https://www.facebook.com/profile.php?id=61560689761675' target='_blank' rel='noopener noreferrer'>
+                  <img src='/facebookicon.png' alt='Facebook' width={28} height={28} />
+                </Link>
+              </ul>
             </ul>
           </div>
         </div>

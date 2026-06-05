@@ -233,10 +233,10 @@ const CookiesPolicyPage: React.FC = () => {
                   </div>
 
                   <a
-                    href="mailto:bookings@ikigaifarm.com"
+                    href="mailto:contact@ikigaifarm.org"
                     className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-all duration-300 hover:bg-white/10"
                   >
-                    bookings@ikigaifarm.com
+                    contact@ikigaifarm.org
                   </a>
 
                   <a

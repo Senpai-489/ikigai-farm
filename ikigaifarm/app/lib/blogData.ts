@@ -16,7 +16,7 @@ export const blogs: Blog[] = [
       'Why Ikigai Farm is the Best Adventure Farm Near Delhi NCR',
     description:
       'Looking for the perfect adventure farm near Delhi? Discover ziplining, ATV rides, rope courses, rain dance, and 40+ outdoor activities at Ikigai Farm Noida.',
-    image: '/zipline2.jpeg',
+    image: '/ATV5.jpeg',
     category: 'Adventure',
     author: 'Ikigai Farm',
     date: 'June 2026',
@@ -73,7 +73,7 @@ Ikigai Farm is quickly becoming one of the most popular picnic spots near Noida 
       'The Perfect Weekend Getaway From Delhi NCR',
     description:
       'Escape city stress with a relaxing weekend getaway near Delhi featuring nature walks, adventure activities, bonfires, outdoor dining, and peaceful farm experiences.',
-    image: '/BeautifulVenue1.jpeg',
+    image: '/FamilyReunion2.jpeg',
     category: 'Travel',
     author: 'Ikigai Farm',
     date: 'June 2026',
@@ -122,7 +122,7 @@ For people searching for a peaceful farm near Delhi NCR, Ikigai Farm creates the
       'Why Corporate Teams Love Outdoor Team Outings Near Delhi NCR',
     description:
       'Discover how outdoor adventure activities, farm experiences, and nature retreats improve team bonding and employee engagement.',
-    image: '/CorporateFood.jpeg',
+    image: '/CorporateParty1.jpeg',
     category: 'Corporate',
     author: 'Ikigai Farm',
     date: 'June 2026',
@@ -173,7 +173,7 @@ For organizations looking for unique corporate retreat venues near Delhi NCR, Ik
       'The Ultimate Outdoor Kids Birthday Party in Noida',
     description:
       'Planning a memorable kids birthday party near Delhi NCR? Discover outdoor games, ziplining, farm activities, food, and adventure experiences.',
-    image: '/KidsParty1.jpeg',
+    image: '/KidsParty6.jpeg',
     category: 'Events',
     author: 'Ikigai Farm',
     date: 'June 2026',
@@ -218,7 +218,7 @@ Ikigai Farm has become a favorite kids birthday party destination in Noida for f
       'The Rise of Farm-To-Table Dining Near Delhi',
     description:
       'Experience fresh farm-to-fork dining, outdoor brunches, and sustainable food experiences at Ikigai Farm Noida.',
-    image: '/Food1.jpeg',
+    image: '/FarmToTable.jpeg',
     category: 'Food',
     author: 'Ikigai Farm',
     date: 'June 2026',
@@ -266,7 +266,7 @@ Ikigai Farm offers one of the most unique farm-to-table dining experiences near 
       'Looking For The Best Picnic Spot Near Noida?',
     description:
       'Discover why Ikigai Farm is becoming one of the most loved picnic and day outing destinations near Delhi NCR.',
-    image: '/beltCarousel1.jpeg',
+    image: '/FamilyReunion1.jpeg',
     category: 'Travel',
     author: 'Ikigai Farm',
     date: 'June 2026',
@@ -392,7 +392,7 @@ The farm provides structured activities designed for school groups and education
       'Why Farm Weddings Are Becoming Popular Near Delhi NCR',
     description:
       'Discover the beauty of outdoor farm weddings, sustainable celebrations, and nature-inspired events near Delhi.',
-    image: '/BeautifulVenue1.jpeg',
+    image: '/FarmVenue2.jpeg',
     category: 'Events',
     author: 'Ikigai Farm',
     date: 'June 2026',
@@ -479,7 +479,7 @@ Ikigai Farm combines thrill, adventure, food, and nature into one unforgettable 
       'The Magic of Bonfire Experiences Near Delhi NCR',
     description:
       'Experience peaceful evenings, outdoor dining, music, and bonfire nights surrounded by nature.',
-    image: '/BeautifulVenue1.jpeg',
+    image: '/LohriFestival2.jpg',
     category: 'Lifestyle',
     author: 'Ikigai Farm',
     date: 'June 2026',
@@ -517,7 +517,7 @@ Sometimes the most memorable experiences come from simple moments shared outdoor
       'Why Nature Walks Are The Best Digital Detox',
     description:
       'Reconnect with yourself through peaceful nature walks, wellness experiences, and outdoor retreats near Delhi NCR.',
-    image: '/beltCarousel1.jpeg',
+    image: '/PicnicSpot.jpg',
     category: 'Wellness',
     author: 'Ikigai Farm',
     date: 'June 2026',

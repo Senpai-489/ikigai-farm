@@ -497,6 +497,14 @@ const Page = () => {
       Kids Birthday Party
     </option>
 
+    <option value="Kids Birthday Party">
+      School Booking
+    </option>
+
+    <option value="Kids Birthday Party">
+      Group Booking
+    </option>
+
     <option value="Corporate Events">
       Corporate Events
     </option>

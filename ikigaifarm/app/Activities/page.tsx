@@ -24,6 +24,7 @@ const Cards = [
     description:
       'Fun, focus, and friendly competition for all ages. Step into the exciting world of archery. ',
   },
+  
   {
     imageSrc: ['/KidsTrain.jpeg'],
     title: 'Kids train',
@@ -42,7 +43,12 @@ const Cards = [
     description:
       'Experience the thrill of a camel cart ride through the scenic farm landscape.',
   },
-  
+  {
+    imageSrc: ['/RainDance1.jpeg','/RainDance2.jpeg'],
+    title: 'Rain Dance',
+    description:
+      'Get drenched in fun with our exhilarating rain dance experience, perfect for all ages to enjoy a splash of joy and laughter.',
+  },
 ]
 
 const page = () => {
