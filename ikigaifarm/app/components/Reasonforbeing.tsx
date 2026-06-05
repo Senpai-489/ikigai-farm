@@ -24,21 +24,21 @@ const Reasonforbeing = () => {
 
     <div className="my-10 flex flex-wrap items-center justify-center gap-8 md:gap-16">
       <img
-        src="/TripAdvisorLogo.png"
+        src="/TripAdvisorLogo.jpeg"
         alt="Tripadvisor"
-        className="h-16 lg:h-28 object-contain opacity-80 transition hover:opacity-100"
+        className="h-16 lg:h-28 object-contain  transition "
       />
 
       <img
-        src="/DistrictLogo.svg"
+        src="/DistrictLogoPurple.jpeg"
         alt="District"
-        className="h-16 lg:h-28 object-contain opacity-80 transition hover:opacity-100"
+        className="h-16 lg:h-28 object-contain  transition "
       />
 
       <img
         src="/BookMyShowLogo.png"
         alt="BookMyShow"
-        className="h-16 lg:h-28 object-contain opacity-80 transition hover:opacity-100"
+        className="h-16 lg:h-28 object-contain  transition "
       />
     </div>
   </div>

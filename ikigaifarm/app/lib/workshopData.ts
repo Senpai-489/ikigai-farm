@@ -1,7 +1,7 @@
 export const workshopData = {
 'pottery-workshop': {
 title: 'Pottery Workshop',
-heroImage: '/PotteryWorkshop1.jpg',
+heroImage: '/Potteryworkshop1.jpg',
 description:
 'Discover the art of pottery through hands-on clay shaping and creative expression in a peaceful farm environment.',
 duration: '2 Hours',
@@ -13,7 +13,7 @@ highlights: [
 'Take Home Creations',
 ],
 gallery: [
-'/PotteryWorkshop1.jpg',
+'/Potteryworkshop1.jpg',
 '/PotteryWorkshop2.jpg',
 '/PotteryWorkshop3.jpg',
 '/PotteryWorkshop4.jpg',
@@ -244,8 +244,8 @@ gallery: [
 
 
 
-'handwriting-and-calligraphy-class': {
-title: 'Handwriting and Calligraphy Class',
+'handwriting-and-calligraphy-workshop': {
+title: 'Handwriting and Calligraphy Workshop',
 heroImage: '/HandwritingCalligraphy1.jpg',
 description:
 'Master elegant lettering and improve handwriting through guided calligraphy practice.',

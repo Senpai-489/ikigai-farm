@@ -93,7 +93,7 @@ const [isSubmitted, setIsSubmitted] =
       className="space-y-6 scroll-smooth rounded-[2rem] border border-[#d6e3af] bg-white p-8 shadow-xl"
     >
       <h2 className={`text-3xl text-center font-semibold text-[#122a02] ${medievalSharp.className}`}>
-        Workshop Enquiry
+       Enquiry
       </h2>
 
       <input
