@@ -166,7 +166,7 @@ const page = () => {
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               
-              <Link href='/Events'>
+              <Link href='/Packages'>
                 <button className="w-full rounded-full bg-[#f8ffad] px-6 py-3 text-sm font-semibold text-[#012d0b] transition duration-300 hover:scale-105 sm:w-auto">
                   Event Packages
                 </button>

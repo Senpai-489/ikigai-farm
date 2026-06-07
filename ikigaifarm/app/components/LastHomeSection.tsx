@@ -12,7 +12,7 @@ const medieval_Sharp = MedievalSharp({
 const LastHomeSection = () => {
   const activities = [
     'Archery',
-    'ATV Ride',
+    'Rain Dance',
     'Trampoline',
     'Camel Ride',
     'Zorbing',
@@ -139,8 +139,8 @@ const LastHomeSection = () => {
               {/* Small Bottom */}
               <div className="group overflow-hidden rounded-[1.5rem] shadow-xl">
                 <Image
-                  src="/ATV ride.jpeg"
-                  alt="ATV Ride"
+                  src="/Adventure4.jpg"
+                  alt="Adventure"
                   width={400}
                   height={300}
                   quality={70}

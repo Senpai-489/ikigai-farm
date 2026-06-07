@@ -24,15 +24,15 @@ const Reasonforbeing = () => {
 
     <div className="my-10 flex flex-wrap items-center justify-center gap-8 md:gap-16">
       <img
-        src="/TripAdvisorLogo.jpeg"
+        src="/TripAdvisorLogo.png"
         alt="Tripadvisor"
         className="h-16 lg:h-28 object-contain  transition "
       />
 
       <img
-        src="/DistrictLogoPurple.jpeg"
+        src="/DistrictLogo.svg"
         alt="District"
-        className="h-16 lg:h-28 object-contain  transition "
+        className="h-12 lg:h-28 object-contain  transition "
       />
 
       <img

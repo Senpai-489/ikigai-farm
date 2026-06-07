@@ -1,4 +1,4 @@
-import { CheckCircle2, IndianRupeeIcon } from 'lucide-react'
+import { CheckCircle2, DownloadIcon, IndianRupeeIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -56,13 +56,23 @@ const PackagesCard = (props: {
       </div>
 
       {/* CTA */}
-      <div className="mt-auto border-t border-[#e5e5e5] px-6 py-10">
+      <div className="mt-auto border-t flex flex-col gap-4 border-[#e5e5e5] mb-4 px-6 pb-10">
     <Link
       href="/Contact"
       className="block rounded-full bg-[#122a02] px-6 py-3 text-center text-amber-100"
     >
       Book Now
     </Link>
+    <Link
+  href="/IkigaiFarm_PackageDetails.pdf"
+  download
+  className="
+   items-center block rounded-full bg-[#122a02] px-6 py-3 text-center text-amber-100
+  "
+>
+ <DownloadIcon className="mr-2 inline" />
+ Download Brochure
+</Link>
   </div>
     </div>
   )

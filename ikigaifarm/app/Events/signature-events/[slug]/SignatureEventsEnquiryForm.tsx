@@ -240,8 +240,8 @@ const [isSubmitted, setIsSubmitted] =
 
       <div className="rounded-2xl bg-[#f8f8f8] p-6">
         <div className="flex justify-between">
-          <span>Workshop</span>
-          <span>{workshop}</span>
+          <span >Event Type</span>
+          <span className='font-bold text-right' >{workshop}</span>
         </div>
 
         <div className="mt-2 flex justify-between">

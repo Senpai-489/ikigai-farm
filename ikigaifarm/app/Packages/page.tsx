@@ -275,6 +275,7 @@ const Page = () => {
   const glimpseCardData = [
     {
       title: 'Adventure Day Out',
+      timeframe: '10:00 AM - 3:00 PM',
       schedule: [
         {
           time: '10:00 AM',
@@ -320,6 +321,7 @@ const Page = () => {
     },
     {
       title: 'Sunset Trails',
+      timeframe: '04:00 PM - 09:00 PM',
       schedule: [
        {
           time: '04:00 PM',
@@ -482,7 +484,7 @@ const Page = () => {
   <div className="mt-16">
     <div className="mb-12 text-center">
       <h3 className="text-3xl font-bold text-[#122a02] md:text-4xl">
-        Event Timelines
+        Package Timelines
       </h3>
 
       <p className="mt-3 text-[#6b5f3a]">
@@ -498,6 +500,7 @@ const Page = () => {
         >
           <GlimpseCard
             title={card.title}
+              timeframe={card.timeframe}
             schedule={card.schedule}
           />
         </div>

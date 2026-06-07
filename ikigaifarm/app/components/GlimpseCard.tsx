@@ -9,11 +9,13 @@ type ScheduleItem = {
 
 type ProgramScheduleProps = {
   title: string;
+  timeframe: string;
   schedule: ScheduleItem[];
 };
 
 const GlimpseCard = ({
   title,
+  timeframe,
   schedule,
 }: ProgramScheduleProps) => {
   return (
@@ -38,8 +40,8 @@ const GlimpseCard = ({
           {title}
         </h3>
 
-        <p className="mt-2 text-center text-xs sm:text-sm text-white/80">
-          Your celebration timeline
+        <p className="mt-2 text-center text-lg lg:text-xl text-white">
+          {timeframe}
         </p>
       </div>
 
