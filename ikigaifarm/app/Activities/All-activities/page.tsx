@@ -36,7 +36,7 @@ const page = () => {
         <div className='pointer-events-none absolute -right-20 top-52 -z-10 h-80 w-80 rounded-full bg-[#f5e6c9] blur-3xl' /> */}
 
         {/* <ThreeDMarquee images={images} className='absolute left-1/2 -translate-y-20 -top-1/12 -z-10 w-[120%] -translate-x-1/2 ' /> */}
-        <div className="absolute opacity-70 left-1/2 -translate-y-20 -top-1/14 -z-10 w-[100%] -translate-x-1/2  grid grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-2 h-[600px]">
+        <div className="absolute hidden opacity-70 left-1/2 -translate-y-20 -top-1/14 -z-10 w-[100%] -translate-x-1/2  lg:grid grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-2 h-[600px]">
   {/* Tall Right */}
   {/* <div className="relative overflow-hidden rounded-3xl">*/}
   <div className="relative  overflow-hidden rounded-3xl md:col-span-2 md:row-span-1">
@@ -113,57 +113,45 @@ const page = () => {
         <section className="py-20">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     {/* Heading */}
-    <div className="mb-12 text-center">
-      
-
-      <h2 className={`${medievalSharp.className} mt-5 text-4xl font-black text-[#122a02] md:text-5xl`}>
-        Activities Offered at Ikigai Farm
-      </h2>
-
-      <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600">
-        Discover creative workshops, seasonal festivals, family
-        celebrations, corporate gatherings, and immersive farm
-        experiences designed for all age groups.
-      </p>
-    </div>
+   
 
     {/* Grid */}
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid gap-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {[
         "Zip Line",
-        "Climbing Wall",
-        "Commando Net",
-        "Commando Crawl",
-        "Commando Bridge",
-        "Burma Bridge",
         "Plank Walk",
-        "Tyre Bridge",
         "Tyre Wall",
         "Tyre Walk",
-        "Balance Bridge",
-        "Balance Walk",
-        "Beam Balance",
-        "Vertical Bridge",
-        "Space Walk",
-        "Log Walk",
+        "Tyre Bridge",
         "Cat Walk",
-        "Hurdle Walk",
+        "Log Walk",
+        "Space Walk",
         "Water Zorb",
         "Body Zorb",
-        "Tube Well Bath",
         "Archery",
-        "Dart Shooting",
-        "Velcro Dart",
+        "Velcro Dart",  
         "Sling Shot",
         "Hopscotch",
-        "Trampoline",
-        "Camel Cart Ride",
         "Cricket",
         "Volleyball",
         "Badminton",
         "Table Tennis",
         "Carrom",
         "Ludo",
+        "Trampoline",
+        "Camel Cart Ride",
+        "Tube Well Bath",
+        "Dart Shooting",
+        "Vertical Bridge",
+        "Hurdle Walk",
+        "Balance Walk",
+        "Beam Balance",
+        "Burma Bridge",
+        "Balance Bridge",
+        "Commando Crawl",
+        "Commando Bridge",
+        "Climbing Wall",
+        "Commando Net",
         "Cross & Zero (Tic-Tac-Toe)",
         "ATV Ride (Extra Charges Applicable)",
         "Horse Ride (Extra Charges Applicable)"

@@ -8,6 +8,7 @@ import { ThreeDMarquee, MarqueeImage } from "@/app/components/lightswind/3d-marq
 import { AlertTriangle, AlignVerticalSpaceAround } from 'lucide-react'
 const medievalSharp = MedievalSharp({ subsets: ['latin'], weight: '400' })
 import VerticalCard from '../../components/VerticalCard'
+import MasonryGrid from '@/app/components/MasonryGrid'
 const images = [
   {
     src: '/HoliBash1.jpeg',
@@ -134,11 +135,12 @@ const Cards = [
 },
   
 ]
+
 const page = () => {
   return (
     <main className='min-h-screen overflow-x-hidden bg-transparent text-[#0f1d0a]'>
       <Navbar />
-      <section className='relative mx-auto  px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-16'>
+       <section className='relative mx-auto  px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-16'>
         {/* <div className='pointer-events-none absolute inset-x-0 top-0 -z-10 h-[520px] bg-gradient-to-b from-[#f7efe3] via-transparent to-transparent' />
         <div className='pointer-events-none absolute -left-28 top-24 -z-10 h-72 w-72 rounded-full bg-[#e7f1d4] blur-3xl' />
         <div className='pointer-events-none absolute -right-20 top-52 -z-10 h-80 w-80 rounded-full bg-[#f5e6c9] blur-3xl' /> */}
