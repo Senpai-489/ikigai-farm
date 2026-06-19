@@ -17,6 +17,18 @@ const Reasonforbeing = () => {
   return (
     <section className="relative overflow-hidden lg:-translate-y-40  bg-white [content-visibility:auto] [contain-intrinsic-size:760px]">
 <section className="lg:mb-40">
+  <div className="overflow-hidden mb-8 bg-black py-4">
+  <div className="flex w-max animate-[scroll_20s_linear_infinite] whitespace-nowrap">
+    {Array.from({ length: 20 }).map((_, i) => (
+      <span
+        key={i}
+        className="mx-8 text-2xl font-bold uppercase tracking-widest text-amber-300"
+      >
+        Upcoming Events ✦
+      </span>
+    ))}
+  </div>
+</div>
   <div className="-z-10 lg:mb-12 gap-10 flex flex-col mx-auto w-screen items-center justify-center " >
   <div className="relative w-full max-w-4xl">
   <Image

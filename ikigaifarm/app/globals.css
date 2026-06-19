@@ -72,3 +72,12 @@ body {
   display: inline-block;
   animation: sparkle 2s ease-in-out infinite;
 }
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
