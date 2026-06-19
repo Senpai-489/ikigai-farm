@@ -29,7 +29,7 @@ const Reasonforbeing = () => {
     ))}
   </div>
 </div>
-  <div className="-z-10 lg:mb-12 gap-10 flex flex-col mx-auto w-screen items-center justify-center " >
+  <div className="-z-10 mb-12 gap-10 flex flex-col mx-auto w-screen items-center justify-center " >
   <div className="relative w-full max-w-4xl">
   <Image
     src="/FarmersMarketHome.jpeg"
