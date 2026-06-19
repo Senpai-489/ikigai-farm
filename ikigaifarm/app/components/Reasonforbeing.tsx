@@ -17,6 +17,131 @@ const Reasonforbeing = () => {
   return (
     <section className="relative overflow-hidden lg:-translate-y-40  bg-white [content-visibility:auto] [contain-intrinsic-size:760px]">
 <section className="lg:mb-40">
+  <div className="-z-10 lg:mb-12 gap-10 flex flex-col mx-auto w-screen items-center justify-center " >
+  <div className="relative w-full max-w-4xl">
+  <Image
+    src="/FarmersMarketHome.jpeg"
+    alt="Farmers Market"
+    width={1000}
+    height={400}
+    quality={70}
+    sizes="100vw"
+    className="w-full rounded-2xl border object-cover drop-shadow-2xl"
+  />
+
+  {/* District */}
+  <a
+    href="https://www.district.in/events/ikigai-farmers-market-jul19-2026-buy-tickets"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/DistrictLogo.svg"
+      alt="District"
+      className="
+        absolute
+        left-[30%]
+        bottom-[12%]
+        z-10
+        w-16
+        lg:w-28
+        animate-bounce
+        rounded-xl
+      
+        p-2
+        shadow-2xl
+      "
+    />
+  </a>
+
+  {/* BookMyShow */}
+  <a
+    href="https://in.bookmyshow.com/events/ikigai-farmer-s-market-kids-carnival/ET00503122"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/BookMyShowLogo.png"
+      alt="BookMyShow"
+      className="
+        absolute
+        left-[55%]
+        bottom-[12%]
+        z-10
+        w-16
+        lg:w-28
+        animate-bounce
+        rounded-xl
+      
+        p-2
+        shadow-2xl
+      "
+    />
+  </a>
+</div>
+<div className="relative w-full max-w-4xl">
+  <Image
+    src="/FifaScreening.jpeg"
+    alt="FIFA Screening"
+    width={1000}
+    height={400}
+    quality={70}
+    sizes="100vw"
+    className="w-full rounded-2xl border object-cover drop-shadow-2xl"
+  />
+<div className=' lg:translate-y-[-16vh]'>
+  <a
+    href="https://www.district.in/events/fifa-grand-finale-the-last-whistle-jun19-2026-buy-tickets"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/DistrictLogo.svg"
+      alt="District"
+      className="
+        absolute
+        left-[6%]
+        bottom-[18%]
+        z-10
+        w-16
+        lg:w-28
+        animate-bounce
+        rounded-xl
+      
+        p-2
+        shadow-2xl
+      "
+    />
+  </a>
+
+  <a
+    href="https://in.bookmyshow.com/events/the-final-whistle-fifa-grand-finale-screening/ET00503670"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/BookMyShowLogo.png"
+      alt="BookMyShow"
+      className="
+        absolute
+        left-[25%]
+        bottom-[18%]
+        z-10
+        w-16
+        lg:w-28
+        animate-bounce
+        rounded-xl
+        
+        p-2
+        shadow-2xl
+      "
+    />
+  </a></div>
+</div>
+    
+
+  </div>
+
   <div className="mx-auto max-w-6xl px-4">
     <h3 className={` ${medievalSharp.className} text-center text-3xl lg:text-5xl  text-black`}>
       We Are Also Available On

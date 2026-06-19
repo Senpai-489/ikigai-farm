@@ -642,16 +642,17 @@ const Page = () => {
             {/* MAP */}
             <div className="overflow-hidden rounded-[2rem] border border-[#122a02]/10 shadow-[0_24px_80px_rgba(18,42,2,0.10)]">
               <div className="h-[320px] w-full sm:h-[400px] lg:h-[450px]">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.557061229342!2d77.36919127511187!3d28.492883175741355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce791c95d1485%3A0xb367fe11eaf90f92!2sRajgarh%20Farms%2C%20Noida!5e0!3m2!1sen!2sin!4v1779670547874!5m2!1sen!2sin"
-                  className="h-full w-full border-0"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.559904820725!2d77.3693018751119!3d28.492797575741307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7ace82341c9%3A0x97ad65b596abb9fe!2sIkigai%20Farm%20Noida!5e0!3m2!1sen!2sin!4v1781848682192!5m2!1sen!2sin"
+
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                 />
               </div>
 
               <a
-                href="https://www.google.com/maps/place/Rajgarh+Farms,+Noida/"
+                href="https://maps.app.goo.gl/3nvysqEu9cYSrZ2o9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 text-center text-sm font-medium text-[#122a02] underline"
