@@ -225,7 +225,7 @@ const Page = () => {
   const PackagesCardData = [
     {
       title: 'Kids',
-      price: '850/-',
+      price: '950/-',
       specs: '5-11yrs',
       description: [
         "20+ Adventure Activities",
@@ -237,7 +237,7 @@ const Page = () => {
     },
     {
       title: 'Adults',
-      price: '1250/-',
+      price: '1450/-',
       specs: '',
       description: [
         "40+ Adventure Activities",
@@ -248,7 +248,7 @@ const Page = () => {
     },
     {
       title: 'Groups',
-      price: '1050/person',
+      price: '1250/person',
       specs: 'minimum 30+ people ',
       description: [
        " Exclusive Area For Meals",

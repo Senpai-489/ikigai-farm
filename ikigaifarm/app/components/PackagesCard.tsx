@@ -66,8 +66,9 @@ const PackagesCard = (props: {
     <Link
   href="/IkigaiFarm_PackageDetails.pdf"
   download
+  tabIndex={-1}
   className="
-   items-center block rounded-full bg-[#122a02] px-6 py-3 text-center text-amber-100
+   items-center disable index pointer-events-none block rounded-full bg-[#122a02]/60 px-6 py-3 text-center text-amber-100
   "
 >
  <DownloadIcon className="mr-2 inline" />
