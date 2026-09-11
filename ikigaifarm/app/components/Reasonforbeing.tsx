@@ -22,7 +22,7 @@ const Reasonforbeing = () => {
     {Array.from({ length: 20 }).map((_, i) => (
       <span
         key={i}
-        className="mx-8 text-2xl font-bold uppercase tracking-widest text-amber-300"
+        className="mx-8 text-sm font-bold uppercase tracking-widest text-amber-300"
       >
         Upcoming Events ✦
       </span>
@@ -31,12 +31,12 @@ const Reasonforbeing = () => {
 </div>
   <div className="-z-10 mb-12 gap-10 flex flex-col mx-auto w-screen items-center justify-center " >
   <div className="relative w-full max-w-4xl">
-  <div className="w-full space-y-4">
+  <div className="w-full px-4 space-y-4">
   {/* Main Event Image */}
   <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
     <Image
       src="/dandiyanights.jpeg"
-      alt="Farmers Market"
+      alt="Dandiya Nights"
       width={1000}
       height={400}
       quality={70}
@@ -44,20 +44,18 @@ const Reasonforbeing = () => {
       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02] sm:h-[350px] lg:h-full"
     />
 
-    {/* Bottom gradient */}
     <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
-
-    
   </div>
 
   {/* Booking Options */}
-  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+  <div className="grid grid-cols-2 gap-2 sm:gap-3">
+
     {/* District */}
     <a
       href="https://www.district.in/events/ikigai-dandiya-nights-2026-noida-oct17-2026-buy-tickets"
-      className="group flex items-center gap-4 rounded-2xl border border-black/10 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="group flex min-w-0 items-center gap-2 rounded-xl border border-black/10 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:gap-4 sm:rounded-2xl sm:p-3"
     >
-      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl">
+      <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg sm:h-16 sm:w-20 sm:rounded-xl">
         <img
           src="/DistrictLogoPurple.jpeg"
           alt="Book on District"
@@ -67,16 +65,17 @@ const Reasonforbeing = () => {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <div className="flex-1">
-        <p className="text-xs font-medium uppercase tracking-wider text-black/40">
+      <div className="min-w-0 flex-1">
+        <p className="text-[8px] font-medium uppercase tracking-wider text-black/40 sm:text-xs">
           Tickets
         </p>
-        <p className="mt-0.5 font-semibold text-black">
+
+        <p className="mt-0.5 truncate text-[10px] font-semibold leading-tight text-black sm:text-base">
           Book on District
         </p>
       </div>
 
-      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1">
+      <div className="hidden h-7 w-7 shrink-0 items-center justify-center rounded-full bg-black text-sm text-white transition-transform duration-300 group-hover:translate-x-1 sm:flex sm:h-9 sm:w-9 sm:text-base">
         →
       </div>
     </a>
@@ -84,9 +83,9 @@ const Reasonforbeing = () => {
     {/* BookMyShow */}
     <a
       href="https://in.bookmyshow.com/activities/ikigai-dandiya-nights-2026-noida/ET00510140?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
-      className="group flex items-center gap-4 rounded-2xl border border-black/10 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="group flex min-w-0 items-center gap-2 rounded-xl border border-black/10 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:gap-4 sm:rounded-2xl sm:p-3"
     >
-      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl">
+      <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg sm:h-16 sm:w-20 sm:rounded-xl">
         <img
           src="/bookmyshowlogosmall.png"
           alt="Book on BookMyShow"
@@ -96,16 +95,17 @@ const Reasonforbeing = () => {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <div className="flex-1">
-        <p className="text-xs font-medium uppercase tracking-wider text-black/40">
+      <div className="min-w-0 flex-1">
+        <p className="text-[8px] font-medium uppercase tracking-wider text-black/40 sm:text-xs">
           Tickets
         </p>
-        <p className="mt-0.5 font-semibold text-black">
-          Book on BookMyShow
+
+        <p className="mt-0.5 truncate text-[10px] font-semibold leading-tight text-black sm:text-base">
+          BookMyShow
         </p>
       </div>
 
-      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1">
+      <div className="hidden h-7 w-7 shrink-0 items-center justify-center rounded-full bg-black text-sm text-white transition-transform duration-300 group-hover:translate-x-1 sm:flex sm:h-9 sm:w-9 sm:text-base">
         →
       </div>
     </a>
@@ -113,12 +113,16 @@ const Reasonforbeing = () => {
 </div>
 
 
-<div className="w-full mt-8 space-y-4">
+{/* ====================================================== */}
+{/* CHRISTMAS CARNIVAL */}
+{/* ====================================================== */}
+
+<div className="mt-6 px-4 w-full space-y-4 sm:mt-8">
   {/* Main Event Image */}
   <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
     <Image
       src="/ChristmasPoster.jpeg"
-      alt="Farmers Market"
+      alt="Christmas Carnival"
       width={1000}
       height={400}
       quality={70}
@@ -126,20 +130,18 @@ const Reasonforbeing = () => {
       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02] sm:h-[350px] lg:h-full"
     />
 
-    {/* Bottom gradient */}
     <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
-
-    
   </div>
 
   {/* Booking Options */}
-  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+  <div className="grid grid-cols-2 gap-2 sm:gap-3">
+
     {/* District */}
     <a
       href="https://www.district.in/events/ikigai-christmas-carnival-food-festival-2026-dec20-2026-buy-tickets"
-      className="group flex items-center gap-4 rounded-2xl border border-black/10 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="group flex min-w-0 items-center gap-2 rounded-xl border border-black/10 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:gap-4 sm:rounded-2xl sm:p-3"
     >
-      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl">
+      <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg sm:h-16 sm:w-20 sm:rounded-xl">
         <img
           src="/DistrictLogoPurple.jpeg"
           alt="Book on District"
@@ -149,16 +151,17 @@ const Reasonforbeing = () => {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <div className="flex-1">
-        <p className="text-xs font-medium uppercase tracking-wider text-black/40">
+      <div className="min-w-0 flex-1">
+        <p className="text-[8px] font-medium uppercase tracking-wider text-black/40 sm:text-xs">
           Tickets
         </p>
-        <p className="mt-0.5 font-semibold text-black">
+
+        <p className="mt-0.5 truncate text-[10px] font-semibold leading-tight text-black sm:text-base">
           Book on District
         </p>
       </div>
 
-      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1">
+      <div className="hidden h-7 w-7 shrink-0 items-center justify-center rounded-full bg-black text-sm text-white transition-transform duration-300 group-hover:translate-x-1 sm:flex sm:h-9 sm:w-9 sm:text-base">
         →
       </div>
     </a>
@@ -166,9 +169,9 @@ const Reasonforbeing = () => {
     {/* BookMyShow */}
     <a
       href="https://in.bookmyshow.com/activities/ikigai-christmas-carnival-food-festival-2026/ET00510138"
-      className="group flex items-center gap-4 rounded-2xl border border-black/10 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="group flex min-w-0 items-center gap-2 rounded-xl border border-black/10 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:gap-4 sm:rounded-2xl sm:p-3"
     >
-      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl">
+      <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg sm:h-16 sm:w-20 sm:rounded-xl">
         <img
           src="/bookmyshowlogosmall.png"
           alt="Book on BookMyShow"
@@ -178,22 +181,22 @@ const Reasonforbeing = () => {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <div className="flex-1">
-        <p className="text-xs font-medium uppercase tracking-wider text-black/40">
+      <div className="min-w-0 flex-1">
+        <p className="text-[8px] font-medium uppercase tracking-wider text-black/40 sm:text-xs">
           Tickets
         </p>
-        <p className="mt-0.5 font-semibold text-black">
-          Book on BookMyShow
+
+        <p className="mt-0.5 truncate text-[10px] font-semibold leading-tight text-black sm:text-base">
+          BookMyShow
         </p>
       </div>
 
-      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1">
+      <div className="hidden h-7 w-7 shrink-0 items-center justify-center rounded-full bg-black text-sm text-white transition-transform duration-300 group-hover:translate-x-1 sm:flex sm:h-9 sm:w-9 sm:text-base">
         →
       </div>
     </a>
   </div>
 </div>
-
 
   </div> 
 
