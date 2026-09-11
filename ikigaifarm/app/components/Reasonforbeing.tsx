@@ -31,126 +31,173 @@ const Reasonforbeing = () => {
 </div>
   <div className="-z-10 mb-12 gap-10 flex flex-col mx-auto w-screen items-center justify-center " >
   <div className="relative w-full max-w-4xl">
-  <Image
-    src="/FarmersMarketHome.jpeg"
-    alt="Farmers Market"
-    width={1000}
-    height={400}
-    quality={70}
-    sizes="100vw"
-    className="w-full rounded-2xl border object-cover drop-shadow-2xl"
-  />
+  <div className="w-full space-y-4">
+  {/* Main Event Image */}
+  <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
+    <Image
+      src="/dandiyanights.jpeg"
+      alt="Farmers Market"
+      width={1000}
+      height={400}
+      quality={70}
+      sizes="100vw"
+      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02] sm:h-[350px] lg:h-full"
+    />
 
-  {/* District */}
-  <a
-    href="https://www.district.in/events/ikigai-farmers-market-jul19-2026-buy-tickets"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="/DistrictLogo.svg"
-      alt="District"
-      className="
-        absolute
-        left-[30%]
-        bottom-[12%]
-        z-10
-        w-16
-        lg:w-28
-        animate-bounce
-        rounded-xl
-      
-        p-2
-        shadow-2xl
-      "
-    />
-  </a>
+    {/* Bottom gradient */}
+    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
 
-  {/* BookMyShow */}
-  <a
-    href="https://in.bookmyshow.com/events/ikigai-farmer-s-market-kids-carnival/ET00503122"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="/BookMyShowLogo.png"
-      alt="BookMyShow"
-      className="
-        absolute
-        left-[55%]
-        bottom-[12%]
-        z-10
-        w-16
-        lg:w-28
-        animate-bounce
-        rounded-xl
-      
-        p-2
-        shadow-2xl
-      "
-    />
-  </a>
-</div>
-<div className="relative w-full max-w-4xl">
-  <Image
-    src="/FifaScreening.jpeg"
-    alt="FIFA Screening"
-    width={1000}
-    height={400}
-    quality={70}
-    sizes="100vw"
-    className="w-full rounded-2xl border object-cover drop-shadow-2xl"
-  />
-<div className=' lg:translate-y-[-16vh]'>
-  <a
-    href="https://www.district.in/events/fifa-grand-finale-the-last-whistle-jun19-2026-buy-tickets"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="/DistrictLogo.svg"
-      alt="District"
-      className="
-        absolute
-        left-[6%]
-        bottom-[18%]
-        z-10
-        w-16
-        lg:w-28
-        animate-bounce
-        rounded-xl
-      
-        p-2
-        shadow-2xl
-      "
-    />
-  </a>
-
-  <a
-    href="https://in.bookmyshow.com/events/the-final-whistle-fifa-grand-finale-screening/ET00503670"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="/BookMyShowLogo.png"
-      alt="BookMyShow"
-      className="
-        absolute
-        left-[25%]
-        bottom-[18%]
-        z-10
-        w-16
-        lg:w-28
-        animate-bounce
-        rounded-xl
-        
-        p-2
-        shadow-2xl
-      "
-    />
-  </a></div>
-</div>
     
+  </div>
+
+  {/* Booking Options */}
+  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+    {/* District */}
+    <a
+      href="https://www.district.in/events/ikigai-dandiya-nights-2026-noida-oct17-2026-buy-tickets"
+      className="group flex items-center gap-4 rounded-2xl border border-black/10 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    >
+      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl">
+        <img
+          src="/DistrictLogoPurple.jpeg"
+          alt="Book on District"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
+
+      <div className="flex-1">
+        <p className="text-xs font-medium uppercase tracking-wider text-black/40">
+          Tickets
+        </p>
+        <p className="mt-0.5 font-semibold text-black">
+          Book on District
+        </p>
+      </div>
+
+      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1">
+        →
+      </div>
+    </a>
+
+    {/* BookMyShow */}
+    <a
+      href="https://in.bookmyshow.com/activities/ikigai-dandiya-nights-2026-noida/ET00510140?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+      className="group flex items-center gap-4 rounded-2xl border border-black/10 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    >
+      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl">
+        <img
+          src="/bookmyshowlogosmall.png"
+          alt="Book on BookMyShow"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
+
+      <div className="flex-1">
+        <p className="text-xs font-medium uppercase tracking-wider text-black/40">
+          Tickets
+        </p>
+        <p className="mt-0.5 font-semibold text-black">
+          Book on BookMyShow
+        </p>
+      </div>
+
+      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1">
+        →
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<div className="w-full mt-8 space-y-4">
+  {/* Main Event Image */}
+  <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
+    <Image
+      src="/ChristmasPoster.jpeg"
+      alt="Farmers Market"
+      width={1000}
+      height={400}
+      quality={70}
+      sizes="100vw"
+      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02] sm:h-[350px] lg:h-full"
+    />
+
+    {/* Bottom gradient */}
+    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
+
+    
+  </div>
+
+  {/* Booking Options */}
+  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+    {/* District */}
+    <a
+      href="https://www.district.in/events/ikigai-christmas-carnival-food-festival-2026-dec20-2026-buy-tickets"
+      className="group flex items-center gap-4 rounded-2xl border border-black/10 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    >
+      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl">
+        <img
+          src="/DistrictLogoPurple.jpeg"
+          alt="Book on District"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
+
+      <div className="flex-1">
+        <p className="text-xs font-medium uppercase tracking-wider text-black/40">
+          Tickets
+        </p>
+        <p className="mt-0.5 font-semibold text-black">
+          Book on District
+        </p>
+      </div>
+
+      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1">
+        →
+      </div>
+    </a>
+
+    {/* BookMyShow */}
+    <a
+      href="https://in.bookmyshow.com/activities/ikigai-christmas-carnival-food-festival-2026/ET00510138"
+      className="group flex items-center gap-4 rounded-2xl border border-black/10 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    >
+      <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl">
+        <img
+          src="/bookmyshowlogosmall.png"
+          alt="Book on BookMyShow"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
+
+      <div className="flex-1">
+        <p className="text-xs font-medium uppercase tracking-wider text-black/40">
+          Tickets
+        </p>
+        <p className="mt-0.5 font-semibold text-black">
+          Book on BookMyShow
+        </p>
+      </div>
+
+      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1">
+        →
+      </div>
+    </a>
+  </div>
+</div>
+
+
+  </div> 
+
+
 
   </div>
 
