@@ -441,7 +441,7 @@ const Page = () => {
       {/* HERO */}
 
 {/* Pricing Cards */}
-<div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+{/* <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
   {PackagesCardData.map((pkg, index) => (
     <PackagesCard
       key={index}
@@ -451,7 +451,7 @@ const Page = () => {
       description={pkg.description}
     />
   ))}
-</div>
+</div> */}
 
 {/* Celebration Preview Section */}
 <section className="mx-auto mt-28 w-full max-w-7xl">
